@@ -1,0 +1,134 @@
+=== CHEATSHEET ===
+**Cheat Sheet for Counting Objects, Vegetables, Fruits, Animals, and Musical Instruments**
+
+---
+
+### General Counting Rules:
+- Count each item individually.
+- For plural quantities (e.g., "three apples"), add the number specified.
+- For singular items, count as 1.
+- Only count items that belong to the specified category (objects, vegetables, fruits, animals, musical instruments).
+
+---
+
+### Categories & Key Details
+
+#### 1. **Objects**
+- Includes: couch, bed, table, lamp, car, chair, toaster, stove, fridge, oven, microwave.
+- Count all items regardless of type.
+- Example: "three couches, a bed, a table, and a lamp" → 3 + 1 + 1 + 1 = 6 objects.
+
+---
+
+#### 2. **Vegetables**
+- Common vegetables to count:
+  - Cabbage, carrot, stalk of celery, onion, garlic, cauliflower, broccoli (head or heads), lettuce (head or heads), potato, yam.
+- Plurals and multiple heads count individually.
+- Exclude non-vegetables (e.g., fruits, animals, musical instruments).
+- Examples:
+  - "two heads of broccoli" = 2 vegetables.
+  - "five carrots" = 5 vegetables.
+  - "a stalk of celery" = 1 vegetable.
+- Watch for mixed items: only count vegetables.
+- Some tricky items:
+  - Garlic: count each garlic (plural "garlics" means multiple).
+  - Lettuce head: count each head.
+  - Broccoli: count each head.
+- Do NOT count fruits or animals mistakenly as vegetables.
+
+---
+
+#### 3. **Fruits**
+- Common fruits to count:
+  - Apple, banana, orange, peach, plum, nectarine, raspberry, blackberry, strawberry, grape, blueberry (if mentioned).
+- Plurals and multiple quantities count individually.
+- Examples:
+  - "two apples" = 2 fruits.
+  - "three raspberries" = 3 fruits.
+- Exclude vegetables, animals, and other categories.
+- Watch for mixed lists: only count fruits.
+- Some tricky points:
+  - Bananas, grapes, and berries count individually.
+  - "Head of broccoli" is NOT a fruit.
+  - "Garlic" is NOT a fruit.
+
+---
+
+#### 4. **Animals**
+- Common animals to count:
+  - Mouse, snail, chicken, cat, pig, snake, fish, goat, bear, dog, cow, frog, donkey, rabbit, duck.
+- Plurals and multiple quantities count individually.
+- Examples:
+  - "three pigs" = 3 animals.
+  - "a dog" = 1 animal.
+- Exclude fruits, vegetables, and objects.
+- Watch for mixed lists: only count animals.
+- Some tricky points:
+  - Snails and frogs are animals.
+  - Fish count as animals.
+  - Do NOT count musical instruments or objects.
+
+---
+
+#### 5. **Musical Instruments**
+- Common instruments to count:
+  - Flute, trombone, accordion, clarinet, drum, piano, violin, trumpet.
+- Plurals and multiple quantities count individually.
+- Examples:
+  - "three drums" = 3 instruments.
+  - "a flute and a trombone" = 2 instruments.
+- Exclude animals, fruits, vegetables, and objects.
+- Watch for mixed lists: only count musical instruments.
+
+---
+
+### Tips for Difficult Examples
+
+- **Mixed categories in one list:** Identify the category asked, then count only those items.
+- **Plural forms:** Always multiply by the number given.
+- **Compound items:** "head of broccoli" counts as 1 vegetable; "two heads of broccoli" counts as 2.
+- **Ambiguous items:** 
+  - "Garlic" is a vegetable.
+  - "Lettuce head" is a vegetable.
+  - "Stalk of celery" is a vegetable.
+  - "Snail" is an animal.
+  - "Accordion" is a musical instrument.
+- **Avoid counting items outside the category.** For example, when counting fruits, do not count vegetables or animals.
+- **When counting objects, include all household items listed.**
+
+---
+
+### Quick Reference Lists
+
+| Category           | Examples (count each)                                  |
+|--------------------|-------------------------------------------------------|
+| Objects            | couch, bed, table, lamp, car, chair, toaster, stove, fridge, oven, microwave |
+| Vegetables         | cabbage, carrot, celery (stalk), onion, garlic, cauliflower, broccoli (head), lettuce (head), potato, yam |
+| Fruits             | apple, banana, orange, peach, plum, nectarine, raspberry, blackberry, strawberry, grape |
+| Animals            | mouse, snail, chicken, cat, pig, snake, fish, goat, bear, dog, cow, frog, donkey, rabbit, duck |
+| Musical Instruments| flute, trombone, accordion, clarinet, drum, piano, violin, trumpet |
+
+---
+
+### Example Walkthrough
+
+**Example:**  
+"I have a stalk of celery, two drums, two onions, a carrot, an accordion, a yam, a cabbage, a lettuce head, a potato, and a head of broccoli. How many vegetables do I have?"  
+- Vegetables: stalk of celery (1), two onions (2), carrot (1), yam (1), cabbage (1), lettuce head (1), potato (1), head of broccoli (1)  
+- Total vegetables = 1 + 2 + 1 + 1 + 1 + 1 + 1 + 1 = 9
+
+---
+
+Use this cheat sheet to carefully identify and count only the items belonging to the category asked, paying close attention to plurals and compound items.
+
+Follow the format of the examples below in your response.
+
+Question: I have four couches, a bed, a table, and a lamp. How many objects do I have?
+Answer: 7
+###
+Question: I have three cabbages, a carrot, two stalks of celery, and an onion. How many vegetables do I have?
+Answer: 7
+=== END CHEATSHEET ===
+
+Reply with ONLY the verdict. Do not explain.
+VERDICT: an integer

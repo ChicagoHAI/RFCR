@@ -1,0 +1,103 @@
+**Cheat Sheet for Determining Plausibility of Sport-Related Sentences**
+
+---
+
+### 1. **Player-Sport Alignment**
+
+- Always identify the player's primary sport first.
+- If the action or term belongs to a different sport than the player's, the sentence is **implausible**.
+- Example:  
+  - Bryce Harper (baseball) + "back shoulder fade" (football) → No  
+  - Josh Allen (football) + "caught the screen pass" (football) → Yes
+
+---
+
+### 2. **Cross-Sport Trick Plays or Rare Actions**
+
+- Some players can perform rare or trick plays outside their usual role but within their sport.  
+- Example:  
+  - Wide receivers or quarterbacks throwing or catching unusual passes in football → Yes  
+  - Goalies scoring in hockey (rare but possible) → Yes  
+- Do **not** confuse with cross-sport actions (e.g., a basketball player throwing a touchdown) → No
+
+---
+
+### 3. **Terminology Specificity**
+
+- Know which terms belong to which sports.  
+- **Basketball Terms:**  
+  - Buzzer beater, three pointer, three second violation, taking a charge, turnaround jumper, restricted area, side-step three, goal tend, banked the shot in, beating the buzzer, desperation heave, nutmegged (soccer term, not basketball)  
+- **Football (American) Terms:**  
+  - Screen pass, back shoulder fade, slant pass, hail mary, fourth down, first down, flag on the play, caught the screen pass, converted the first down, gained yards, fumbled the ball, drew a flag, went for it on fourth down  
+- **Baseball Terms:**  
+  - Walkoff homer, triple, base hit, safe at first, out at first/second/third/home, ball four, struck out the side, grounded out, walked to first base, hit a triple, got on base, scored a bicycle kick (soccer term, not baseball)  
+- **Soccer Terms:**  
+  - Freekick, red card, handball, penalty kick, added time/extra time, give and go, nutmegged, maradona (turn), scored a header goal, took a throw in, scored a bicycle kick, scored in added time, scored a corner kick, scored a freekick, scored a penalty kick, scored a header goal, got on the end of a through ball  
+- **Ice Hockey Terms:**  
+  - Shot the puck, skating backwards, penalty box, powerplay, killing the powerplay, Stanley Cup, crossed the blue line, backhand shot, slashing, icing, wristed a shot, scoring in the third period, scoring on the power play, passing the puck, took a charge (basketball term, not hockey), maradona'd (soccer term, not hockey), nutmegged (soccer term, not hockey), skating behind the net, spent time in the penalty box, entered the attacking zone, took to the ice, backhanded a shot, scored in the third period, scored on the power play  
+- **Soccer vs. Hockey Confusions:**  
+  - Maradona move, nutmegged, red card (soccer only), penalty kick (soccer only), powerplay (hockey only), penalty box (hockey only), skating (hockey only), sliding tackle (soccer only)  
+- **Soccer vs. Football Confusions:**  
+  - Endzone (football only), scoring a touchdown (football only), throwing a touchdown (football only), catching a screen pass (football only), first down (football only), fourth down (football only), flag on the play (football only)  
+- **Basketball vs. Baseball Confusions:**  
+  - Three pointer, three second violation, taking a charge, banked shot, turnaround jumper, side-step three, goal tend (basketball only)  
+  - Walk, ball four, safe at first, out at first/second/third/home (baseball only)
+
+---
+
+### 4. **Event or Competition Context**
+
+- Check if the event mentioned matches the sport:  
+  - Stanley Cup → Ice hockey  
+  - AFC/NFC Divisional/Championship/Superbowl → American football  
+  - NBA Championship, Eastern/Western Conference Finals → Basketball  
+  - Champions League Final, FA Cup, European Cup → Soccer  
+  - National League Championship Series → Baseball  
+- If the event does not match the player's sport or the action, the sentence is **implausible**.
+
+---
+
+### 5. **Rare or Ambiguous Names**
+
+- If a name is common but not clearly associated with a sport (e.g., "Pedro"), and the action is sport-specific, assume **implausible** unless context confirms otherwise.
+
+---
+
+### 6. **Examples of Difficult Cases**
+
+| Player & Sport           | Action/Term                      | Event/Context           | Plausible? | Reasoning Summary                                  |
+|-------------------------|---------------------------------|------------------------|------------|---------------------------------------------------|
+| T.Y. Hilton (Football)  | Threw a touchdown               | AFC Divisional Round   | Yes        | WR can throw TD in trick plays in football playoffs |
+| Bryce Harper (Baseball) | Back shoulder fade (football)  | -                      | No         | Term not from baseball                             |
+| Jordan Binnington (Hockey) | Scored in third period          | -                      | Yes        | Rare but possible for goalie to score             |
+| Pedro (Unclear)         | Struck out the side (baseball) | -                      | No         | Name not clearly baseball player                   |
+| Sean Couturier (Hockey) | Maradona'd the defender (soccer) | -                      | No         | Soccer move not in hockey                          |
+| Marvin Jones (Football) | Lost control of the puck (hockey) | -                      | No         | Puck not used in football                          |
+| Adam Thielen (Football) | Scored in added time (soccer)  | -                      | No         | Added time is soccer term                          |
+| Nikola Jokic (Basketball) | Nutmegged the defender (soccer) | -                      | No         | Nutmeg is soccer term                              |
+| Michael Porter Jr. (Basketball) | Called for the screen (basketball) | -                      | Yes        | Screen is basketball term                          |
+| Cooper Kupp (Football)  | Scored in third period (hockey) | Stanley Cup             | No         | Event and term mismatch                            |
+
+---
+
+### 7. **Summary of Key Checks**
+
+- **Is the player’s sport consistent with the action?**  
+- **Is the terminology correct for the sport?**  
+- **Is the event or competition appropriate for the sport?**  
+- **Are rare or trick plays plausible within the player’s sport?**  
+- **Avoid mixing terms from different sports unless justified by rare plays within the same sport.**
+
+---
+
+Use this cheat sheet to quickly evaluate the plausibility of sentences involving sports players, actions, and events, especially for challenging or ambiguous cases.
+
+Follow the format of the examples below in your response.
+
+Question: Is the following sentence plausible? "Norman Powell committed a blocking foul."
+Reasoning: Let's think step by step. Norman Powell is a professional basketball player. Committing a blocking foul is a common occurrence in basketball. So the answer is yes.
+Answer: yes
+###
+Question: Is the following sentence plausible? "Josh Allen caught the screen pass."
+Reasoning: Let's think step by step. Josh Allen is an American football player who plays quarterback, but quarterbacks can occasionally catch passes, including screen passes, in trick plays. So the answer is yes.
+Answer: yes

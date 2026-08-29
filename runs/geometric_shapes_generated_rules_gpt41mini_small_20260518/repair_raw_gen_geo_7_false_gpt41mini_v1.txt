@@ -1,0 +1,25 @@
+```json
+{
+  "rules": [
+    {
+      "id": "gen_geo_7_false_gpt41mini_repair_v2",
+      "task": "geometric_shapes",
+      "routing_key": [
+        7,
+        false
+      ],
+      "rule": "If the SVG path has exactly 6 effective vertices, counting only the initial M and subsequent L commands but excluding the final closing L if it repeats the initial M coordinate, and the path is closed (the final coordinate equals the initial M coordinate), then classify the shape as hexagon (C).",
+      "use_when": "partition_key is (7, False) and effective_vertices == 6 and path is closed",
+      "do_not_use_when": "effective_vertices != 6 or path is not closed or partition_key != (7, False)",
+      "check": "Count the number of vertices by including the initial M command and all L commands except the last L if it duplicates the initial M coordinate. Confirm the path is closed by verifying the final coordinate equals the initial M coordinate. If and only if the count of effective vertices is exactly 6 and the path is closed, output the VERDICT hexagon (C). Otherwise, do not apply this rule.",
+      "micro_example": "Input: <path d='M 26,23 L 19,16 L 40,74 L 83,64 L 91,38 L 34,12 L 26,23'/> has 6 vertices and is closed, so output hexagon (C).",
+      "source_of_candidate": "generated_from_failure_audit",
+      "generator_model": "openai/gpt-4.1-mini",
+      "target_partition": "(7, False)",
+      "observed_failure_gold_labels": [
+        "(C)"
+      ]
+    }
+  ]
+}
+```

@@ -1,0 +1,21 @@
+{
+  "task": "object_counting",
+  "protegi_run_dir": "<PROTEGI_WORKDIR>/runs/object_counting",
+  "n_test_items": 100,
+  "n_train_items": 150,
+  "n_llm_calls_audited": 7370,
+  "n_docs_audited": 14805,
+  "test_item_matches (must be 0)": 0,
+  "train_test_key_overlap (must be 0)": 0,
+  "detector_sanity_train_item_matches (must be > 0)": 17996,
+  "examples": [],
+  "artifact_sha256": {
+    "<PROTEGI_WORKDIR>/seeds/object_counting_seed_prompt.md": "81f84bc85e87c642ff82fa037f7e35517e4074809cebe76cb96055b9a3e566f6",
+    "<PROTEGI_WORKDIR>/data/object_counting/train.jsonl": "6768199f5cfd69205df06058068329b29daa92d0a1bf6c62810dde9af92149c5",
+    "<PROTEGI_WORKDIR>/runs/object_counting/best_candidate.md": "6e026cc8e622e9e94291db08020e5a5386e0c7bec2e9b459770ccf3987947794",
+    "<PROTEGI_WORKDIR>/runs/object_counting/optimized_cheatsheet.txt": "6cb2e69dc9e1cd3a12efae6f0b1a1897277c2340a110a0729824e7bf9f34904f",
+    "<PROTEGI_WORKDIR>/runs/object_counting/results.txt": "363e3127bc904d8dbfad412cf2ddf9d3896b9d16699adfc991d27bd612c5be7a",
+    "<REPO>/baselines/protegi/object_counting/optimized_prompt.txt": "6cb2e69dc9e1cd3a12efae6f0b1a1897277c2340a110a0729824e7bf9f34904f",
+    "<REPO>/baselines/protegi/object_counting/seed_prompt.txt": "809ab7beaf067d61c24f24dbf7c7f35c57f6726bad8e92dda05c8746f4319637"
+  }
+}

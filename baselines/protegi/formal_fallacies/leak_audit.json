@@ -1,0 +1,21 @@
+{
+  "task": "formal_fallacies",
+  "protegi_run_dir": "<PROTEGI_WORKDIR>/runs/formal_fallacies",
+  "n_test_items": 100,
+  "n_train_items": 150,
+  "n_llm_calls_audited": 7469,
+  "n_docs_audited": 15007,
+  "test_item_matches (must be 0)": 0,
+  "train_test_key_overlap (must be 0)": 0,
+  "detector_sanity_train_item_matches (must be > 0)": 8162,
+  "examples": [],
+  "artifact_sha256": {
+    "<PROTEGI_WORKDIR>/seeds/formal_fallacies_seed_prompt.md": "ce38e2e050bcf34293c3a4715b13bdf32428a028152019413217b2d1b1bfa160",
+    "<PROTEGI_WORKDIR>/data/formal_fallacies/train.jsonl": "e3fdff486065baea8a96fe4a0959bced280a3925b77482d7827c7e3539a93a49",
+    "<PROTEGI_WORKDIR>/runs/formal_fallacies/best_candidate.md": "adb46be8a5e7b960ae7a1d2cd3e96b6d4f4077bc851e0e567836f3b5dbc362b9",
+    "<PROTEGI_WORKDIR>/runs/formal_fallacies/optimized_cheatsheet.txt": "c19f8e639c7f4aea592f57880ee5faa52ab16b7c98de466b63f457e36aeeddef",
+    "<PROTEGI_WORKDIR>/runs/formal_fallacies/results.txt": "669549dc07901d54a7019088c676a656183fc43be3d5a1837a93f6724a2f6e7e",
+    "<REPO>/baselines/protegi/formal_fallacies/optimized_prompt.txt": "c19f8e639c7f4aea592f57880ee5faa52ab16b7c98de466b63f457e36aeeddef",
+    "<REPO>/baselines/protegi/formal_fallacies/seed_prompt.txt": "43a513be75a0d05b55164ea4ce9ced4bc10e92510a1a3b4033f81896a8b9f197"
+  }
+}

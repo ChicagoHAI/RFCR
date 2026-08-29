@@ -1,0 +1,25 @@
+```json
+{
+  "rules": [
+    {
+      "id": "gen_geo_9_false_gpt41mini_repair_v2",
+      "task": "geometric_shapes",
+      "routing_key": [
+        9,
+        false
+      ],
+      "rule": "If the partition_key is (9, False), and the SVG path has exactly 8 line vertices (n_l=8) excluding the closing line if it repeats the starting M coordinate, no arc commands (n_a=0), and the path is closed (the last L coordinate equals the first M coordinate), then predict (F) octagon.",
+      "use_when": "partition_key == (9, False) and n_l == 8 and n_a == 0 and path is closed",
+      "do_not_use_when": "n_l != 8 or n_a > 0 or path is not closed",
+      "check": "Count the number of L commands excluding the closing L if it repeats the starting M coordinate. Confirm this count is exactly 8. Confirm no arc commands (A) are present. Confirm the path is closed by verifying the last L coordinate equals the first M coordinate. If all conditions are met, output the final VERDICT: (F) octagon.",
+      "micro_example": "Input: <path d='M 95.20,70.83 L 87.79,78.67 L 75.59,79.89 L 69.02,71.72 L 67.78,63.84 L 72.64,57.51 L 82.81,55.78 L 93.46,60.66 L 95.20,70.83'/> Output: (F) octagon",
+      "source_of_candidate": "generated_from_failure_audit",
+      "generator_model": "openai/gpt-4.1-mini",
+      "target_partition": "(9, False)",
+      "observed_failure_gold_labels": [
+        "(F)"
+      ]
+    }
+  ]
+}
+```

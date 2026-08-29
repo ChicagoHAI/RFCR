@@ -1,0 +1,123 @@
+Cheat Sheet for Solving Truth/Lie Chain Problems (Focus on Difficult Cases)
+
+---
+
+### Core Principles
+
+1. **Initial Known Fact**: Start with the given fact about the first person (truth-teller or liar). This is your anchor.
+
+2. **Evaluating Claims**:
+   - If a person **tells the truth**, their statement about another person’s truthfulness or lying is **correct**.
+   - If a person **lies**, their statement about another person’s truthfulness or lying is **incorrect**.
+
+3. **Chain Reasoning**:
+   - Move step-by-step through the chain of claims.
+   - At each step, use the previous person's truth status to evaluate the current claim.
+   - Update the current person's truth status accordingly.
+
+---
+
+### Handling Contradictory or Complex Chains
+
+- **When a person says another "lies" or "tells the truth"**:
+  - If the speaker is truthful, the claim matches the actual status of the person they talk about.
+  - If the speaker lies, the claim is the opposite of the actual status.
+
+- **Multiple layers of claims**:
+  - Carefully track each person's truth status.
+  - Use a table or list to keep track of each person’s status as you progress.
+  - Re-check previous conclusions if contradictions arise.
+
+---
+
+### Specific Tips for Difficult Examples
+
+1. **Long Chains with Alternating Truth and Lies**:
+   - Alternate truth and lie statuses often appear.
+   - Example pattern: Truth → Truth → Lie → Truth → Lie ...
+   - Use the initial known fact to propagate truth/lie status down the chain.
+
+2. **Claims About Claims**:
+   - When a person says another "tells the truth" or "lies," and that person is also making a claim about a third person, carefully evaluate each link.
+   - Example: A says B tells the truth; B says C lies; C says D tells the truth.
+   - Evaluate A → B → C → D stepwise.
+
+3. **When the Last Person Claims the Previous Person Lies**:
+   - If the previous person is truthful, the last person’s claim is false → last person lies.
+   - If the previous person lies, the last person’s claim is true → last person tells the truth.
+
+4. **When the First Person is a Liar**:
+   - The first claim about them is false.
+   - This flips the interpretation of the first claim and affects the entire chain.
+
+5. **When a Person Claims Another "Tells the Truth" but That Person is a Liar**:
+   - The claim is false → the speaker lies.
+   - This can cause a cascade of lies/truths down the chain.
+
+6. **When a Person Claims Another "Lies" but That Person is Truthful**:
+   - The claim is false → the speaker lies.
+   - This is a key point to identify liars in the chain.
+
+---
+
+### Step-by-Step Method
+
+1. **Identify the initial truth status** (given in the question).
+
+2. **For each person in the chain**:
+   - Read their claim about the previous person.
+   - If the previous person’s status is known:
+     - If the claim matches the previous person’s status, the current person tells the truth.
+     - If the claim contradicts the previous person’s status, the current person lies.
+   - If the previous person’s status is unknown, wait until it is determined.
+
+3. **Continue until the last person’s status is determined**.
+
+4. **Answer the question about the last person’s truthfulness**.
+
+---
+
+### Common Pitfalls to Avoid
+
+- **Assuming all claims are true without checking the speaker’s status**.
+- **Mixing up who is being talked about in the claim**.
+- **Losing track of the chain order** — always follow the chain in the order given.
+- **Forgetting to invert the claim if the speaker is a liar**.
+
+---
+
+### Example Mini-Template for Reasoning
+
+- Given: Person A is truthful/liar.
+- Person B says A tells the truth/lies.
+- Evaluate B’s claim based on A’s status → B is truthful/liar.
+- Person C says B tells the truth/lies.
+- Evaluate C’s claim based on B’s status → C is truthful/liar.
+- ...
+- Continue until the last person.
+
+---
+
+### Summary
+
+- Always start from the known fact.
+- Evaluate each claim based on the speaker’s truth status.
+- Use logical inversion when the speaker is a liar.
+- Track each person’s status carefully.
+- The last person’s truth status answers the question.
+
+---
+
+This cheat sheet focuses on the detailed logical steps and inversion rules needed to solve the most challenging truth/lie chain problems effectively.
+
+Follow the format of the examples below in your response.
+
+Question: Question: Ryan tells the truth. Helene says Ryan tells the truth. Kandi says Helene tells the truth. Inga says Kandi tells the truth. Delbert says Inga lies. Does Delbert tell the truth?
+Reasoning: Let's think step by step.  
+We are told that "Ryan tells the truth," so Ryan is a truth-teller. Next, "Helene says Ryan tells the truth" — since Ryan does tell the truth, Helene's claim is correct, so Helene tells the truth. Then, "Kandi says Helene tells the truth" — since Helene tells the truth, Kandi's claim is correct, so Kandi tells the truth. Next, "Inga says Kandi tells the truth" — since Kandi tells the truth, Inga's claim is correct, so Inga tells the truth. Finally, "Delbert says Inga lies" — since Inga tells the truth, Delbert's claim is incorrect, so Delbert lies. So the answer is No.
+Answer: No
+###
+Question: Question: Andree lies. Delfina says Andree lies. Jim says Delfina tells the truth. Gwenn says Jim lies. Delbert says Gwenn lies. Does Delbert tell the truth?
+Reasoning: Let's think step by step.
+We are told that "Andree lies," so Andree is a liar. We are then told that "Delfina says Andree lies" — since Andree does lie, Delfina's claim is correct, so Delfina tells the truth. Next, we are told that "Jim says Delfina tells the truth" — since Delfina tells the truth, Jim's claim is correct, so Jim tells the truth. We are then told that "Gwenn says Jim lies" — since Jim tells the truth, Gwenn's claim is incorrect, so Gwenn lies. Finally, we are told that "Delbert says Gwenn lies" — since Gwenn does lie, Delbert's claim is correct, so Delbert tells the truth. So the answer is Yes.
+Answer: Yes

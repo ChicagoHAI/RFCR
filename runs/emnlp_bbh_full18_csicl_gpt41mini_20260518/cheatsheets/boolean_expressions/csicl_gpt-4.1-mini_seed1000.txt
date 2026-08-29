@@ -1,0 +1,153 @@
+**Cheat Sheet for Evaluating Boolean Expressions with `not`, `and`, `or`**
+
+---
+
+### 1. **Operator Precedence and Evaluation Order**
+
+- **Brackets `( )`**: Always evaluate expressions inside brackets first.
+- **Operator precedence (highest to lowest):**  
+  `not` > `and` > `or`
+- **Associativity:**  
+  - `not` is unary, applies right to left (inside out).  
+  - `and` and `or` are left-associative (evaluate left to right).
+
+---
+
+### 2. **Handling Multiple `not`s in a Row**
+
+- Count the number of consecutive `not`s applied to a value:
+  - **Even number of `not`s**: cancels out, value remains the same.  
+    Example: `not not True` → `True`
+  - **Odd number of `not`s**: flips the value.  
+    Example: `not not not False` → `not (not (not False))` → flips once → `True`
+- When nested or chained, evaluate from innermost `not` outward.
+
+---
+
+### 3. **Parsing Ambiguous Expressions with Multiple `not`s and `and`**
+
+- Example: `False or not not not False and True`
+  - Evaluate `not`s first, **one by one** from innermost to outermost:
+    - `not False = True`
+    - `not not False = not (True) = False`
+    - `not not not False = not (False) = True`
+  - Then evaluate `and`:
+    - `True and True = True`
+  - Then evaluate `or`:
+    - `False or True = True`
+- **Key:** Do NOT group `not`s with `and` prematurely; apply `not`s fully before `and`.
+
+---
+
+### 4. **Complex Nested `not`s with Brackets**
+
+- When `not` applies to an expression in brackets, evaluate the bracket first, then apply `not`.
+- Example: `not not not not ( not False )`
+  - Evaluate inside bracket: `not False = True`
+  - Apply `not`s one by one:
+    - 1st `not True = False`
+    - 2nd `not False = True`
+    - 3rd `not True = False`
+    - 4th `not False = True`
+  - Result: `True`
+
+---
+
+### 5. **Expressions with Multiple `and` and `or`**
+
+- Evaluate all `not`s first.
+- Evaluate all `and`s from left to right.
+- Evaluate all `or`s from left to right.
+- Example: `True and not True or True and True`
+  - `not True = False`
+  - Evaluate `and`s:
+    - `True and False = False`
+    - `True and True = True`
+  - Expression becomes: `False or True`
+  - Evaluate `or`: `False or True = True`
+
+---
+
+### 6. **When `not` Applies to Compound Expressions**
+
+- `not (A or B)` means evaluate `A or B` first, then negate.
+- `not (A and B)` means evaluate `A and B` first, then negate.
+- Example: `not (True or False) or True`
+  - `True or False = True`
+  - `not True = False`
+  - `False or True = True`
+
+---
+
+### 7. **Common Pitfalls**
+
+- **Do not shortcut `not` evaluation:** Always fully evaluate nested `not`s stepwise.
+- **Do not mix `not` with `and` or `or` without respecting precedence:** `not` applies before `and` and `or`.
+- **Beware of multiple `not`s without brackets:** Evaluate from innermost to outermost.
+- **When in doubt, rewrite expression with explicit parentheses to clarify order.**
+
+---
+
+### 8. **Step-by-Step Approach**
+
+1. **Identify and evaluate all bracketed expressions first.**
+2. **Count and evaluate consecutive `not`s carefully, from innermost to outermost.**
+3. **Evaluate all `and` operations from left to right.**
+4. **Evaluate all `or` operations from left to right.**
+5. **Substitute intermediate results back into the expression stepwise.**
+
+---
+
+### 9. **Example Walkthrough**
+
+Expression: `False or not not not False and True`
+
+- Step 1: Evaluate `not`s on `False`:
+  - `not False = True`
+  - `not not False = not (True) = False`
+  - `not not not False = not (False) = True`
+- Step 2: Evaluate `and`:
+  - `True and True = True`
+- Step 3: Evaluate `or`:
+  - `False or True = True`
+
+---
+
+### 10. **Summary Table for Multiple `not`s**
+
+| Number of `not`s | Result on True | Result on False |
+|------------------|----------------|-----------------|
+| 1                | False          | True            |
+| 2                | True           | False           |
+| 3                | False          | True            |
+| 4                | True           | False           |
+| 5                | False          | True            |
+| 6                | True           | False           |
+| 7                | False          | True            |
+
+---
+
+Use this cheat sheet to carefully evaluate complex boolean expressions involving multiple `not`s, `and`s, `or`s, and nested brackets. Always proceed stepwise, respecting operator precedence and associativity.
+
+Follow the format of the examples below in your response.
+
+Question: ( True ) and True and not True is
+Reasoning: Let's think step by step.
+Remember that (i) expressions inside brackets are always evaluated first and that (ii) the order of operations from highest priority to lowest priority is "not", "and", "or", respectively.
+We first simplify this expression "Z" as follows: "Z = ( True ) and True and not True".
+First, evaluate the "not" operation: not True = False.
+Now substitute back: Z = True and True and False.
+Next, evaluate the "and" operations from left to right: True and True = True, then True and False = False.
+So the answer is False.
+Answer: False
+###
+Question: False or not ( True ) and True is
+Reasoning: Let's think step by step.
+Remember that (i) expressions inside brackets are always evaluated first and that (ii) the order of operations from highest priority to lowest priority is "not", "and", "or", respectively.
+We first simplify this expression "Z" as follows: "Z = False or not ( True ) and True".
+First, evaluate the expression inside the brackets: not ( True ) = not True = False.
+Now substitute back: Z = False or False and True.
+Next, evaluate the "and": False and True = False.
+Now substitute back: Z = False or False.
+Finally, evaluate the "or": False or False = False. So the answer is False.
+Answer: False

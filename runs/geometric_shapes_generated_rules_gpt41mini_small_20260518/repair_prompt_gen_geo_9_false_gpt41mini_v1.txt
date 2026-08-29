@@ -1,0 +1,43 @@
+
+You are repairing one generated SF-CR rule for BBH geometric_shapes.
+
+Keep the same target partition and core rule family. The prior candidate had real fixes but regressed baseline-correct items. Repair only wording/boundary/check so the model follows the direct shape decision more reliably. Prefer explicit final VERDICT instructions.
+
+Original candidate JSON:
+{
+  "id": "gen_geo_9_false_gpt41mini_v1",
+  "task": "geometric_shapes",
+  "routing_key": [
+    9,
+    false
+  ],
+  "rule": "If the partition_key is (9, False), and the SVG path has exactly 8 line vertices (n_l=8), no arc commands (n_a=0), and the path is closed (the last L coordinate equals the first M coordinate), then predict (F) octagon.",
+  "use_when": "partition_key == (9, False) and n_l == 8 and n_a == 0 and path is closed",
+  "do_not_use_when": "n_l != 8 or n_a > 0 or path is not closed",
+  "check": "Count the number of L commands (excluding the closing L if it repeats the starting M coordinate). Confirm it is exactly 8. Confirm no arc commands (A) are present. Confirm the path is closed by checking if the last L coordinate equals the first M coordinate. If all true, return (F) octagon.",
+  "micro_example": "Input: <path d='M 95.20,70.83 L 87.79,78.67 L 75.59,79.89 L 69.02,71.72 L 67.78,63.84 L 72.64,57.51 L 82.81,55.78 L 93.46,60.66 L 95.20,70.83'/> Output: (F) octagon",
+  "source_of_candidate": "generated_from_failure_audit",
+  "generator_model": "openai/gpt-4.1-mini",
+  "target_partition": "(9, False)",
+  "observed_failure_gold_labels": [
+    "(F)"
+  ]
+}
+
+Examples fixed by the rule:
+- geometric_shapes_0159: baseline=(B) candidate=(F) gold=(F) input=This SVG path element <path d="M 56.95,54.25 L 49.39,55.67 M 49.39,55.67 L 41.35,49.14 L 39.83,39.99 L 43.92,28.59 L 57.65,29.03 L 64.49,36.58 L 63.02,49.10 M 63.02,49.10 L 56.95,54.25"/> draws a Options: (A) circle (B) heptagon (C) hexagon
+- geometric_shapes_0168: baseline=(B) candidate=(F) gold=(F) input=This SVG path element <path d="M 95.20,70.83 L 87.79,78.67 L 75.59,79.89 L 69.02,71.72 L 67.78,63.84 L 72.64,57.51 L 82.81,55.78 L 93.46,60.66 L 95.20,70.83"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octag
+- geometric_shapes_0171: baseline=(B) candidate=(F) gold=(F) input=This SVG path element <path d="M 38.00,68.00 L 32.00,59.00 L 36.00,45.00 L 47.00,38.00 L 64.00,37.00 L 71.00,55.00 L 65.00,68.00 L 48.00,73.00 L 38.00,68.00"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octag
+- geometric_shapes_0185: baseline=(B) candidate=(F) gold=(F) input=This SVG path element <path d="M 38.00,62.00 L 47.00,58.00 L 54.00,49.00 L 54.00,60.00 L 65.00,62.00 L 62.00,69.00 L 53.00,73.00 L 42.00,71.00 L 38.00,62.00"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octag
+
+Examples regressed by the rule, which must remain correct:
+- geometric_shapes_0167: baseline=(F) candidate=(E) gold=(F) input=This SVG path element <path d="M 42.84,45.37 L 48.55,45.35 M 48.55,45.35 L 49.27,51.61 L 55.53,50.89 L 56.80,56.46 M 56.80,56.46 L 51.67,61.48 M 51.67,61.48 L 42.62,59.98 L 39.66,50.81 L 42.84,45.37"/> draws a Options: (A) circle (B) heptag
+
+Return JSON only with one rule object inside {"rules": [...]}.
+Requirements:
+- id must be "gen_geo_9_false_gpt41mini_repair_v2".
+- task must be geometric_shapes.
+- routing_key must remain [9, False].
+- Do not broaden activation.
+- The CHECK must end with an explicit instruction to output the correct VERDICT option for this partition.
+- Do not introduce uncertainty words like usually, likely, may, or consider.

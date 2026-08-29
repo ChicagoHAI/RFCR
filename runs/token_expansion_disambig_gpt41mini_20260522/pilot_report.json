@@ -1,0 +1,1088 @@
+{
+  "output_dir": "runs/token_expansion_disambig_gpt41mini_20260522",
+  "generated_rules": [
+    {
+      "id": "gen_disambig_specific_family_v1_1",
+      "task": "disambiguation_qa",
+      "rule": "When the pronoun refers to who better understood or knew something, assign it to the subject if the verb is 'corrected' or 'warned' and the subject is agent of understanding.",
+      "use_when": "Sentence contains verbs like 'corrected', 'warned', or 'informed' followed by 'because' + pronoun + 'better understood' or similar.",
+      "do_not_use_when": "Sentence contains multiple agents with equal knowledge or no clear agent of understanding.",
+      "check": "Assign pronoun to subject (first noun) when sentence states subject corrected/warned because pronoun better understood something.",
+      "activation_cues": [
+        "corrected because she better understood",
+        "warned ... because they better understood",
+        "informed ... because he better understood"
+      ],
+      "negative_cues": [
+        "ambiguous",
+        "both understood"
+      ],
+      "micro_example": "The secretary corrected the developer because she better understood the problem. => (A) The secretary understood",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini"
+    },
+    {
+      "id": "gen_disambig_specific_family_v1_2",
+      "task": "disambiguation_qa",
+      "rule": "When the pronoun refers to who needed or should do an action (e.g., make payments, reply), assign it to the indirect object or recipient if the verb implies obligation or necessity.",
+      "use_when": "Sentence contains verbs like 'sent', 'informed', 'bought' with 'because' + pronoun + 'needed' or 'should' + verb.",
+      "do_not_use_when": "Sentence is ambiguous about who has the obligation or need.",
+      "check": "Assign pronoun to the indirect object or recipient of the action when obligation or need is expressed.",
+      "activation_cues": [
+        "because he needed",
+        "because she needed",
+        "because they needed",
+        "didn't reply",
+        "should floss"
+      ],
+      "negative_cues": [
+        "ambiguous",
+        "both needed"
+      ],
+      "micro_example": "The CEO bought the accountant a car because he needed one. => (B) The accountant needed a car",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini"
+    },
+    {
+      "id": "gen_disambig_specific_family_v1_3",
+      "task": "disambiguation_qa",
+      "rule": "When the pronoun refers to possession or ownership of a thing mentioned immediately before, assign it to the possessor noun closest to the possessed noun.",
+      "use_when": "Sentence contains possessive constructions or references to objects owned by one of the nouns.",
+      "do_not_use_when": "Sentence contains ambiguous or shared ownership without further cues.",
+      "check": "Assign pronoun to the noun closest to the possessed object when possession is explicit.",
+      "activation_cues": [
+        "her car",
+        "his office",
+        "their microscope",
+        "her grading policy"
+      ],
+      "negative_cues": [
+        "ambiguous",
+        "shared ownership"
+      ],
+      "micro_example": "The manager asked the employee to not forget her car. => (C) Ambiguous (if no clear cue), else assign to closest possessor",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini"
+    },
+    {
+      "id": "gen_disambig_specific_family_v1_4",
+      "task": "disambiguation_qa",
+      "rule": "When the pronoun refers to who performed an action described by a verb in a relative clause or subordinate clause, assign it to the subject of that clause if explicit.",
+      "use_when": "Sentence contains relative or subordinate clauses with pronouns referring to the subject of the clause.",
+      "do_not_use_when": "Sentence contains multiple subjects or ambiguous clause attachment.",
+      "check": "Assign pronoun to the subject of the subordinate clause when verb action is described explicitly.",
+      "activation_cues": [
+        "after she broke",
+        "because he wrote",
+        "before she sent"
+      ],
+      "negative_cues": [
+        "ambiguous",
+        "multiple subjects"
+      ],
+      "micro_example": "The driver yelled at the tailor after she broke a window. => (B) The tailor broke a window",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini"
+    },
+    {
+      "id": "gen_disambig_specific_family_v1_5",
+      "task": "disambiguation_qa",
+      "rule": "When the pronoun refers to a person who is the recipient of an action and the pronoun is the object of a verb or preposition, assign it to the indirect object or recipient noun.",
+      "use_when": "Sentence contains verbs with indirect objects and pronouns referring to the recipient.",
+      "do_not_use_when": "Sentence is ambiguous about recipient or agent roles.",
+      "check": "Assign pronoun to the indirect object or recipient noun when pronoun is object of verb/preposition.",
+      "activation_cues": [
+        "gave her",
+        "helped him",
+        "told them"
+      ],
+      "negative_cues": [
+        "ambiguous",
+        "both possible recipients"
+      ],
+      "micro_example": "The carpenter made a desk for the clerk and gave her a discount. => (B) Gave the clerk a discount",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini"
+    },
+    {
+      "id": "gen_disambig_specific_family_v1_6",
+      "task": "disambiguation_qa",
+      "rule": "When the pronoun refers to who possesses a quality or attribute mentioned, assign it to the noun whose role or context semantically licenses that attribute.",
+      "use_when": "Sentence contains attributes like 'culinary training', 'history of substance abuse', 'rare skin condition' linked to one noun by context.",
+      "do_not_use_when": "Sentence contains joint possession or ambiguous attribution.",
+      "check": "Assign pronoun to noun whose role fits the attribute mentioned.",
+      "activation_cues": [
+        "culinary training",
+        "history of substance abuse",
+        "rare skin condition"
+      ],
+      "negative_cues": [
+        "ambiguous",
+        "both have attribute"
+      ],
+      "micro_example": "The customer and the chef discussed her culinary training. => (B) It was the chef's culinary training",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini"
+    }
+  ],
+  "candidate_summaries": [
+    {
+      "label": "rule1",
+      "task": "disambiguation_qa",
+      "model_score": "openai/gpt-4.1-mini",
+      "n_items": 100,
+      "baseline_correct": 56,
+      "baseline_accuracy": 0.56,
+      "candidate_correct": 59,
+      "candidate_accuracy": 0.59,
+      "fixed_count": 11,
+      "regression_count": 8,
+      "net_count": 3,
+      "parse_error_count": 0,
+      "fixed_item_ids": [
+        "disambiguation_qa_0160",
+        "disambiguation_qa_0174",
+        "disambiguation_qa_0182",
+        "disambiguation_qa_0183",
+        "disambiguation_qa_0196",
+        "disambiguation_qa_0197",
+        "disambiguation_qa_0212",
+        "disambiguation_qa_0213",
+        "disambiguation_qa_0226",
+        "disambiguation_qa_0234",
+        "disambiguation_qa_0238"
+      ],
+      "regressed_item_ids": [
+        "disambiguation_qa_0161",
+        "disambiguation_qa_0166",
+        "disambiguation_qa_0167",
+        "disambiguation_qa_0193",
+        "disambiguation_qa_0209",
+        "disambiguation_qa_0215",
+        "disambiguation_qa_0217",
+        "disambiguation_qa_0242"
+      ],
+      "parse_error_item_ids": [],
+      "candidate_id": "gen_disambig_specific_family_v1_1",
+      "rule": {
+        "id": "gen_disambig_specific_family_v1_1",
+        "task": "disambiguation_qa",
+        "rule": "When the pronoun refers to who better understood or knew something, assign it to the subject if the verb is 'corrected' or 'warned' and the subject is agent of understanding.",
+        "use_when": "Sentence contains verbs like 'corrected', 'warned', or 'informed' followed by 'because' + pronoun + 'better understood' or similar.",
+        "do_not_use_when": "Sentence contains multiple agents with equal knowledge or no clear agent of understanding.",
+        "check": "Assign pronoun to subject (first noun) when sentence states subject corrected/warned because pronoun better understood something.",
+        "activation_cues": [
+          "corrected because she better understood",
+          "warned ... because they better understood",
+          "informed ... because he better understood"
+        ],
+        "negative_cues": [
+          "ambiguous",
+          "both understood"
+        ],
+        "micro_example": "The secretary corrected the developer because she better understood the problem. => (A) The secretary understood",
+        "source_of_candidate": "generated_from_failure_logs",
+        "generator_model": "openai/gpt-4.1-mini"
+      }
+    },
+    {
+      "label": "rule2",
+      "task": "disambiguation_qa",
+      "model_score": "openai/gpt-4.1-mini",
+      "n_items": 100,
+      "baseline_correct": 56,
+      "baseline_accuracy": 0.56,
+      "candidate_correct": 72,
+      "candidate_accuracy": 0.72,
+      "fixed_count": 20,
+      "regression_count": 4,
+      "net_count": 16,
+      "parse_error_count": 0,
+      "fixed_item_ids": [
+        "disambiguation_qa_0153",
+        "disambiguation_qa_0162",
+        "disambiguation_qa_0171",
+        "disambiguation_qa_0172",
+        "disambiguation_qa_0174",
+        "disambiguation_qa_0178",
+        "disambiguation_qa_0182",
+        "disambiguation_qa_0183",
+        "disambiguation_qa_0185",
+        "disambiguation_qa_0190",
+        "disambiguation_qa_0196",
+        "disambiguation_qa_0205",
+        "disambiguation_qa_0212",
+        "disambiguation_qa_0219",
+        "disambiguation_qa_0220",
+        "disambiguation_qa_0222",
+        "disambiguation_qa_0226",
+        "disambiguation_qa_0230",
+        "disambiguation_qa_0232",
+        "disambiguation_qa_0247"
+      ],
+      "regressed_item_ids": [
+        "disambiguation_qa_0157",
+        "disambiguation_qa_0167",
+        "disambiguation_qa_0193",
+        "disambiguation_qa_0194"
+      ],
+      "parse_error_item_ids": [],
+      "candidate_id": "gen_disambig_specific_family_v1_2",
+      "rule": {
+        "id": "gen_disambig_specific_family_v1_2",
+        "task": "disambiguation_qa",
+        "rule": "When the pronoun refers to who needed or should do an action (e.g., make payments, reply), assign it to the indirect object or recipient if the verb implies obligation or necessity.",
+        "use_when": "Sentence contains verbs like 'sent', 'informed', 'bought' with 'because' + pronoun + 'needed' or 'should' + verb.",
+        "do_not_use_when": "Sentence is ambiguous about who has the obligation or need.",
+        "check": "Assign pronoun to the indirect object or recipient of the action when obligation or need is expressed.",
+        "activation_cues": [
+          "because he needed",
+          "because she needed",
+          "because they needed",
+          "didn't reply",
+          "should floss"
+        ],
+        "negative_cues": [
+          "ambiguous",
+          "both needed"
+        ],
+        "micro_example": "The CEO bought the accountant a car because he needed one. => (B) The accountant needed a car",
+        "source_of_candidate": "generated_from_failure_logs",
+        "generator_model": "openai/gpt-4.1-mini"
+      }
+    },
+    {
+      "label": "rule3",
+      "task": "disambiguation_qa",
+      "model_score": "openai/gpt-4.1-mini",
+      "n_items": 100,
+      "baseline_correct": 56,
+      "baseline_accuracy": 0.56,
+      "candidate_correct": 55,
+      "candidate_accuracy": 0.55,
+      "fixed_count": 8,
+      "regression_count": 9,
+      "net_count": -1,
+      "parse_error_count": 0,
+      "fixed_item_ids": [
+        "disambiguation_qa_0178",
+        "disambiguation_qa_0181",
+        "disambiguation_qa_0182",
+        "disambiguation_qa_0196",
+        "disambiguation_qa_0197",
+        "disambiguation_qa_0205",
+        "disambiguation_qa_0212",
+        "disambiguation_qa_0232"
+      ],
+      "regressed_item_ids": [
+        "disambiguation_qa_0157",
+        "disambiguation_qa_0166",
+        "disambiguation_qa_0173",
+        "disambiguation_qa_0191",
+        "disambiguation_qa_0194",
+        "disambiguation_qa_0216",
+        "disambiguation_qa_0218",
+        "disambiguation_qa_0229",
+        "disambiguation_qa_0243"
+      ],
+      "parse_error_item_ids": [],
+      "candidate_id": "gen_disambig_specific_family_v1_3",
+      "rule": {
+        "id": "gen_disambig_specific_family_v1_3",
+        "task": "disambiguation_qa",
+        "rule": "When the pronoun refers to possession or ownership of a thing mentioned immediately before, assign it to the possessor noun closest to the possessed noun.",
+        "use_when": "Sentence contains possessive constructions or references to objects owned by one of the nouns.",
+        "do_not_use_when": "Sentence contains ambiguous or shared ownership without further cues.",
+        "check": "Assign pronoun to the noun closest to the possessed object when possession is explicit.",
+        "activation_cues": [
+          "her car",
+          "his office",
+          "their microscope",
+          "her grading policy"
+        ],
+        "negative_cues": [
+          "ambiguous",
+          "shared ownership"
+        ],
+        "micro_example": "The manager asked the employee to not forget her car. => (C) Ambiguous (if no clear cue), else assign to closest possessor",
+        "source_of_candidate": "generated_from_failure_logs",
+        "generator_model": "openai/gpt-4.1-mini"
+      }
+    },
+    {
+      "label": "rule4",
+      "task": "disambiguation_qa",
+      "model_score": "openai/gpt-4.1-mini",
+      "n_items": 100,
+      "baseline_correct": 56,
+      "baseline_accuracy": 0.56,
+      "candidate_correct": 66,
+      "candidate_accuracy": 0.66,
+      "fixed_count": 14,
+      "regression_count": 4,
+      "net_count": 10,
+      "parse_error_count": 0,
+      "fixed_item_ids": [
+        "disambiguation_qa_0160",
+        "disambiguation_qa_0172",
+        "disambiguation_qa_0174",
+        "disambiguation_qa_0178",
+        "disambiguation_qa_0181",
+        "disambiguation_qa_0182",
+        "disambiguation_qa_0183",
+        "disambiguation_qa_0212",
+        "disambiguation_qa_0214",
+        "disambiguation_qa_0222",
+        "disambiguation_qa_0226",
+        "disambiguation_qa_0227",
+        "disambiguation_qa_0232",
+        "disambiguation_qa_0238"
+      ],
+      "regressed_item_ids": [
+        "disambiguation_qa_0191",
+        "disambiguation_qa_0195",
+        "disambiguation_qa_0200",
+        "disambiguation_qa_0229"
+      ],
+      "parse_error_item_ids": [],
+      "candidate_id": "gen_disambig_specific_family_v1_4",
+      "rule": {
+        "id": "gen_disambig_specific_family_v1_4",
+        "task": "disambiguation_qa",
+        "rule": "When the pronoun refers to who performed an action described by a verb in a relative clause or subordinate clause, assign it to the subject of that clause if explicit.",
+        "use_when": "Sentence contains relative or subordinate clauses with pronouns referring to the subject of the clause.",
+        "do_not_use_when": "Sentence contains multiple subjects or ambiguous clause attachment.",
+        "check": "Assign pronoun to the subject of the subordinate clause when verb action is described explicitly.",
+        "activation_cues": [
+          "after she broke",
+          "because he wrote",
+          "before she sent"
+        ],
+        "negative_cues": [
+          "ambiguous",
+          "multiple subjects"
+        ],
+        "micro_example": "The driver yelled at the tailor after she broke a window. => (B) The tailor broke a window",
+        "source_of_candidate": "generated_from_failure_logs",
+        "generator_model": "openai/gpt-4.1-mini"
+      }
+    },
+    {
+      "label": "rule5",
+      "task": "disambiguation_qa",
+      "model_score": "openai/gpt-4.1-mini",
+      "n_items": 100,
+      "baseline_correct": 56,
+      "baseline_accuracy": 0.56,
+      "candidate_correct": 66,
+      "candidate_accuracy": 0.66,
+      "fixed_count": 14,
+      "regression_count": 4,
+      "net_count": 10,
+      "parse_error_count": 0,
+      "fixed_item_ids": [
+        "disambiguation_qa_0154",
+        "disambiguation_qa_0172",
+        "disambiguation_qa_0174",
+        "disambiguation_qa_0178",
+        "disambiguation_qa_0182",
+        "disambiguation_qa_0190",
+        "disambiguation_qa_0205",
+        "disambiguation_qa_0212",
+        "disambiguation_qa_0214",
+        "disambiguation_qa_0220",
+        "disambiguation_qa_0222",
+        "disambiguation_qa_0226",
+        "disambiguation_qa_0230",
+        "disambiguation_qa_0232"
+      ],
+      "regressed_item_ids": [
+        "disambiguation_qa_0157",
+        "disambiguation_qa_0173",
+        "disambiguation_qa_0229",
+        "disambiguation_qa_0243"
+      ],
+      "parse_error_item_ids": [],
+      "candidate_id": "gen_disambig_specific_family_v1_5",
+      "rule": {
+        "id": "gen_disambig_specific_family_v1_5",
+        "task": "disambiguation_qa",
+        "rule": "When the pronoun refers to a person who is the recipient of an action and the pronoun is the object of a verb or preposition, assign it to the indirect object or recipient noun.",
+        "use_when": "Sentence contains verbs with indirect objects and pronouns referring to the recipient.",
+        "do_not_use_when": "Sentence is ambiguous about recipient or agent roles.",
+        "check": "Assign pronoun to the indirect object or recipient noun when pronoun is object of verb/preposition.",
+        "activation_cues": [
+          "gave her",
+          "helped him",
+          "told them"
+        ],
+        "negative_cues": [
+          "ambiguous",
+          "both possible recipients"
+        ],
+        "micro_example": "The carpenter made a desk for the clerk and gave her a discount. => (B) Gave the clerk a discount",
+        "source_of_candidate": "generated_from_failure_logs",
+        "generator_model": "openai/gpt-4.1-mini"
+      }
+    },
+    {
+      "label": "rule6",
+      "task": "disambiguation_qa",
+      "model_score": "openai/gpt-4.1-mini",
+      "n_items": 100,
+      "baseline_correct": 56,
+      "baseline_accuracy": 0.56,
+      "candidate_correct": 71,
+      "candidate_accuracy": 0.71,
+      "fixed_count": 27,
+      "regression_count": 12,
+      "net_count": 15,
+      "parse_error_count": 0,
+      "fixed_item_ids": [
+        "disambiguation_qa_0153",
+        "disambiguation_qa_0154",
+        "disambiguation_qa_0156",
+        "disambiguation_qa_0160",
+        "disambiguation_qa_0162",
+        "disambiguation_qa_0170",
+        "disambiguation_qa_0174",
+        "disambiguation_qa_0176",
+        "disambiguation_qa_0178",
+        "disambiguation_qa_0179",
+        "disambiguation_qa_0181",
+        "disambiguation_qa_0182",
+        "disambiguation_qa_0185",
+        "disambiguation_qa_0190",
+        "disambiguation_qa_0196",
+        "disambiguation_qa_0205",
+        "disambiguation_qa_0206",
+        "disambiguation_qa_0211",
+        "disambiguation_qa_0212",
+        "disambiguation_qa_0214",
+        "disambiguation_qa_0219",
+        "disambiguation_qa_0220",
+        "disambiguation_qa_0222",
+        "disambiguation_qa_0223",
+        "disambiguation_qa_0226",
+        "disambiguation_qa_0230",
+        "disambiguation_qa_0232"
+      ],
+      "regressed_item_ids": [
+        "disambiguation_qa_0150",
+        "disambiguation_qa_0151",
+        "disambiguation_qa_0157",
+        "disambiguation_qa_0158",
+        "disambiguation_qa_0173",
+        "disambiguation_qa_0193",
+        "disambiguation_qa_0194",
+        "disambiguation_qa_0198",
+        "disambiguation_qa_0218",
+        "disambiguation_qa_0228",
+        "disambiguation_qa_0229",
+        "disambiguation_qa_0243"
+      ],
+      "parse_error_item_ids": [],
+      "candidate_id": "gen_disambig_specific_family_v1_6",
+      "rule": {
+        "id": "gen_disambig_specific_family_v1_6",
+        "task": "disambiguation_qa",
+        "rule": "When the pronoun refers to who possesses a quality or attribute mentioned, assign it to the noun whose role or context semantically licenses that attribute.",
+        "use_when": "Sentence contains attributes like 'culinary training', 'history of substance abuse', 'rare skin condition' linked to one noun by context.",
+        "do_not_use_when": "Sentence contains joint possession or ambiguous attribution.",
+        "check": "Assign pronoun to noun whose role fits the attribute mentioned.",
+        "activation_cues": [
+          "culinary training",
+          "history of substance abuse",
+          "rare skin condition"
+        ],
+        "negative_cues": [
+          "ambiguous",
+          "both have attribute"
+        ],
+        "micro_example": "The customer and the chef discussed her culinary training. => (B) It was the chef's culinary training",
+        "source_of_candidate": "generated_from_failure_logs",
+        "generator_model": "openai/gpt-4.1-mini"
+      }
+    }
+  ],
+  "feature_route_candidates": [
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_2",
+      "route_feature": "because_clause",
+      "activated_count": 27,
+      "fixed_count": 9,
+      "regression_count": 0,
+      "net_count": 9,
+      "fixed_item_ids": [
+        "disambiguation_qa_0171",
+        "disambiguation_qa_0172",
+        "disambiguation_qa_0174",
+        "disambiguation_qa_0182",
+        "disambiguation_qa_0190",
+        "disambiguation_qa_0196",
+        "disambiguation_qa_0205",
+        "disambiguation_qa_0212",
+        "disambiguation_qa_0226"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_2",
+      "route_feature": "pronoun_they",
+      "activated_count": 20,
+      "fixed_count": 6,
+      "regression_count": 0,
+      "net_count": 6,
+      "fixed_item_ids": [
+        "disambiguation_qa_0162",
+        "disambiguation_qa_0182",
+        "disambiguation_qa_0190",
+        "disambiguation_qa_0212",
+        "disambiguation_qa_0219",
+        "disambiguation_qa_0220"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_5",
+      "route_feature": "pronoun_they",
+      "activated_count": 20,
+      "fixed_count": 6,
+      "regression_count": 0,
+      "net_count": 6,
+      "fixed_item_ids": [
+        "disambiguation_qa_0154",
+        "disambiguation_qa_0182",
+        "disambiguation_qa_0190",
+        "disambiguation_qa_0212",
+        "disambiguation_qa_0214",
+        "disambiguation_qa_0220"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_4",
+      "route_feature": "because_clause",
+      "activated_count": 27,
+      "fixed_count": 6,
+      "regression_count": 0,
+      "net_count": 6,
+      "fixed_item_ids": [
+        "disambiguation_qa_0160",
+        "disambiguation_qa_0172",
+        "disambiguation_qa_0174",
+        "disambiguation_qa_0182",
+        "disambiguation_qa_0212",
+        "disambiguation_qa_0226"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_6",
+      "route_feature": "told_that",
+      "activated_count": 12,
+      "fixed_count": 5,
+      "regression_count": 0,
+      "net_count": 5,
+      "fixed_item_ids": [
+        "disambiguation_qa_0153",
+        "disambiguation_qa_0162",
+        "disambiguation_qa_0219",
+        "disambiguation_qa_0220",
+        "disambiguation_qa_0223"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_1",
+      "route_feature": "concrete_object_or_issue",
+      "activated_count": 21,
+      "fixed_count": 5,
+      "regression_count": 0,
+      "net_count": 5,
+      "fixed_item_ids": [
+        "disambiguation_qa_0160",
+        "disambiguation_qa_0174",
+        "disambiguation_qa_0196",
+        "disambiguation_qa_0226",
+        "disambiguation_qa_0234"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_2",
+      "route_feature": "told_that",
+      "activated_count": 12,
+      "fixed_count": 4,
+      "regression_count": 0,
+      "net_count": 4,
+      "fixed_item_ids": [
+        "disambiguation_qa_0153",
+        "disambiguation_qa_0162",
+        "disambiguation_qa_0219",
+        "disambiguation_qa_0220"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_2",
+      "route_feature": "pronoun_she",
+      "activated_count": 19,
+      "fixed_count": 4,
+      "regression_count": 0,
+      "net_count": 4,
+      "fixed_item_ids": [
+        "disambiguation_qa_0153",
+        "disambiguation_qa_0172",
+        "disambiguation_qa_0178",
+        "disambiguation_qa_0205"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_6",
+      "route_feature": "pronoun_she",
+      "activated_count": 19,
+      "fixed_count": 4,
+      "regression_count": 0,
+      "net_count": 4,
+      "fixed_item_ids": [
+        "disambiguation_qa_0153",
+        "disambiguation_qa_0160",
+        "disambiguation_qa_0178",
+        "disambiguation_qa_0205"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_2",
+      "route_feature": "needed_one",
+      "activated_count": 3,
+      "fixed_count": 3,
+      "regression_count": 0,
+      "net_count": 3,
+      "fixed_item_ids": [
+        "disambiguation_qa_0171",
+        "disambiguation_qa_0190",
+        "disambiguation_qa_0205"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_6",
+      "route_feature": "knowledge_asymmetry",
+      "activated_count": 4,
+      "fixed_count": 3,
+      "regression_count": 0,
+      "net_count": 3,
+      "fixed_item_ids": [
+        "disambiguation_qa_0160",
+        "disambiguation_qa_0176",
+        "disambiguation_qa_0226"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_3",
+      "route_feature": "pronoun_she",
+      "activated_count": 19,
+      "fixed_count": 3,
+      "regression_count": 0,
+      "net_count": 3,
+      "fixed_item_ids": [
+        "disambiguation_qa_0178",
+        "disambiguation_qa_0197",
+        "disambiguation_qa_0205"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_4",
+      "route_feature": "pronoun_she",
+      "activated_count": 19,
+      "fixed_count": 3,
+      "regression_count": 0,
+      "net_count": 3,
+      "fixed_item_ids": [
+        "disambiguation_qa_0160",
+        "disambiguation_qa_0172",
+        "disambiguation_qa_0178"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_5",
+      "route_feature": "pronoun_she",
+      "activated_count": 19,
+      "fixed_count": 3,
+      "regression_count": 0,
+      "net_count": 3,
+      "fixed_item_ids": [
+        "disambiguation_qa_0172",
+        "disambiguation_qa_0178",
+        "disambiguation_qa_0205"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_4",
+      "route_feature": "pronoun_he",
+      "activated_count": 20,
+      "fixed_count": 3,
+      "regression_count": 0,
+      "net_count": 3,
+      "fixed_item_ids": [
+        "disambiguation_qa_0174",
+        "disambiguation_qa_0222",
+        "disambiguation_qa_0226"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_4",
+      "route_feature": "pronoun_they",
+      "activated_count": 20,
+      "fixed_count": 3,
+      "regression_count": 0,
+      "net_count": 3,
+      "fixed_item_ids": [
+        "disambiguation_qa_0182",
+        "disambiguation_qa_0212",
+        "disambiguation_qa_0214"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_2",
+      "route_feature": "advice_should",
+      "activated_count": 2,
+      "fixed_count": 2,
+      "regression_count": 0,
+      "net_count": 2,
+      "fixed_item_ids": [
+        "disambiguation_qa_0162",
+        "disambiguation_qa_0219"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_2",
+      "route_feature": "helped_because",
+      "activated_count": 2,
+      "fixed_count": 2,
+      "regression_count": 0,
+      "net_count": 2,
+      "fixed_item_ids": [
+        "disambiguation_qa_0172",
+        "disambiguation_qa_0174"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_4",
+      "route_feature": "helped_because",
+      "activated_count": 2,
+      "fixed_count": 2,
+      "regression_count": 0,
+      "net_count": 2,
+      "fixed_item_ids": [
+        "disambiguation_qa_0172",
+        "disambiguation_qa_0174"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_5",
+      "route_feature": "helped_because",
+      "activated_count": 2,
+      "fixed_count": 2,
+      "regression_count": 0,
+      "net_count": 2,
+      "fixed_item_ids": [
+        "disambiguation_qa_0172",
+        "disambiguation_qa_0174"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_6",
+      "route_feature": "advice_should",
+      "activated_count": 2,
+      "fixed_count": 2,
+      "regression_count": 0,
+      "net_count": 2,
+      "fixed_item_ids": [
+        "disambiguation_qa_0162",
+        "disambiguation_qa_0219"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_5",
+      "route_feature": "needed_one",
+      "activated_count": 3,
+      "fixed_count": 2,
+      "regression_count": 0,
+      "net_count": 2,
+      "fixed_item_ids": [
+        "disambiguation_qa_0190",
+        "disambiguation_qa_0205"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_6",
+      "route_feature": "needed_one",
+      "activated_count": 3,
+      "fixed_count": 2,
+      "regression_count": 0,
+      "net_count": 2,
+      "fixed_item_ids": [
+        "disambiguation_qa_0190",
+        "disambiguation_qa_0205"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_1",
+      "route_feature": "knowledge_asymmetry",
+      "activated_count": 4,
+      "fixed_count": 2,
+      "regression_count": 0,
+      "net_count": 2,
+      "fixed_item_ids": [
+        "disambiguation_qa_0160",
+        "disambiguation_qa_0226"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_4",
+      "route_feature": "knowledge_asymmetry",
+      "activated_count": 4,
+      "fixed_count": 2,
+      "regression_count": 0,
+      "net_count": 2,
+      "fixed_item_ids": [
+        "disambiguation_qa_0160",
+        "disambiguation_qa_0226"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_1",
+      "route_feature": "pronoun_their",
+      "activated_count": 10,
+      "fixed_count": 2,
+      "regression_count": 0,
+      "net_count": 2,
+      "fixed_item_ids": [
+        "disambiguation_qa_0234",
+        "disambiguation_qa_0238"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_4",
+      "route_feature": "pronoun_her",
+      "activated_count": 14,
+      "fixed_count": 2,
+      "regression_count": 0,
+      "net_count": 2,
+      "fixed_item_ids": [
+        "disambiguation_qa_0181",
+        "disambiguation_qa_0183"
+      ],
+      "regressed_item_ids": []
+    },
+    {
+      "candidate_id": "gen_disambig_specific_family_v1_3",
+      "route_feature": "pronoun_they",
+      "activated_count": 20,
+      "fixed_count": 2,
+      "regression_count": 0,
+      "net_count": 2,
+      "fixed_item_ids": [
+        "disambiguation_qa_0182",
+        "disambiguation_qa_0212"
+      ],
+      "regressed_item_ids": []
+    }
+  ],
+  "safe_routed_union_summary": {
+    "task": "disambiguation_qa",
+    "n_items": 100,
+    "baseline_correct": 56,
+    "baseline_accuracy": 0.56,
+    "union_correct": 76,
+    "union_accuracy": 0.76,
+    "fixed_count": 20,
+    "regression_count": 0,
+    "net_count": 20,
+    "activated_count": 87,
+    "parse_error_count": 0,
+    "fixed_item_ids": [
+      "disambiguation_qa_0153",
+      "disambiguation_qa_0162",
+      "disambiguation_qa_0171",
+      "disambiguation_qa_0172",
+      "disambiguation_qa_0174",
+      "disambiguation_qa_0178",
+      "disambiguation_qa_0181",
+      "disambiguation_qa_0182",
+      "disambiguation_qa_0183",
+      "disambiguation_qa_0190",
+      "disambiguation_qa_0196",
+      "disambiguation_qa_0205",
+      "disambiguation_qa_0212",
+      "disambiguation_qa_0219",
+      "disambiguation_qa_0220",
+      "disambiguation_qa_0222",
+      "disambiguation_qa_0223",
+      "disambiguation_qa_0226",
+      "disambiguation_qa_0234",
+      "disambiguation_qa_0238"
+    ],
+    "regressed_item_ids": [],
+    "parse_error_item_ids": [],
+    "selected_routes": [
+      {
+        "candidate_id": "gen_disambig_specific_family_v1_2",
+        "route_feature": "because_clause",
+        "activated_count": 27,
+        "fixed_count": 9,
+        "regression_count": 0,
+        "net_count": 9,
+        "fixed_item_ids": [
+          "disambiguation_qa_0171",
+          "disambiguation_qa_0172",
+          "disambiguation_qa_0174",
+          "disambiguation_qa_0182",
+          "disambiguation_qa_0190",
+          "disambiguation_qa_0196",
+          "disambiguation_qa_0205",
+          "disambiguation_qa_0212",
+          "disambiguation_qa_0226"
+        ],
+        "regressed_item_ids": []
+      },
+      {
+        "candidate_id": "gen_disambig_specific_family_v1_2",
+        "route_feature": "pronoun_they",
+        "activated_count": 20,
+        "fixed_count": 6,
+        "regression_count": 0,
+        "net_count": 6,
+        "fixed_item_ids": [
+          "disambiguation_qa_0162",
+          "disambiguation_qa_0182",
+          "disambiguation_qa_0190",
+          "disambiguation_qa_0212",
+          "disambiguation_qa_0219",
+          "disambiguation_qa_0220"
+        ],
+        "regressed_item_ids": []
+      },
+      {
+        "candidate_id": "gen_disambig_specific_family_v1_6",
+        "route_feature": "told_that",
+        "activated_count": 12,
+        "fixed_count": 5,
+        "regression_count": 0,
+        "net_count": 5,
+        "fixed_item_ids": [
+          "disambiguation_qa_0153",
+          "disambiguation_qa_0162",
+          "disambiguation_qa_0219",
+          "disambiguation_qa_0220",
+          "disambiguation_qa_0223"
+        ],
+        "regressed_item_ids": []
+      },
+      {
+        "candidate_id": "gen_disambig_specific_family_v1_1",
+        "route_feature": "concrete_object_or_issue",
+        "activated_count": 21,
+        "fixed_count": 5,
+        "regression_count": 0,
+        "net_count": 5,
+        "fixed_item_ids": [
+          "disambiguation_qa_0160",
+          "disambiguation_qa_0174",
+          "disambiguation_qa_0196",
+          "disambiguation_qa_0226",
+          "disambiguation_qa_0234"
+        ],
+        "regressed_item_ids": []
+      },
+      {
+        "candidate_id": "gen_disambig_specific_family_v1_2",
+        "route_feature": "pronoun_she",
+        "activated_count": 19,
+        "fixed_count": 4,
+        "regression_count": 0,
+        "net_count": 4,
+        "fixed_item_ids": [
+          "disambiguation_qa_0153",
+          "disambiguation_qa_0172",
+          "disambiguation_qa_0178",
+          "disambiguation_qa_0205"
+        ],
+        "regressed_item_ids": []
+      },
+      {
+        "candidate_id": "gen_disambig_specific_family_v1_4",
+        "route_feature": "pronoun_he",
+        "activated_count": 20,
+        "fixed_count": 3,
+        "regression_count": 0,
+        "net_count": 3,
+        "fixed_item_ids": [
+          "disambiguation_qa_0174",
+          "disambiguation_qa_0222",
+          "disambiguation_qa_0226"
+        ],
+        "regressed_item_ids": []
+      },
+      {
+        "candidate_id": "gen_disambig_specific_family_v1_1",
+        "route_feature": "pronoun_their",
+        "activated_count": 10,
+        "fixed_count": 2,
+        "regression_count": 0,
+        "net_count": 2,
+        "fixed_item_ids": [
+          "disambiguation_qa_0234",
+          "disambiguation_qa_0238"
+        ],
+        "regressed_item_ids": []
+      },
+      {
+        "candidate_id": "gen_disambig_specific_family_v1_4",
+        "route_feature": "pronoun_her",
+        "activated_count": 14,
+        "fixed_count": 2,
+        "regression_count": 0,
+        "net_count": 2,
+        "fixed_item_ids": [
+          "disambiguation_qa_0181",
+          "disambiguation_qa_0183"
+        ],
+        "regressed_item_ids": []
+      }
+    ],
+    "output_dir": "runs/token_expansion_disambig_gpt41mini_20260522",
+    "model_score": "openai/gpt-4.1-mini",
+    "model_gen": "openai/gpt-4.1-mini",
+    "candidate_ids": [
+      "gen_disambig_specific_family_v1_1",
+      "gen_disambig_specific_family_v1_2",
+      "gen_disambig_specific_family_v1_3",
+      "gen_disambig_specific_family_v1_4",
+      "gen_disambig_specific_family_v1_5",
+      "gen_disambig_specific_family_v1_6"
+    ],
+    "activation_routing_mode": "posthoc_feature_zero_regression",
+    "memory_format": "rule_check"
+  }
+}

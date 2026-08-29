@@ -1,0 +1,48 @@
+
+You are repairing only the octagon SF-CR memory atom for BBH geometric_shapes.
+
+Current octagon candidate:
+{
+  "id": "gen_geo_9_false_gpt41mini_repair_v2",
+  "task": "geometric_shapes",
+  "routing_key": [
+    9,
+    false
+  ],
+  "rule": "If the partition_key is (9, False), and the SVG path has exactly 8 line vertices (n_l=8) excluding the closing line if it repeats the starting M coordinate, no arc commands (n_a=0), and the path is closed (the last L coordinate equals the first M coordinate), then predict (F) octagon.",
+  "use_when": "partition_key == (9, False) and n_l == 8 and n_a == 0 and path is closed",
+  "do_not_use_when": "n_l != 8 or n_a > 0 or path is not closed",
+  "check": "Count the number of L commands excluding the closing L if it repeats the starting M coordinate. Confirm this count is exactly 8. Confirm no arc commands (A) are present. Confirm the path is closed by verifying the last L coordinate equals the first M coordinate. If all conditions are met, output the final VERDICT: (F) octagon.",
+  "micro_example": "Input: <path d='M 95.20,70.83 L 87.79,78.67 L 75.59,79.89 L 69.02,71.72 L 67.78,63.84 L 72.64,57.51 L 82.81,55.78 L 93.46,60.66 L 95.20,70.83'/> Output: (F) octagon",
+  "source_of_candidate": "generated_boundary_repair",
+  "generator_model": "openai/gpt-4.1-mini",
+  "target_partition": "(9, False)",
+  "observed_failure_gold_labels": [
+    "(F)"
+  ],
+  "parent_candidate_id": "gen_geo_9_false_gpt41mini_v1"
+}
+
+The candidate fixed these target failures:
+- geometric_shapes_0168: baseline=(B) candidate=(F) gold=(F) input=This SVG path element <path d="M 95.20,70.83 L 87.79,78.67 L 75.59,79.89 L 69.02,71.72 L 67.78,63.84 L 72.64,57.51 L 82.81,55.78 L 93.46,60.66 L 95.20,70.83"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octag
+- geometric_shapes_0171: baseline=(B) candidate=(F) gold=(F) input=This SVG path element <path d="M 38.00,68.00 L 32.00,59.00 L 36.00,45.00 L 47.00,38.00 L 64.00,37.00 L 71.00,55.00 L 65.00,68.00 L 48.00,73.00 L 38.00,68.00"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octag
+- geometric_shapes_0185: baseline=(B) candidate=(F) gold=(F) input=This SVG path element <path d="M 38.00,62.00 L 47.00,58.00 L 54.00,49.00 L 54.00,60.00 L 65.00,62.00 L 62.00,69.00 L 53.00,73.00 L 42.00,71.00 L 38.00,62.00"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octag
+- geometric_shapes_0214: baseline=(B) candidate=(F) gold=(F) input=This SVG path element <path d="M 41.00,62.00 L 46.00,58.00 L 51.00,63.00 L 56.00,58.00 L 61.00,62.00 L 60.00,70.00 L 51.00,75.00 L 42.00,69.00 L 41.00,62.00"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octag
+- geometric_shapes_0236: baseline=(B) candidate=(F) gold=(F) input=This SVG path element <path d="M 39.78,47.94 L 27.24,37.07 L 41.81,38.54 L 36.74,32.11 L 40.22,19.93 L 46.25,27.14 M 46.25,27.14 L 50.16,35.01 L 46.02,45.07 L 39.78,47.94"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) 
+
+But inside the same routed partition it regressed these baseline-correct octagons by calling them line:
+- geometric_shapes_0162: baseline=(F) candidate=(E) gold=(F) input=This SVG path element <path d="M 54.74,88.20 L 59.54,81.34 M 59.54,81.34 L 62.50,68.22 L 72.08,77.66 L 79.82,80.84 M 79.82,80.84 L 74.65,86.44 M 74.65,86.44 L 71.70,99.56 L 62.12,90.12 M 62.12,90.12 L 54.74,88.20"/> draws a Options: (A) cir
+- geometric_shapes_0167: baseline=(F) candidate=(E) gold=(F) input=This SVG path element <path d="M 42.84,45.37 L 48.55,45.35 M 48.55,45.35 L 49.27,51.61 L 55.53,50.89 L 56.80,56.46 M 56.80,56.46 L 51.67,61.48 M 51.67,61.48 L 42.62,59.98 L 39.66,50.81 L 42.84,45.37"/> draws a Options: (A) circle (B) heptag
+
+Mechanism to encode:
+- The target partition is already (9, False), so the item is a line-only closed path with eight effective vertices plus a repeated closing point.
+- Multiple M commands in the middle are pen moves and still mark polygon vertices/continuations in these BBH examples; they do NOT make the shape a line.
+- The final coordinate returning to the first coordinate closes the polygon; do not count it as a ninth vertex.
+- For this routed atom, once eight distinct vertex coordinates are present, the answer must be VERDICT: (F) octagon.
+
+Return JSON only with one rule:
+- id: gen_geo_9_false_gpt41mini_repair_v3
+- task: geometric_shapes
+- routing_key: [9, false]
+- keep activation narrow
+- CHECK must be short and end with exactly: output VERDICT: (F)

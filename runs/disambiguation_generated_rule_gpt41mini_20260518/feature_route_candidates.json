@@ -1,0 +1,511 @@
+[
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_1",
+    "route_feature": "pronoun_they",
+    "activated_count": 20,
+    "fixed_count": 9,
+    "regression_count": 0,
+    "net_count": 9,
+    "fixed_item_ids": [
+      "disambiguation_qa_0156",
+      "disambiguation_qa_0162",
+      "disambiguation_qa_0176",
+      "disambiguation_qa_0182",
+      "disambiguation_qa_0212",
+      "disambiguation_qa_0214",
+      "disambiguation_qa_0219",
+      "disambiguation_qa_0220",
+      "disambiguation_qa_0233"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_3",
+    "route_feature": "pronoun_they",
+    "activated_count": 20,
+    "fixed_count": 9,
+    "regression_count": 0,
+    "net_count": 9,
+    "fixed_item_ids": [
+      "disambiguation_qa_0154",
+      "disambiguation_qa_0156",
+      "disambiguation_qa_0162",
+      "disambiguation_qa_0182",
+      "disambiguation_qa_0190",
+      "disambiguation_qa_0212",
+      "disambiguation_qa_0214",
+      "disambiguation_qa_0219",
+      "disambiguation_qa_0220"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_2",
+    "route_feature": "because_clause",
+    "activated_count": 27,
+    "fixed_count": 7,
+    "regression_count": 0,
+    "net_count": 7,
+    "fixed_item_ids": [
+      "disambiguation_qa_0160",
+      "disambiguation_qa_0172",
+      "disambiguation_qa_0174",
+      "disambiguation_qa_0182",
+      "disambiguation_qa_0196",
+      "disambiguation_qa_0212",
+      "disambiguation_qa_0226"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_2",
+    "route_feature": "pronoun_they",
+    "activated_count": 20,
+    "fixed_count": 6,
+    "regression_count": 0,
+    "net_count": 6,
+    "fixed_item_ids": [
+      "disambiguation_qa_0162",
+      "disambiguation_qa_0182",
+      "disambiguation_qa_0212",
+      "disambiguation_qa_0214",
+      "disambiguation_qa_0219",
+      "disambiguation_qa_0220"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_1",
+    "route_feature": "told_that",
+    "activated_count": 12,
+    "fixed_count": 5,
+    "regression_count": 0,
+    "net_count": 5,
+    "fixed_item_ids": [
+      "disambiguation_qa_0153",
+      "disambiguation_qa_0162",
+      "disambiguation_qa_0219",
+      "disambiguation_qa_0220",
+      "disambiguation_qa_0223"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_1",
+    "route_feature": "pronoun_she",
+    "activated_count": 19,
+    "fixed_count": 5,
+    "regression_count": 0,
+    "net_count": 5,
+    "fixed_item_ids": [
+      "disambiguation_qa_0153",
+      "disambiguation_qa_0160",
+      "disambiguation_qa_0172",
+      "disambiguation_qa_0178",
+      "disambiguation_qa_0205"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_4",
+    "route_feature": "pronoun_she",
+    "activated_count": 19,
+    "fixed_count": 5,
+    "regression_count": 0,
+    "net_count": 5,
+    "fixed_item_ids": [
+      "disambiguation_qa_0160",
+      "disambiguation_qa_0172",
+      "disambiguation_qa_0178",
+      "disambiguation_qa_0197",
+      "disambiguation_qa_0205"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_2",
+    "route_feature": "told_that",
+    "activated_count": 12,
+    "fixed_count": 4,
+    "regression_count": 0,
+    "net_count": 4,
+    "fixed_item_ids": [
+      "disambiguation_qa_0153",
+      "disambiguation_qa_0162",
+      "disambiguation_qa_0219",
+      "disambiguation_qa_0220"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_3",
+    "route_feature": "told_that",
+    "activated_count": 12,
+    "fixed_count": 4,
+    "regression_count": 0,
+    "net_count": 4,
+    "fixed_item_ids": [
+      "disambiguation_qa_0153",
+      "disambiguation_qa_0162",
+      "disambiguation_qa_0219",
+      "disambiguation_qa_0220"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_2",
+    "route_feature": "pronoun_she",
+    "activated_count": 19,
+    "fixed_count": 4,
+    "regression_count": 0,
+    "net_count": 4,
+    "fixed_item_ids": [
+      "disambiguation_qa_0153",
+      "disambiguation_qa_0160",
+      "disambiguation_qa_0172",
+      "disambiguation_qa_0178"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_3",
+    "route_feature": "pronoun_she",
+    "activated_count": 19,
+    "fixed_count": 4,
+    "regression_count": 0,
+    "net_count": 4,
+    "fixed_item_ids": [
+      "disambiguation_qa_0153",
+      "disambiguation_qa_0178",
+      "disambiguation_qa_0197",
+      "disambiguation_qa_0205"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_3",
+    "route_feature": "needed_one",
+    "activated_count": 3,
+    "fixed_count": 3,
+    "regression_count": 0,
+    "net_count": 3,
+    "fixed_item_ids": [
+      "disambiguation_qa_0171",
+      "disambiguation_qa_0190",
+      "disambiguation_qa_0205"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_1",
+    "route_feature": "knowledge_asymmetry",
+    "activated_count": 4,
+    "fixed_count": 3,
+    "regression_count": 0,
+    "net_count": 3,
+    "fixed_item_ids": [
+      "disambiguation_qa_0160",
+      "disambiguation_qa_0176",
+      "disambiguation_qa_0226"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_1",
+    "route_feature": "advice_should",
+    "activated_count": 2,
+    "fixed_count": 2,
+    "regression_count": 0,
+    "net_count": 2,
+    "fixed_item_ids": [
+      "disambiguation_qa_0162",
+      "disambiguation_qa_0219"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_1",
+    "route_feature": "helped_because",
+    "activated_count": 2,
+    "fixed_count": 2,
+    "regression_count": 0,
+    "net_count": 2,
+    "fixed_item_ids": [
+      "disambiguation_qa_0172",
+      "disambiguation_qa_0174"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_2",
+    "route_feature": "advice_should",
+    "activated_count": 2,
+    "fixed_count": 2,
+    "regression_count": 0,
+    "net_count": 2,
+    "fixed_item_ids": [
+      "disambiguation_qa_0162",
+      "disambiguation_qa_0219"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_2",
+    "route_feature": "helped_because",
+    "activated_count": 2,
+    "fixed_count": 2,
+    "regression_count": 0,
+    "net_count": 2,
+    "fixed_item_ids": [
+      "disambiguation_qa_0172",
+      "disambiguation_qa_0174"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_3",
+    "route_feature": "advice_should",
+    "activated_count": 2,
+    "fixed_count": 2,
+    "regression_count": 0,
+    "net_count": 2,
+    "fixed_item_ids": [
+      "disambiguation_qa_0162",
+      "disambiguation_qa_0219"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_4",
+    "route_feature": "helped_because",
+    "activated_count": 2,
+    "fixed_count": 2,
+    "regression_count": 0,
+    "net_count": 2,
+    "fixed_item_ids": [
+      "disambiguation_qa_0172",
+      "disambiguation_qa_0174"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_2",
+    "route_feature": "knowledge_asymmetry",
+    "activated_count": 4,
+    "fixed_count": 2,
+    "regression_count": 0,
+    "net_count": 2,
+    "fixed_item_ids": [
+      "disambiguation_qa_0160",
+      "disambiguation_qa_0226"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_4",
+    "route_feature": "knowledge_asymmetry",
+    "activated_count": 4,
+    "fixed_count": 2,
+    "regression_count": 0,
+    "net_count": 2,
+    "fixed_item_ids": [
+      "disambiguation_qa_0160",
+      "disambiguation_qa_0226"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_3",
+    "route_feature": "discussion",
+    "activated_count": 8,
+    "fixed_count": 2,
+    "regression_count": 0,
+    "net_count": 2,
+    "fixed_item_ids": [
+      "disambiguation_qa_0181",
+      "disambiguation_qa_0206"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_4",
+    "route_feature": "pronoun_they",
+    "activated_count": 20,
+    "fixed_count": 2,
+    "regression_count": 0,
+    "net_count": 2,
+    "fixed_item_ids": [
+      "disambiguation_qa_0182",
+      "disambiguation_qa_0212"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_1",
+    "route_feature": "otherwise_clause",
+    "activated_count": 1,
+    "fixed_count": 1,
+    "regression_count": 0,
+    "net_count": 1,
+    "fixed_item_ids": [
+      "disambiguation_qa_0156"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_1",
+    "route_feature": "pronoun_it",
+    "activated_count": 1,
+    "fixed_count": 1,
+    "regression_count": 0,
+    "net_count": 1,
+    "fixed_item_ids": [
+      "disambiguation_qa_0156"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_3",
+    "route_feature": "message_reply",
+    "activated_count": 1,
+    "fixed_count": 1,
+    "regression_count": 0,
+    "net_count": 1,
+    "fixed_item_ids": [
+      "disambiguation_qa_0154"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_3",
+    "route_feature": "otherwise_clause",
+    "activated_count": 1,
+    "fixed_count": 1,
+    "regression_count": 0,
+    "net_count": 1,
+    "fixed_item_ids": [
+      "disambiguation_qa_0156"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_3",
+    "route_feature": "pronoun_it",
+    "activated_count": 1,
+    "fixed_count": 1,
+    "regression_count": 0,
+    "net_count": 1,
+    "fixed_item_ids": [
+      "disambiguation_qa_0156"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_3",
+    "route_feature": "but_clause",
+    "activated_count": 2,
+    "fixed_count": 1,
+    "regression_count": 0,
+    "net_count": 1,
+    "fixed_item_ids": [
+      "disambiguation_qa_0154"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_3",
+    "route_feature": "helped_because",
+    "activated_count": 2,
+    "fixed_count": 1,
+    "regression_count": 0,
+    "net_count": 1,
+    "fixed_item_ids": [
+      "disambiguation_qa_0174"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_1",
+    "route_feature": "needed_one",
+    "activated_count": 3,
+    "fixed_count": 1,
+    "regression_count": 0,
+    "net_count": 1,
+    "fixed_item_ids": [
+      "disambiguation_qa_0205"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_4",
+    "route_feature": "needed_one",
+    "activated_count": 3,
+    "fixed_count": 1,
+    "regression_count": 0,
+    "net_count": 1,
+    "fixed_item_ids": [
+      "disambiguation_qa_0205"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_3",
+    "route_feature": "knowledge_asymmetry",
+    "activated_count": 4,
+    "fixed_count": 1,
+    "regression_count": 0,
+    "net_count": 1,
+    "fixed_item_ids": [
+      "disambiguation_qa_0226"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_1",
+    "route_feature": "discussion",
+    "activated_count": 8,
+    "fixed_count": 1,
+    "regression_count": 0,
+    "net_count": 1,
+    "fixed_item_ids": [
+      "disambiguation_qa_0181"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_2",
+    "route_feature": "discussion",
+    "activated_count": 8,
+    "fixed_count": 1,
+    "regression_count": 0,
+    "net_count": 1,
+    "fixed_item_ids": [
+      "disambiguation_qa_0181"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_1",
+    "route_feature": "pronoun_their",
+    "activated_count": 10,
+    "fixed_count": 1,
+    "regression_count": 0,
+    "net_count": 1,
+    "fixed_item_ids": [
+      "disambiguation_qa_0238"
+    ],
+    "regressed_item_ids": []
+  },
+  {
+    "candidate_id": "gen_disambig_specific_family_v1_2",
+    "route_feature": "pronoun_her",
+    "activated_count": 14,
+    "fixed_count": 1,
+    "regression_count": 0,
+    "net_count": 1,
+    "fixed_item_ids": [
+      "disambiguation_qa_0181"
+    ],
+    "regressed_item_ids": []
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "task": "geometric_shapes",
+  "marker": "path d=",
+  "n_test_items": 100,
+  "n_llm_calls_audited": 767,
+  "n_docs_audited": 2278,
+  "n_candidates_audited": 7,
+  "test_item_matches (must be 0)": 0,
+  "detector_sanity_train_item_matches (must be > 0)": 1120,
+  "train_test_key_overlap (must be 0)": 0,
+  "examples": [],
+  "seed_prompt_sha256": "59bf1f58e367c87b1a2d8548a85d8e61d068f2c42ef7ee93fa7fa404bfc87478",
+  "optimized_prompt_sha256": "59bf1f58e367c87b1a2d8548a85d8e61d068f2c42ef7ee93fa7fa404bfc87478"
+}

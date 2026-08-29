@@ -1,0 +1,21 @@
+{
+  "task": "geometric_shapes",
+  "protegi_run_dir": "<PROTEGI_WORKDIR>/runs/geometric_shapes",
+  "n_test_items": 100,
+  "n_train_items": 150,
+  "n_llm_calls_audited": 6902,
+  "n_docs_audited": 13863,
+  "test_item_matches (must be 0)": 0,
+  "train_test_key_overlap (must be 0)": 0,
+  "detector_sanity_train_item_matches (must be > 0)": 7509,
+  "examples": [],
+  "artifact_sha256": {
+    "<PROTEGI_WORKDIR>/seeds/geometric_shapes_seed_prompt.md": "ad8ccb550a0196afe4ce3764c0ec9e8c6899d8e19d39ac56388ee5418c141ff8",
+    "<PROTEGI_WORKDIR>/data/geometric_shapes/train.jsonl": "1f34a679c9287071b02565fac65b1a148eb68949c4b146a775106b83bd4157b1",
+    "<PROTEGI_WORKDIR>/runs/geometric_shapes/best_candidate.md": "f80baefe7d7752a8248722bee1da1591d9eaad5b94e9808183f0251205276e97",
+    "<PROTEGI_WORKDIR>/runs/geometric_shapes/optimized_cheatsheet.txt": "db4285ae42a8a017d47d78c6f3e925eb2ab7c2d2c9683ef8fd4614a434ecc34c",
+    "<PROTEGI_WORKDIR>/runs/geometric_shapes/results.txt": "358ccdf20375096b70d74715cb63b5409a5cf0b9bb6acc5454b18157097bd9bb",
+    "<REPO>/baselines/protegi/geometric_shapes/optimized_prompt.txt": "db4285ae42a8a017d47d78c6f3e925eb2ab7c2d2c9683ef8fd4614a434ecc34c",
+    "<REPO>/baselines/protegi/geometric_shapes/seed_prompt.txt": "89732dd7e41d30f106eeda40c152dd445a2507a57646dad13fb3e5a31187ffb9"
+  }
+}

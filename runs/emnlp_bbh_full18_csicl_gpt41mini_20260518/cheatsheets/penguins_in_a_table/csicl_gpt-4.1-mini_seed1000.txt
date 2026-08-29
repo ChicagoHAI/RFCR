@@ -1,0 +1,201 @@
+**Cheat Sheet for Difficult Penguin & Giraffe Table Questions**
+
+---
+
+### 1. **Basic Table Structure**
+
+- Columns:  
+  1. name  
+  2. age  
+  3. height (cm)  
+  4. weight (kg)
+
+- Penguins (initial):  
+  - Louis: age 7, height 50 cm, weight 11 kg  
+  - Bernard: age 5, height 80 cm, weight 13 kg  
+  - Vincent: age 9, height 60 cm, weight 11 kg  
+  - Gwen: age 8, height 70 cm, weight 15 kg
+
+- Added penguin (sometimes):  
+  - James: age 12, height 90 cm, weight 12 kg
+
+- Giraffes (when present):  
+  - Jody: age 5, height 430 cm, weight 620 kg  
+  - Gladys: age 10, height 420 cm, weight 590 kg  
+  - Marian: age 2, height 310 cm, weight 410 kg  
+  - Donna: age 9, height 440 cm, weight 650 kg
+
+---
+
+### 2. **Counting Penguins or Animals**
+
+- Initial penguins: 4  
+- After adding James: 5  
+- After deleting Bernard: subtract 1  
+- Total animals = penguins + giraffes (if both tables present)
+
+---
+
+### 3. **Sorting Names Alphabetically**
+
+- Penguins: Bernard, Gwen, Louis, Vincent, (James if added)  
+- Giraffes: Donna, Gladys, Jody, Marian
+
+- Alphabetical order examples:  
+  - First penguin: Bernard (or Bernard if James not added)  
+  - Last penguin: Vincent (or James if added)  
+  - Next to last penguin: Louis (if James added, last is James)  
+  - Last giraffe: Marian (alphabetically last among giraffes)
+
+---
+
+### 4. **Age-Related Questions**
+
+- Penguins' ages:  
+  - Louis: 7  
+  - Bernard: 5  
+  - Vincent: 9  
+  - Gwen: 8  
+  - James: 12 (if added)
+
+- Giraffes' ages:  
+  - Jody: 5  
+  - Gladys: 10  
+  - Marian: 2  
+  - Donna: 9
+
+- Counting penguins/animals older than X:  
+  - Use strict "more than" (>) or "less than" (<) carefully.  
+  - Example: "More than 5 years old" excludes age 5, includes 6+.
+
+- Youngest penguin: Bernard (5)  
+- Oldest penguin: James (12) if added, else Vincent (9)  
+- Penguins between ages: e.g., younger than Vincent (9) and older than Louis (7) → Gwen (8)
+
+---
+
+### 5. **Height-Related Questions**
+
+- Heights in cm:  
+  - Louis: 50  
+  - Bernard: 80  
+  - Vincent: 60  
+  - Gwen: 70  
+  - James: 90 (if added)
+
+- Convert meters to cm if needed (e.g., 0.6 m = 60 cm)  
+- Identify penguin by height exactly matching the value.
+
+---
+
+### 6. **Weight-Related Questions**
+
+- Weights in kg:  
+  - Louis: 11  
+  - Bernard: 13  
+  - Vincent: 11  
+  - Gwen: 15  
+  - James: 12 (if added)
+
+- Use strict inequalities carefully for "more than" or "less than" weight.
+
+---
+
+### 7. **Cumulated (Sum) Calculations**
+
+- Cumulated age or weight: sum values of all relevant animals after additions/deletions.
+
+- Example:  
+  - After deleting Bernard, penguins are Louis, Vincent, Gwen (and James if added).  
+  - Sum ages or weights accordingly.
+
+- For combined tables (penguins + giraffes), sum all animals' ages or weights.
+
+---
+
+### 8. **Column Numbering**
+
+- Columns are numbered as:  
+  1 = name  
+  2 = age  
+  3 = height (cm)  
+  4 = weight (kg)
+
+---
+
+### 9. **Species and Animals Count**
+
+- Species count:  
+  - Only penguins = 1 species  
+  - Penguins + giraffes = 2 species
+
+- Animals count:  
+  - Sum of all individual animals listed in all tables.
+
+---
+
+### 10. **Special Name-Related Questions**
+
+- Famous jazzman: Louis (Louis Armstrong)  
+- Welsh name: Gwen  
+- Shortest name: Gwen (4 letters)  
+- First penguin alphabetically: Bernard (unless Bernard deleted)  
+- Last penguin alphabetically: Vincent (or James if added)  
+- Last giraffe alphabetically: Marian
+
+---
+
+### 11. **Handling Additions and Deletions**
+
+- When adding James, add his data to the list.  
+- When deleting Bernard, remove his data from the list.  
+- Always update counts and sums accordingly.
+
+---
+
+### 12. **Step-by-Step Approach**
+
+1. Identify which animals are currently in the table (consider additions/deletions).  
+2. Extract relevant attribute(s) (age, height, weight, name).  
+3. Apply conditions (e.g., >5 years old, <12 kg).  
+4. Sort names alphabetically if needed.  
+5. Calculate sums or counts as required.  
+6. Choose the correct option based on the processed data.
+
+---
+
+### 13. **Common Pitfalls to Avoid**
+
+- Confusing alphabetical order with age or other attributes.  
+- Forgetting to remove Bernard after deletion.  
+- Forgetting to add James after addition.  
+- Misinterpreting "more than" vs. "at least" (strict inequalities).  
+- Mixing penguins and giraffes when question specifies only one species.  
+- Miscounting total animals when multiple tables are present.
+
+---
+
+**Keep this cheat sheet handy to quickly recall key data and methods for solving complex table questions involving penguins and giraffes!**
+
+Follow the format of the examples below in your response.
+
+Question: Here is a table where the first line is a header and each subsequent line is a penguin:  name, age, height (cm), weight (kg) Louis, 7, 50, 11 Bernard, 5, 80, 13 Vincent, 9, 60, 11 Gwen, 8, 70, 15  For example: the age of Louis is 7, the weight of Gwen is 15 kg, the height of Bernard is 80 cm.  We then delete the penguin named Bernard from the table.
+How many penguins are there in the table?
+Options:
+(A) 1
+(B) 2
+(C) 3
+(D) 4
+(E) 5
+Reasoning: Let's think step by step. This question focuses on the name. We know the following: The names of the penguin in the table are Louis, Bernard, Vincent, and Gwen. When we sort their names alphabetically, we get Bernard, Gwen, Louis, Vincent. The name of the second penguin sorted by alphabetical order is Gwen. The name of the second penguin sorted by alphabetic order is Gwen. So the answer is (D).
+Answer: (C)
+###
+Question: Here is a table where the first line is a header and each subsequent line is a penguin:  name, age, height (cm), weight (kg) Louis, 7, 50, 11 Bernard, 5, 80, 13 Vincent, 9, 60, 11 Gwen, 8, 70, 15  For example: the age of Louis is 7, the weight of Gwen is 15 kg, the height of Bernard is 80 cm.  Which is the second youngest penguin?
+Options:
+(A) Louis
+(B) Bernard
+(C) Vincent
+(D) Gwen
+(E) James
+Reasoning: Let's think step by step. This question focuses on the name. We know the following: The names of the penguin in the table are Louis, Bernard, Vincent, and Gwen. When we sort their names alphabetically, we get Bernard, Gwen, Louis, Vincent. The name of the second penguin sorted by alphabetical order is Gwen. The name of the second penguin sorted by alphabetic order is Gwen. So the answer is (D).
+Answer: (A)

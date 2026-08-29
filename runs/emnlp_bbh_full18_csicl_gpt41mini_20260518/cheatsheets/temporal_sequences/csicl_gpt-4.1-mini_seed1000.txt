@@ -1,0 +1,137 @@
+Cheat Sheet for Solving Time-Interval Location Questions (Focus on Difficult Examples)
+
+---
+
+### Key Principles
+
+1. **Identify Known Time Blocks:**
+   - Use all given witness sightings and activities to mark occupied time intervals.
+   - Include wake-up time as the earliest possible start.
+
+2. **Check Location Closure Time:**
+   - The event location is only accessible before its closing time.
+   - The person cannot be at the location after it closes.
+
+3. **Find Free Time Intervals:**
+   - Determine gaps between known activities where the person is unaccounted for.
+   - These gaps are potential times they could have visited the location.
+
+4. **Exclude Impossible Intervals:**
+   - Times before wake-up.
+   - Times overlapping with known sightings.
+   - Times after location closing.
+
+5. **Consider Continuous Time Blocks:**
+   - The visit must fit entirely within a free time block.
+   - Partial overlaps with known sightings are invalid.
+
+---
+
+### Difficult Example Patterns & Tips
+
+#### 1. **Short Gaps Between Long Activities**
+   - Example: Andrew at coffee shop (Q7)
+     - Busy 8am-1pm, 3pm-6pm, free 1pm-3pm → answer is 1pm-3pm.
+   - **Tip:** Look for small gaps between long known activities.
+
+#### 2. **Wake-up Time After Some Activities**
+   - Example: Jessica at restaurant (Q18)
+     - Woke at 3pm, activities start at 3pm → visit must be after last known activity but before closing.
+   - **Tip:** Do not consider times before wake-up.
+
+#### 3. **No Witnesses During Large Time Blocks**
+   - Example: Sarah at construction site (Q3)
+     - Busy 8am-4pm, free 4pm-7pm, then busy 7pm-8pm → visit must be in free block.
+   - **Tip:** Large free blocks between sightings are prime candidates.
+
+#### 4. **Overlapping Activities Near Closing Time**
+   - Example: Mark at football field (Q6)
+     - Busy 7am-9pm, field closes 10pm → only 9pm-10pm free.
+   - **Tip:** Check if visit can happen after last known activity but before closing.
+
+#### 5. **Multiple Short Sightings with Small Gaps**
+   - Example: Leslie at movies (Q9)
+     - Busy 6am-7am, 12pm-2pm, 2pm-7pm → free 7am-12pm.
+   - **Tip:** Combine multiple short sightings to find longer free intervals.
+
+#### 6. **Wake-up Time Close to Closing Time**
+   - Example: Nancy at bookstore (Q153)
+     - Woke 8am, busy 8am-2pm, bookstore closes 9pm → free 2pm-9pm.
+   - **Tip:** If wake-up is late, free time may be only after last known activity.
+
+#### 7. **Confusing Overlaps with Multiple Witnesses**
+   - Example: Elizabeth at amusement park (Q14)
+     - Busy 8am-9pm, park closes 10pm → only 6am-8am free.
+   - **Tip:** Carefully check all sightings and closing times to find earliest free slot.
+
+---
+
+### Step-by-Step Approach for Difficult Cases
+
+1. **List all known time intervals (activities, sightings).**
+2. **Mark these intervals on a timeline from wake-up to location closing.**
+3. **Identify all gaps (free intervals) between these known intervals.**
+4. **Exclude any intervals before wake-up or after closing.**
+5. **Select the free interval(s) that fit entirely within the location’s open hours.**
+6. **Match the free interval(s) to the given options.**
+
+---
+
+### Common Pitfalls to Avoid
+
+- Choosing intervals overlapping with known sightings.
+- Ignoring wake-up time (cannot be before wake-up).
+- Ignoring location closing time.
+- Selecting partial overlaps instead of full free intervals.
+- Confusing the person’s activities with others’ activities.
+
+---
+
+### Summary Table of Difficult Example Types
+
+| Difficulty Type                      | Example Q# | Key Insight                          |
+|------------------------------------|------------|------------------------------------|
+| Short gaps between long activities | 7, 12      | Look for small free intervals      |
+| Wake-up after some activities      | 18, 22     | No time before wake-up             |
+| Large free blocks between sightings| 3, 153     | Use big gaps for possible visit    |
+| Overlaps near closing time         | 6, 14      | Visit after last activity possible |
+| Multiple short sightings           | 9, 153     | Combine to find free time          |
+| Late wake-up, early closing        | 153        | Limited free time after activities |
+| Multiple witnesses, complex timeline| 14, 18    | Careful timeline analysis needed   |
+
+---
+
+Use this cheat sheet to analyze timelines carefully, identify free intervals, and select the correct answer confidently during the test.
+
+Follow the format of the examples below in your response.
+
+Question: Today, Jennifer went to the basketball court. Between what times could they have gone?
+We know that:
+Jennifer woke up at 6am.
+Thomas saw Jennifer buying a bike at the bike shop from 6am to 9am.
+Samantha saw Jennifer driving to the water park from 9am to 10am.
+Steven saw Jennifer fixing their computer at the electronic store from 10am to 1pm.
+Mark saw Jennifer stretching at a yoga studio from 3pm to 5pm.
+The basketball court was closed after 5pm.
+Between what times could Jennifer have gone to the basketball court?
+Options:
+(A) 9am to 10am
+(B) 6am to 9am
+(C) 3pm to 5pm
+(D) 1pm to 3pm
+Answer: (D)
+###
+Question: Today, Jessica went to the restaurant. Between what times could they have gone?
+We know that:
+Jessica woke up at 6am.
+Lisa saw Jessica waiting at the train station from 6am to 12pm.
+Linda saw Jessica getting a coffee at the cafe from 12pm to 2pm.
+Sarah saw Jessica walking towards the Statue of Liberty from 2pm to 6pm.
+The restaurant was closed after 7pm.
+Between what times could Jessica have gone to the restaurant?
+Options:
+(A) 6pm to 7pm
+(B) 6am to 12pm
+(C) 12pm to 2pm
+(D) 2pm to 6pm
+Answer: (A)

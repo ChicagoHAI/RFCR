@@ -1,0 +1,21 @@
+{
+  "task": "disambiguation_qa",
+  "protegi_run_dir": "<PROTEGI_WORKDIR>/runs/disambiguation_qa",
+  "n_test_items": 100,
+  "n_train_items": 150,
+  "n_llm_calls_audited": 7075,
+  "n_docs_audited": 14221,
+  "test_item_matches (must be 0)": 0,
+  "train_test_key_overlap (must be 0)": 0,
+  "detector_sanity_train_item_matches (must be > 0)": 9262,
+  "examples": [],
+  "artifact_sha256": {
+    "<PROTEGI_WORKDIR>/seeds/disambiguation_qa_seed_prompt.md": "b39c7e46858f9efce5a949709e149b137edca6fc61dbf1983315808173a5226b",
+    "<PROTEGI_WORKDIR>/data/disambiguation_qa/train.jsonl": "fec69647cf9921acd30834dbbb1166bcf785b54c8bd80335cf548a3c4ae9264f",
+    "<PROTEGI_WORKDIR>/runs/disambiguation_qa/best_candidate.md": "b39c7e46858f9efce5a949709e149b137edca6fc61dbf1983315808173a5226b",
+    "<PROTEGI_WORKDIR>/runs/disambiguation_qa/optimized_cheatsheet.txt": "042a5e0d2601bdbf90e77be895f597278d871af9b6e78203680e61249162c18f",
+    "<PROTEGI_WORKDIR>/runs/disambiguation_qa/results.txt": "883a1a0a479c294922093b2e197e8e265f56bd297bb15535d8cf9a20c60d68ad",
+    "<REPO>/baselines/protegi/disambiguation_qa/optimized_prompt.txt": "042a5e0d2601bdbf90e77be895f597278d871af9b6e78203680e61249162c18f",
+    "<REPO>/baselines/protegi/disambiguation_qa/seed_prompt.txt": "042a5e0d2601bdbf90e77be895f597278d871af9b6e78203680e61249162c18f"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "task": "object_counting",
+  "aborted": null,
+  "final_beam": [
+    {
+      "train_acc": 0.82,
+      "sha256": "8840b303dda864a398c307423bdeaa58d71abeb77fd10501b62396b585894262"
+    },
+    {
+      "train_acc": 0.8333333333333334,
+      "sha256": "6e026cc8e622e9e94291db08020e5a5386e0c7bec2e9b459770ccf3987947794"
+    },
+    {
+      "train_acc": 0.76,
+      "sha256": "1be348b6c66f153210f6823306319a27cea3c01865c46031dd177031eeb434bb"
+    },
+    {
+      "train_acc": 0.8,
+      "sha256": "a7d2c531ae23b3b30cf7e36dad707dc124d97269e27072be03c0f18777494eed"
+    }
+  ],
+  "selected_index": 1,
+  "selected_train_acc": 0.8333333333333334,
+  "best_candidate_sha256": "6e026cc8e622e9e94291db08020e5a5386e0c7bec2e9b459770ccf3987947794",
+  "optimized_cheatsheet_sha256": "6cb2e69dc9e1cd3a12efae6f0b1a1897277c2340a110a0729824e7bf9f34904f",
+  "seed_cheatsheet_sha256": "809ab7beaf067d61c24f24dbf7c7f35c57f6726bad8e92dda05c8746f4319637",
+  "cheatsheet_changed": true,
+  "n_llm_calls": 7370,
+  "est_cost_usd": 2.8315,
+  "input_chars": 25844176,
+  "output_chars": 617734
+}

@@ -1,0 +1,137 @@
+Cheat Sheet for Returning to Starting Point in Movement Instructions
+
+---
+
+### 1. **Basic Setup**
+- Start at origin (0,0).
+- Initial facing direction: positive y-axis (north).
+- Directions:
+  - Forward: move in facing direction.
+  - Backward: move opposite facing direction.
+  - Left/Right steps: move perpendicular to facing direction, without changing facing.
+- Turning commands change facing direction but do not move position.
+
+---
+
+### 2. **Movement with "Always Face Forward"**
+- Facing direction never changes (always north).
+- Left/right steps move along x-axis:
+  - Right step: +x direction.
+  - Left step: -x direction.
+- Forward/backward steps move along y-axis:
+  - Forward step: +y direction.
+  - Backward step: -y direction.
+- To return to start, sum of all x movements = 0 and sum of all y movements = 0.
+
+---
+
+### 3. **Movement with Turns**
+- Turning changes facing direction:
+  - Turn left: facing rotates 90° counterclockwise.
+  - Turn right: facing rotates 90° clockwise.
+  - Turn around: facing rotates 180°.
+- After turns, forward/backward/left/right steps move relative to new facing.
+- Track facing direction after each turn.
+- Update position accordingly:
+  - Forward: +facing vector.
+  - Backward: -facing vector.
+  - Left: 90° left of facing vector.
+  - Right: 90° right of facing vector.
+
+---
+
+### 4. **Tracking Position and Facing**
+- Represent facing as vector:
+  - North: (0, +1)
+  - East: (+1, 0)
+  - South: (0, -1)
+  - West: (-1, 0)
+- Turning updates facing vector:
+  - Left turn: (x, y) → (-y, x)
+  - Right turn: (x, y) → (y, -x)
+  - Turn around: (x, y) → (-x, -y)
+- Movement updates position:
+  - Forward: pos += facing * steps
+  - Backward: pos -= facing * steps
+  - Left: pos += (left vector) * steps, where left vector = (-facing.y, facing.x)
+  - Right: pos += (right vector) * steps, where right vector = (facing.y, -facing.x)
+
+---
+
+### 5. **Handling "Take N steps" Without Direction**
+- If no direction specified, assume forward.
+- If direction specified (left, right, forward, backward), move accordingly relative to current facing.
+
+---
+
+### 6. **Common Pitfalls in Difficult Examples**
+- **Misinterpreting "Always face forward"**: It means no turning; all left/right steps are lateral moves on x-axis.
+- **Ignoring turns**: Always update facing direction after each turn before moving.
+- **Mixing up left/right steps after turns**: Left/right steps are relative to current facing, not fixed axes.
+- **Not summing all movements correctly**: Keep cumulative x and y positions.
+- **Assuming turns move position**: Turns only change facing, no position change.
+- **Multiple turns in sequence**: Apply each turn stepwise to update facing.
+
+---
+
+### 7. **Step-by-Step Approach for Difficult Problems**
+1. Initialize position (0,0) and facing (0,1).
+2. For each instruction:
+   - If turn: update facing vector.
+   - If move:
+     - Determine move vector based on facing and direction (forward/backward/left/right).
+     - Update position by move vector * steps.
+3. After all instructions, check if position == (0,0).
+4. If yes, answer "Yes"; else "No".
+
+---
+
+### 8. **Example of Facing Vector Updates**
+| Facing | Turn Left | Turn Right | Turn Around |
+|--------|-----------|------------|-------------|
+| (0,1)  | (-1,0)    | (1,0)      | (0,-1)      |
+| (1,0)  | (0,1)     | (0,-1)     | (-1,0)      |
+| (0,-1) | (1,0)     | (-1,0)     | (0,1)       |
+| (-1,0) | (0,-1)    | (0,1)      | (1,0)       |
+
+---
+
+### 9. **Summary of Movement Vectors**
+- Forward: facing vector.
+- Backward: negative facing vector.
+- Left: (-facing.y, facing.x)
+- Right: (facing.y, -facing.x)
+
+---
+
+### 10. **Tips for Complex Instructions**
+- Write down each step’s position and facing.
+- Use a table or coordinate system.
+- Double-check turns and relative directions.
+- Sum all movements at the end.
+
+---
+
+This cheat sheet focuses on the key challenges:
+- Correctly updating facing direction after turns.
+- Correctly interpreting left/right steps relative to facing.
+- Handling "always face forward" as no turns.
+- Summing movements precisely to determine if back at origin.
+
+Use this methodical approach to solve difficult problems confidently.
+
+Follow the format of the examples below in your response.
+
+Question: If you follow these instructions, do you return to the starting point? Always face forward. Take 1 step backward. Take 5 steps right. Take 3 steps left. Take 1 step backward. Take 5 steps backward. Take 4 steps forward. Take 3 steps forward. Take 2 steps left.
+Options:
+- Yes
+- No
+Reasoning: Let's think step by step. We start at the origin (0, 0), facing the positive y-axis. (1) Always face forward: (0, 0), facing the positive y-axis. (2) Take 2 steps right: (0, 2), facing the positive y-axis. (3) Take 9 steps left: (0, -7), facing the positive y-axis. (4) Take 7 steps right: (0, 7), facing the positive y-axis. Since (0, 0) is (0, 0), we are indeed where we started. So the answer is Yes.
+Answer: Yes
+###
+Question: If you follow these instructions, do you return to the starting point? Always face forward. Take 4 steps right. Take 7 steps right. Take 1 step left. Take 4 steps left. Take 6 steps left.
+Options:
+- Yes
+- No
+Reasoning: Let's think step by step. We start at the origin (0, 0), facing the positive y-axis. (1) Always face forward: (0, 0), facing the positive y-axis. (2) Take 2 steps right: (0, 2), facing the positive y-axis. (3) Take 9 steps left: (0, -7), facing the positive y-axis. (4) Take 7 steps right: (0, 7), facing the positive y-axis. Since (0, 0) is (0, 0), we are indeed where we started. So the answer is Yes.
+Answer: Yes

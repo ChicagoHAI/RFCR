@@ -1,0 +1,15 @@
+{
+  "task": "boolean_expressions",
+  "condition": "csicl",
+  "generator_model": "openai/gpt-4.1-mini",
+  "seed": 1000,
+  "train_path": "datasets/bbh/boolean_expressions_train.jsonl",
+  "n_train": 150,
+  "prompt_hash": "726ccfaffbe11488",
+  "cheatsheet_hash": "a0dbb90b7992b88b",
+  "created_at": "2026-05-18T12:47:08",
+  "generation_prompt_chars": 98225,
+  "generation_input_tokens": 24557,
+  "generation_output_tokens": 1088,
+  "generation_estimated_cost_usd": 0.011564
+}

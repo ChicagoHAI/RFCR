@@ -1,0 +1,171 @@
+**Date Calculation Cheat Sheet for Difficult Examples**
+
+---
+
+### 1. **Understanding "Tomorrow," "Yesterday," and "Today"**
+
+- If **tomorrow** is given as a date, then:
+  - **Today** = one day before tomorrow.
+  - **Yesterday** = two days before tomorrow.
+- If **yesterday** is given as a date, then:
+  - **Today** = one day after yesterday.
+  - **Tomorrow** = two days after yesterday.
+
+---
+
+### 2. **Calculating a Month Ago / One Month Before**
+
+- Subtract 1 from the month number, keep the day the same if possible.
+- If the previous month has fewer days than the current day, use the last day of the previous month.
+- Example:  
+  - From 03/31/2021, one month ago is 02/28/2021 (Feb has 28 days).
+  - From 05/31/2021, one month ago is 04/30/2021.
+
+---
+
+### 3. **Calculating One Year Ago**
+
+- Subtract 1 from the year, keep the month and day the same.
+- If the date is Feb 29 on a leap year and the previous year is not leap, use Feb 28.
+- Example:  
+  - 02/29/2016 one year ago → 02/28/2015 (non-leap year).
+
+---
+
+### 4. **Calculating One Week Ago / One Week From Today**
+
+- One week = 7 days.
+- Add or subtract 7 days from the given date.
+- Be careful crossing month/year boundaries.
+- Example:  
+  - From 01/01/2020, one week ago is 12/25/2019.
+  - From 12/31/1899, one week from today is 01/07/1900.
+
+---
+
+### 5. **Calculating 10 Days Ago / 10 Days Later**
+
+- Add or subtract 10 days from the given date.
+- Count days carefully across months.
+- Example:  
+  - From 03/12/2002, 10 days ago is 03/02/2002.
+  - From 09/09/1909, 10 days ago is 08/30/1909.
+
+---
+
+### 6. **Handling Leap Years and Last Day of February**
+
+- Leap years: divisible by 4, except centuries not divisible by 400.
+- Last day of February:  
+  - Leap year → Feb 29  
+  - Non-leap year → Feb 28
+- When birthday is Feb 29 and current year is non-leap, birthday is celebrated on Feb 28.
+- Example:  
+  - Born 02/29/2000, 16th birthday in 2016 (leap year) → 02/29/2016.  
+  - One year ago from 02/29/2016 → 02/28/2015.
+
+---
+
+### 7. **When Given Relative Time to a Known Date**
+
+- Example: "2015 is coming in 36 hours" means current time is 36 hours before 01/01/2015 midnight → 12/30/2014 noon.
+- Use this to find "today" and then calculate other dates relative to it.
+- Example:  
+  - Today = 12/30/2014  
+  - One week ago = 12/23/2014  
+  - A month ago ≈ 11/30/2014 (choose closest option).
+
+---
+
+### 8. **Special Named Days**
+
+- **US Thanksgiving**: 4th Thursday of November.  
+  - Find the first Thursday, then add 3 weeks.  
+  - Example: 2001 Thanksgiving = 11/22/2001.
+- **Palindrome Day 2020**: 02/02/2020 (MMDDYYYY palindrome).
+- **Golden Wedding Anniversary**: 50 years after wedding date.
+- **Work Anniversary**: Add years to start date.
+- **Meteor Shower / Regular Visits**: Count visits/months from start date.
+
+---
+
+### 9. **Date Format Differences**
+
+- UK format DD/MM/YYYY → Convert to MM/DD/YYYY by swapping day and month.
+- Example:  
+  - UK 02/01/1987 = Jan 2, 1987 → MM/DD/YYYY = 01/02/1987.
+
+---
+
+### 10. **Calculating Dates After Adding/Subtracting Days (e.g., 176 days)**
+
+- Break down days by month lengths.
+- Example: Adding 176 days to 03/20/2020:  
+  - Mar 20–31: 11 days  
+  - Apr: 30 days (total 41)  
+  - May: 31 days (72)  
+  - Jun: 30 days (102)  
+  - Jul: 31 days (133)  
+  - Aug: 31 days (164)  
+  - Remaining: 176 - 164 = 12 days into Sep → 09/12/2020.
+
+---
+
+### 11. **When Options Have Year Typos or Close Dates**
+
+- Choose the option with correct month/day even if year is off, if no exact match.
+- Use logic and closest match.
+
+---
+
+### 12. **24 Hours Later**
+
+- 24 hours later = next day.
+- Add 1 day to the given date.
+- Example:  
+  - Today 03/05/1973 → 24 hours later is 03/06/1973.
+
+---
+
+### 13. **Summary of Common Date Adjustments**
+
+| Operation           | How to Calculate                          | Notes                                  |
+|---------------------|------------------------------------------|----------------------------------------|
+| Tomorrow            | Today + 1 day                            |                                        |
+| Yesterday           | Today - 1 day                            |                                        |
+| One week ago        | Today - 7 days                          |                                        |
+| One week from today | Today + 7 days                          |                                        |
+| One month ago       | Subtract 1 from month, adjust day if needed | Use last day of previous month if day too large |
+| One year ago        | Subtract 1 from year, adjust Feb 29 if needed |                                        |
+| N days ago/later    | Add/Subtract N days, count days carefully |                                        |
+| Leap year check     | Year divisible by 4 and (not divisible by 100 unless divisible by 400) |                                        |
+
+---
+
+**Use this cheat sheet to carefully analyze the given date, apply the correct operation, and adjust for month lengths, leap years, and special cases.**
+
+Follow the format of the examples below in your response.
+
+Question: Jane booked a flight for tomorrow, Jul 29, 2002. What is the date a month ago in MM/DD/YYYY?
+Options:
+(A) 06/27/2002
+(B) 06/21/2002
+(C) 10/28/2001
+(D) 10/28/2002
+(E) 06/28/2002
+(F) 08/25/2002
+Reasoning: Let's think step by step.
+We are told that "Jane booked a flight for tomorrow, Jul 29, 2002," so tomorrow is 07/29/2002, which means today is 07/28/2002. A month ago from today would be one month before 07/28/2002, which is 06/28/2002. In MM/DD/YYYY format this is 06/28/2002. So the answer is (E).
+Answer: (E)
+###
+Question: In the US, Thanksgiving is on the fourth Thursday of November. Today is the US Thanksgiving of 2001. What is the date tomorrow in MM/DD/YYYY?
+Options:
+(A) 11/09/2002
+(B) 12/07/2002
+(C) 11/23/2002
+(D) 06/23/2002
+(E) 10/15/2002
+(F) 08/29/2002
+Reasoning: Let's think step by step.
+Thanksgiving in the US is on the fourth Thursday of November. In 2001, the fourth Thursday was November 22, 2001. So today is 11/22/2001. Tomorrow is one day after that: 11/23/2001. Looking at the options, the only one that matches the month and day is (C) 11/23/2002, but the year is 2002, not 2001. However, since the question asks for the date tomorrow in MM/DD/YYYY and the closest matching option is (C), it appears there may be a typo in the options. Based on the logic, the answer should be 11/23/2001, but according to the options, (C) is the intended answer. So the answer is (C).
+Answer: (C)

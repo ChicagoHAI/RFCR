@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-07-12T15:35:54",
+  "task": "disambiguation_qa",
+  "gepa_version": "0.1.1",
+  "litellm_version": "1.83.7",
+  "python": "3.14.5",
+  "task_lm": "openai/gpt-4.1-mini",
+  "reflection_lm": "openai/gpt-4.1-mini",
+  "adapter": "gepa.adapters.default_adapter.DefaultAdapter",
+  "evaluator": "ExactMatchRepoParserEvaluator (repo task parsers: _parse_prediction + spec.is_correct; 1.0/0.0)",
+  "max_litellm_workers": 16,
+  "max_litellm_workers_note": "library default is 10; raised to 16 per user parallelism instruction",
+  "litellm_batch_completion_kwargs": {},
+  "task_call_sampling": "library default: no temperature/seed/max_tokens sent (OpenAI defaults, temperature 1.0)",
+  "litellm_num_retries": 5,
+  "max_metric_calls": 680,
+  "max_metric_calls_derivation": "DSPy GEPA 'light' auto-budget formula (auto_budget, num_preds=1, num_candidates=6, valset_size=75, minibatch_size=35, full_eval_steps=5): N=int(max(2*2*log2(6), 9))=10; total = 75 + 30 + 350 + ((10+1)//5 + 1)*75 = 680. Standalone gepa requires an explicit max_metric_calls (no default); its README Quick Start value of 150 would permit at most one full val eval beyond the seed with a 75-item valset.",
+  "seed_candidate_components": [
+    "system_prompt"
+  ],
+  "seed_prompt_source": "ICRefine/runs/emnlp_bbh_full18_csicl_gpt41mini_20260518/cheatsheets/disambiguation_qa/csicl_gpt-4.1-mini_seed1000.txt",
+  "seed_prompt_shape": "locked evaluator prompt template (tasks/utils._make_eval_prompt; GenericBBHTask for object_counting) with the per-item input slot removed; item input sent as the user message per DefaultAdapter contract",
+  "trainset_size": 75,
+  "valset_size": 75,
+  "split": "random.Random(0).shuffle over the 150-item train file, first half train / second half val (gepa README Quick Start pattern)",
+  "train_file": "ICRefine/datasets/bbh/disambiguation_qa_train.jsonl",
+  "gepa_seed": 0,
+  "optimize_defaults_used": {
+    "candidate_selection_strategy": "pareto",
+    "frontier_type": "instance",
+    "skip_perfect_score": true,
+    "batch_sampler": "epoch_shuffled",
+    "reflection_minibatch_size": "None -> 3 (library default)",
+    "perfect_score": 1.0,
+    "module_selector": "round_robin",
+    "use_merge": false,
+    "max_merge_invocations": 5,
+    "raise_on_exception": true,
+    "cache_evaluation": false,
+    "val_evaluation_policy": "None -> full_eval",
+    "reflection_prompt_template": "None (library default InstructionProposalSignature)"
+  }
+}

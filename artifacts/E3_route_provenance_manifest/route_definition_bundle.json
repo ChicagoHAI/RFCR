@@ -1,0 +1,163 @@
+{
+  "atoms": [
+    {
+      "anchor": "csicl",
+      "atom_id": "gen_disambig_specific_family_v1_2",
+      "check": "Assign pronoun to the indirect object or recipient of the action when obligation or need is expressed.",
+      "do_not_use_when": "Sentence is ambiguous about who has the obligation or need.",
+      "generator_model": "openai/gpt-4.1-mini",
+      "negative_tags": null,
+      "positive_tags": null,
+      "route": "needed_one_or_told_that",
+      "routing_key": null,
+      "rule": "When the pronoun refers to who needed or should do an action (e.g., make payments, reply), assign it to the indirect object or recipient if the verb implies obligation or necessity.",
+      "source": "focused_repair_20260522",
+      "source_of_candidate": "generated_from_failure_logs",
+      "task": "disambiguation_qa",
+      "use_when": "Sentence contains verbs like 'sent', 'informed', 'bought' with 'because' + pronoun + 'needed' or 'should' + verb."
+    },
+    {
+      "anchor": "csicl",
+      "atom_id": "ff_role_universal_negative_complement_strict_v1",
+      "check": "Translate the premise as X -> not Y. Check whether the conclusion uses not-Y -> X. If no premise supplies that reverse direction and no exhaustive partition is stated, output VERDICT: INVALID.",
+      "do_not_use_when": "The premises provide an exhaustive partition, a standard valid categorical chain, a valid contrapositive, or a direct nobody/neither binary implication.",
+      "generator_model": null,
+      "negative_tags": [
+        "explicit_exhaustive_partition",
+        "explicit_exhaustive_alternatives",
+        "valid_categorical_syllogism",
+        "valid_syllogism",
+        "conclusion_standard_valid_chain",
+        "direct_exhaustive_binary_conclusion",
+        "contrapositive_valid",
+        "valid_contrapositive_surface",
+        "valid_de_morgan_contrapositive",
+        "valid_neither_contrapositive",
+        "valid_nobody_neither_necessary_chain",
+        "modus_ponens",
+        "modus_tollens"
+      ],
+      "positive_tags": [
+        "premise_universal_negative",
+        "conclusion_universal_complement_membership",
+        "no_explicit_exhaustive_partition"
+      ],
+      "routing_key": null,
+      "rule": "A universal negative premise such as 'No X is Y' or 'X is not Y' does not by itself prove a universal claim about every non-Y or complement-class item being X. That converse is invalid unless the premises explicitly rule out all third categories.",
+      "source": "locked_20260519",
+      "source_of_candidate": null,
+      "task": "formal_fallacies",
+      "use_when": "A universal negative premise appears in the premises and the conclusion makes a universal complement-class claim without an explicit exhaustive partition."
+    },
+    {
+      "anchor": "csicl",
+      "atom_id": "gen_geo_1_true_gpt41mini_v1",
+      "check": "count 'M' commands == 1 AND count 'L' commands == 0 AND count 'A' commands == 2 AND path ends at starting point AND both arcs have large-arc-flag == 1",
+      "do_not_use_when": "number of 'M' commands is not 1, or number of 'L' commands is not 0, or number of 'A' commands is not 2, or path is not closed by arcs returning to start point, or large-arc-flag is not 1 in arcs",
+      "generator_model": "openai/gpt-4.1-mini",
+      "negative_tags": null,
+      "positive_tags": null,
+      "routing_key": [
+        1,
+        true
+      ],
+      "rule": "If the SVG path has exactly one 'M' command, zero 'L' commands, and exactly two 'A' (arc) commands, and the path is closed by the last arc returning to the start point, and the arc flags have the large-arc-flag set to 1, then classify as ellipse (K).",
+      "source": "locked_20260519",
+      "source_of_candidate": "generated_from_failure_audit",
+      "task": "geometric_shapes",
+      "use_when": "partition_key is (1, True)"
+    },
+    {
+      "anchor": "csicl",
+      "atom_id": "gen_geo_6_false_gpt41mini_repair_v3",
+      "check": "Count unique vertices from M and L commands excluding the closing duplicate vertex. Confirm count is 5. Confirm no arc (A) commands. Confirm path is closed by last L coordinate equaling first M coordinate. If all true, output VERDICT: (G).",
+      "do_not_use_when": "the number of unique vertices from M and L commands excluding the closing duplicate vertex is not 5, or the path contains any arc (A) commands, or the path is not closed (last point does not equal first point).",
+      "generator_model": "openai/gpt-4.1-mini",
+      "negative_tags": null,
+      "positive_tags": null,
+      "routing_key": [
+        6,
+        false
+      ],
+      "rule": "If the SVG path has exactly 5 unique vertices from M and L commands excluding the closing duplicate vertex, all commands are M or L, and the path is closed by the last L coordinate equaling the first M coordinate, then output VERDICT: (G).",
+      "source": "locked_20260519",
+      "source_of_candidate": "generated_union_boundary_repair",
+      "task": "geometric_shapes",
+      "use_when": "partition_key is (6, False) and the SVG path has exactly 5 unique vertices from M and L commands excluding the closing duplicate vertex, all commands are M or L, and the path is closed by the last L coordinate equaling the first M coordinate."
+    }
+  ],
+  "bundle_id": "sfcr_repaired_route_definition_bundle_20260523",
+  "route_predicates": {
+    "ff_role_universal_negative_complement_strict_v1": {
+      "activation_predicate": "positive role tags satisfied and negative boundary tags absent",
+      "negative_tags": [
+        "explicit_exhaustive_partition",
+        "explicit_exhaustive_alternatives",
+        "valid_categorical_syllogism",
+        "valid_syllogism",
+        "conclusion_standard_valid_chain",
+        "direct_exhaustive_binary_conclusion",
+        "contrapositive_valid",
+        "valid_contrapositive_surface",
+        "valid_de_morgan_contrapositive",
+        "valid_neither_contrapositive",
+        "valid_nobody_neither_necessary_chain",
+        "modus_ponens",
+        "modus_tollens"
+      ],
+      "positive_tags": [
+        "premise_universal_negative",
+        "conclusion_universal_complement_membership",
+        "no_explicit_exhaustive_partition"
+      ],
+      "route_name": "formal_fallacies_role_tags"
+    },
+    "gen_disambig_specific_family_v1_2": {
+      "activation_predicate": "feature_tags(item) contains needed_one OR told_that",
+      "boundary_predicate": "do not activate for message_reply/weak reply cues unless needed_one or told_that is present",
+      "feature_tag_source": "scripts/run_disambiguation_generated_rule_pilot.py::_feature_tags",
+      "feature_tag_source_sha256": "b2648a7dc5871fcc5e41c239bb8b853410d302f331fa6a05491d1ef1011c186f",
+      "positive_features": [
+        "needed_one",
+        "told_that"
+      ],
+      "route_name": "needed_one_or_told_that"
+    },
+    "gen_geo_1_true_gpt41mini_v1": {
+      "activation_predicate": "partition_key == (1, True); ellipse arc-count boundary checked in atom",
+      "route_name": "geometric_partition_1_true",
+      "routing_key": [
+        1,
+        true
+      ]
+    },
+    "gen_geo_6_false_gpt41mini_repair_v3": {
+      "activation_predicate": "partition_key == (6, False); closed 5-unique-vertex no-arc boundary checked in atom",
+      "route_name": "geometric_partition_6_false_pentagon",
+      "routing_key": [
+        6,
+        false
+      ]
+    }
+  },
+  "rule_source_files": {
+    "disambiguation_generated_rules": {
+      "path": "runs/token_expansion_disambig_gpt41mini_20260522/generated_rules.json",
+      "sha256": "b5a4ddea30f3129d8a6bd04a4983a288cdfaca4019f3cb18c5ff2c5293c01c7d"
+    },
+    "formal_role_subatoms": {
+      "path": "experiments/formal_fallacies_role_aware_subatoms.json",
+      "sha256": "fca29ffd21008196fdfc738599751b7d376a3cc3ace919f932b6fc99f1bd6c1c"
+    },
+    "geometric_generated_rules": {
+      "path": "runs/geometric_shapes_generated_rules_gpt41mini_small_20260518/generated_rules.json",
+      "sha256": "1d4c3cdd22437e0e4a2bffe30cb225006ea92985ece515192c79728b8dd608e9"
+    },
+    "geometric_repaired_rules_v4": {
+      "path": "runs/geometric_shapes_generated_rules_gpt41mini_small_20260518/generated_rules_repaired_v4.json",
+      "sha256": "25d1a1f60954c4a2a8085eae0a241d5ae3c28f127f939f21608ca1044ec62947"
+    }
+  },
+  "selected_atoms_file": "runs/disambig_needed_one_told_that_strict_protocol_20260522/selected_atoms_disambig_needed_one_told_that.json",
+  "selected_atoms_file_hash": "f2a90971412c403bcdbc17ba428bb41d26fd3fc3b2e41082151ddabb0002ccd9"
+}

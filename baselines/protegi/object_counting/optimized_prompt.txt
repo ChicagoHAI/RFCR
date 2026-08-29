@@ -1,0 +1,93 @@
+**Precise Enumeration of Items Within a Designated Category**
+
+---
+
+### Guidelines:
+
+1. Determine the specified category in the prompt (Objects, Vegetables, Fruits, Animals, or Musical Instruments).  
+2. Count only those items that belong to the designated category.  
+3. For every item referenced in the text:  
+   - If a specific quantity is mentioned (e.g., "three bananas"), use that exact number.  
+   - If no quantity is provided, count the item as one.  
+   - Plural forms (e.g., "couches," "garlics") indicate multiple items; count accordingly (e.g., "four couches" = 4, "garlics" = multiple garlic bulbs).  
+   - Compound phrases such as "heads of broccoli," "stalks of celery," or "garlics" represent multiple units and should be counted based on the stated or implied quantity.  
+4. Exclude any items that do not belong to the requested category.  
+5. Count each item individually, even if quantities are not explicitly stated (e.g., "a garlic" = 1, "two garlics" = 2).  
+6. Refer to the category lists provided to confirm whether an item belongs in the specified category before counting.
+
+---
+
+### Category Reference:
+
+**Objects**  
+Examples: couch, bed, table, lamp, car, chair, toaster, stove, fridge, oven, microwave.
+
+**Vegetables**  
+Examples: cabbage, carrot, celery stalk, onion, garlic, cauliflower, broccoli head, lettuce head, potato, yam.  
+Notes:  
+- Count each head, stalk, or bulb separately.  
+- Plural "garlics" means multiple bulbs of garlic.  
+- Do not include fruits, animals, or other categories.
+
+**Fruits**  
+Examples: apple, banana, orange, peach, plum, nectarine, raspberry, blackberry, strawberry, grape, blueberry.  
+Notes:  
+- Count each unit or plural form exactly.  
+- Exclude vegetables, animals, or other categories.
+
+**Animals**  
+Examples: mouse, snail, chicken, cat, pig, snake, fish, goat, bear, dog, cow, frog, donkey, rabbit, duck.  
+Notes:  
+- Correctly count singular and plural forms.  
+- Do not count instruments, fruits, vegetables, or objects.
+
+**Musical Instruments**  
+Examples: flute, trombone, accordion, clarinet, drum, piano, violin, trumpet.  
+Notes:  
+- Count each instrument mentioned.  
+- Exclude animals, fruits, vegetables, or objects.
+
+---
+
+### Correct Counting Examples:
+
+- "three heads of broccoli" = 3 vegetables  
+- "five carrots" = 5 vegetables  
+- "two apples" = 2 fruits  
+- "a dog" = 1 animal  
+- "three drums" = 3 instruments  
+- "a stalk of celery" = 1 vegetable  
+- "four couches" = 4 objects  
+- "a garlic" = 1 vegetable  
+- "two garlics" = 2 vegetables  
+
+---
+
+### Key Points to Remember:
+
+- Multiply counts properly when quantities or plurals are mentioned.  
+- Count each item individually, even if no quantity is given.  
+- Always count singular items as one (e.g., "a [item]" = 1).  
+- Exclude items outside the requested category.  
+- Pay close attention to compound nouns and plural forms to ensure accurate totals.
+
+---
+
+### Example Scenario:
+
+"I have a stalk of celery, two drums, two onions, a carrot, an accordion, a yam, a cabbage, a lettuce head, a potato, and a head of broccoli. How many vegetables do I have?"
+
+Counting only vegetables:  
+- celery stalk (1)  
+- two onions (2)  
+- carrot (1)  
+- yam (1)  
+- cabbage (1)  
+- lettuce head (1)  
+- potato (1)  
+- broccoli head (1)  
+Total = 9 vegetables
+
+---
+
+Follow these instructions carefully to count all items within the specified category accurately.

@@ -1,0 +1,91 @@
+Cheat Sheet for Difficult Examples: Key Strategies and Details
+
+---
+
+### 1. **Color Identification and Verification**
+- When asked if an item is a certain color (yes/no):
+  - Confirm the exact color stated in the question.
+  - Do NOT confuse similar or related colors (e.g., mauve ≠ purple, fuchsia ≠ magenta).
+  - Example: "Is the teddy bear mauve?" → Check if teddy bear is explicitly mauve or another color.
+
+---
+
+### 2. **Position-Based Questions (Arranged in a Row)**
+- **Furthest from / Directly to the left/right of:**
+  - Identify the order of items exactly as given.
+  - "Furthest from X" means the item at the opposite end of the row from X.
+  - "Directly to the left/right of X" means the immediate neighbor on that side.
+  - Carefully track the sequence; do not assume circular or wrap-around order.
+  - Example: If row is [A, B, C], furthest from A is C; directly to the left of B is A.
+
+- **Counting items to the left/right of a specific item:**
+  - Count only items strictly on the specified side.
+  - When counting "non-[color]" or "non-[attribute]" items, exclude those matching the color/attribute.
+  - Example: "How many non-turquoise items to the left of yellow?" → Count all items left of yellow that are NOT turquoise.
+
+---
+
+### 3. **Counting After Removal**
+- When items are removed by category (color or object type):
+  - Remove all specified items first.
+  - Count remaining items of the requested type or color.
+  - Pay attention to plural forms and quantities given.
+  - Example: "If I remove all the envelopes, how many pink items remain?" → Remove all envelopes, then count pink items left.
+
+---
+
+### 4. **Color Grouping and Similar Colors**
+- Be aware of subtle color differences:
+  - Mauve, magenta, fuchsia, purple, pink are distinct.
+  - Teal and turquoise are distinct but related; check exact usage.
+  - Silver and grey are different; silver is metallic.
+- Do NOT confuse colors even if they sound similar.
+
+---
+
+### 5. **Multiple Items of Same Type and Color**
+- When multiple items of the same type and color are present:
+  - Keep track of exact counts.
+  - When removing items, remove all matching the criteria.
+  - Example: "Three silver scrunchiephone chargers and two magenta scrunchiephone chargers. Remove all magenta items. How many scrunchiephone chargers remain?" → Only silver remain, count = 3.
+
+---
+
+### 6. **"Neither" Questions (Neither X nor Y)**
+- Count items that do NOT have either of the specified colors or attributes.
+- Example: "How many items are neither red nor brown?" → Exclude all red and brown items, count the rest.
+
+---
+
+### 7. **Common Object Types and Colors to Remember**
+- Objects: teddy bear, crayon, scrunchiephone charger, dog leash, cat toy, bracelet, necklace, pencil, pen, plate, cup, envelope, booklet, puzzle, stress ball, paperclip, jug, mug, textbook, keychain, fidget spinner, sheet of paper, notebook, puzzle, pair of sunglasses, crayon, pencil, pen, cup, plate, bracelet, necklace, dog leash, cat toy, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paperclip, puzzle, mug, crayon, pen, pencil, notebook, sheet of paper, fidget spinner, dog leash, cat toy, bracelet, necklace, teddy bear, scrunchiephone charger, stress ball, keychain, jug, textbook, booklet, envelope, paper
+
+Follow the format of the examples below in your response.
+
+Question: On the nightstand, you see a silver teddy bear, a gold crayon, and an orange scrunchiephone charger. Is the teddy bear mauve?
+Options:
+(A) yes
+(B) no
+Answer: (B)
+###
+Question: On the table, you see several items arranged in a row: a purple dog leash, a magenta cat toy, and a turquoise pair of sunglasses. What is the color of the item furthest from the dog leash?
+Options:
+(A) red
+(B) orange
+(C) yellow
+(D) green
+(E) blue
+(F) brown
+(G) magenta
+(H) fuchsia
+(I) mauve
+(J) teal
+(K) turquoise
+(L) burgundy
+(M) silver
+(N) gold
+(O) black
+(P) grey
+(Q) purple
+(R) pink
+Answer: (K)

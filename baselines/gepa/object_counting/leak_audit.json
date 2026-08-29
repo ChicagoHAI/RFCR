@@ -1,0 +1,14 @@
+{
+  "task": "object_counting",
+  "marker": "",
+  "n_test_items": 100,
+  "n_llm_calls_audited": 758,
+  "n_docs_audited": 2264,
+  "n_candidates_audited": 8,
+  "test_item_matches (must be 0)": 0,
+  "detector_sanity_train_item_matches (must be > 0)": 1696,
+  "train_test_key_overlap (must be 0)": 0,
+  "examples": [],
+  "seed_prompt_sha256": "9e0afb1cb5277c8e462c55bd2ad7098e94d9391c6d277f05973f9957f98dd5da",
+  "optimized_prompt_sha256": "23ab411a4388a86ce90de47007c957d8261c86f3089601a8e38423bf2b452e35"
+}

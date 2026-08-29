@@ -1,0 +1,52 @@
+You are generating one conservative SF-CR memory atom for BBH object_counting.
+
+The model often undercounts when an item has an explicit quantity word, and it may count distractor objects outside the requested category.
+
+Failure examples, where the baseline answer was wrong:
+- id=object_counting_0156 gold=10 baseline=9 input=I have a trumpet, a piano, a flute, a snake, three accordions, a violin, a drum, a clarinet, and a trombone. How many musical instruments do I have?
+- id=object_counting_0159 gold=8 baseline=6 input=I have three potatoes, a carrot, a snake, a yam, a cauliflower, a stalk of celery, and a garlic. How many vegetables do I have?
+- id=object_counting_0161 gold=5 baseline=4 input=I have a trombone, a flute, two nectarines, a violin, a strawberry, a peach, and a grape. How many fruits do I have?
+- id=object_counting_0162 gold=7 baseline=6 input=I have three heads of broccoli, two cauliflowers, a yam, and a lettuce head. How many vegetables do I have?
+- id=object_counting_0163 gold=13 baseline=11 input=I have a lettuce head, two yams, a cabbage, a stalk of celery, three heads of broccoli, a garlic, an onion, a carrot, a cauliflower, and a potato. How many vegetables do I have?
+- id=object_counting_0165 gold=16 baseline=13 input=I have a cabbage, four stalks of celery, two garlics, three carrots, a yam, a cauliflower, a lettuce head, two heads of broccoli, a microwave, and an onion. How many vegetables do I have?
+- id=object_counting_0169 gold=6 baseline=5 input=I have two chairs, a toaster, an oven, a table, and a couch. How many objects do I have?
+- id=object_counting_0170 gold=11 baseline=10 input=I have a trombone, three clarinets, an accordion, two violins, a flute, a drum, a trumpet, and a piano. How many musical instruments do I have?
+- id=object_counting_0173 gold=10 baseline=9 input=I have three snakes, a cat, a bear, two goats, a chicken, a donkey, a car, and a fish. How many animals do I have?
+- id=object_counting_0174 gold=15 baseline=12 input=I have a fish, a snake, a lettuce head, a mouse, four bears, a rabbit, a pig, three goats, a cow, and two snails. How many animals do I have?
+- id=object_counting_0175 gold=12 baseline=8 input=I have a potato, a carrot, two onions, a cauliflower, a plum, a lettuce head, five stalks of celery, and a yam. How many vegetables do I have?
+- id=object_counting_0177 gold=10 baseline=9 input=I have two fish, four cats, two chickens, a mouse, and a goat. How many animals do I have?
+
+Boundary examples, where the baseline was correct and must not regress:
+- id=object_counting_0150 gold=9 baseline=9 input=I have a couch, a bed, a car, a fridge, two tables, an oven, a toaster, and a chair. How many objects do I have?
+- id=object_counting_0151 gold=2 baseline=2 input=I have a head of broccoli, and a cabbage. How many vegetables do I have?
+- id=object_counting_0152 gold=5 baseline=5 input=I have four snails, and a cow. How many animals do I have?
+- id=object_counting_0153 gold=9 baseline=9 input=I have a plum, a banana, a nectarine, a strawberry, a blackberry, two oranges, a raspberry, and a peach. How many fruits do I have?
+- id=object_counting_0154 gold=5 baseline=5 input=I have a banana, a nectarine, a raspberry, an apple, and a peach. How many fruits do I have?
+- id=object_counting_0155 gold=8 baseline=8 input=I have an apple, a plum, a blackberry, a raspberry, three strawberries, and a banana. How many fruits do I have?
+- id=object_counting_0157 gold=4 baseline=4 input=I have a table, a strawberry, and three nectarines. How many fruits do I have?
+- id=object_counting_0158 gold=11 baseline=11 input=I have an onion, a carrot, a potato, a yam, three lettuce heads, two cauliflowers, a garlic, and a cabbage. How many vegetables do I have?
+- id=object_counting_0160 gold=6 baseline=6 input=I have a banana, a raspberry, a strawberry, a plum, a blackberry, and a grape. How many fruits do I have?
+- id=object_counting_0164 gold=9 baseline=9 input=I have an orange, a raspberry, a strawberry, an apple, a blackberry, a nectarine, a peach, a banana, and a plum. How many fruits do I have?
+- id=object_counting_0166 gold=6 baseline=6 input=I have an oven, an apple, three bananas, a table, and two grapes. How many fruits do I have?
+- id=object_counting_0167 gold=13 baseline=13 input=I have a lettuce head, a stalk of celery, two yams, a cauliflower, a carrot, two onions, two potatoes, and three cabbages. How many vegetables do I have?
+
+Return JSON only:
+{
+  "rules": [
+    {
+      "id": "gen_object_counting_quantity_filter_v1",
+      "task": "object_counting",
+      "rule": "...",
+      "use_when": "...",
+      "do_not_use_when": "...",
+      "check": "...",
+      "micro_example": "..."
+    }
+  ]
+}
+
+Requirements:
+- The rule must tell the scorer to count only objects in the category asked by the question.
+- Convert quantity words like two/three/four/five into counts, while a/an/one count as 1.
+- Ignore distractor objects outside the asked category.
+- Keep the rule procedural and short.

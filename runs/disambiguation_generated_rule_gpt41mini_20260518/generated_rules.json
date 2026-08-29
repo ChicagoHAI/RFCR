@@ -1,0 +1,87 @@
+{
+  "rules": [
+    {
+      "id": "gen_disambig_specific_family_v1_1",
+      "task": "disambiguation_qa",
+      "rule": "When a pronoun refers to who better understood or asked, assign it to the subject who logically has expertise or authority in the context.",
+      "use_when": "sentence contains 'because he/she/they better understood' or 'because he/she/they asked'",
+      "do_not_use_when": "both participants have equal expertise or authority",
+      "check": "Identify which participant is more plausibly the one with knowledge or who initiated the request.",
+      "activation_cues": [
+        "better understood",
+        "because he asked",
+        "because she asked"
+      ],
+      "negative_cues": [
+        "ambiguous expertise",
+        "equal authority"
+      ],
+      "micro_example": "The secretary corrected the developer because she better understood the problem. -> The secretary understood the problem",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini"
+    },
+    {
+      "id": "gen_disambig_specific_family_v1_2",
+      "task": "disambiguation_qa",
+      "rule": "When a pronoun refers to who should perform an action like 'floss' or 'make payments', assign it to the recipient or addressee of the advice or instruction.",
+      "use_when": "sentence contains 'should floss', 'should make payments', or similar obligation verbs",
+      "do_not_use_when": "the subject giving advice is also the one obligated",
+      "check": "Assign obligation to the person who logically needs to follow the advice or instruction.",
+      "activation_cues": [
+        "should floss",
+        "should make payments",
+        "need to make payments"
+      ],
+      "negative_cues": [
+        "ambiguous obligation",
+        "both could be obligated"
+      ],
+      "micro_example": "The hygienist told the patient that they should floss every day. -> The patient should floss",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini"
+    },
+    {
+      "id": "gen_disambig_specific_family_v1_3",
+      "task": "disambiguation_qa",
+      "rule": "When a pronoun refers to possession of an object or location (e.g., 'car', 'office'), assign it to the participant who logically owns or controls it, especially if the sentence implies usage or meeting there.",
+      "use_when": "sentence contains possession or location words like 'car', 'office', 'her car', 'their office'",
+      "do_not_use_when": "ownership is explicitly ambiguous or shared",
+      "check": "Assign possession to the participant whose role or context fits ownership or usage.",
+      "activation_cues": [
+        "her car",
+        "his car",
+        "their office",
+        "at her office",
+        "at his office"
+      ],
+      "negative_cues": [
+        "ambiguous ownership",
+        "shared possession"
+      ],
+      "micro_example": "Bailey will plan to meet the director at her office -> The director's office",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini"
+    },
+    {
+      "id": "gen_disambig_specific_family_v1_4",
+      "task": "disambiguation_qa",
+      "rule": "When a pronoun refers to who performed an action or caused an event (e.g., 'broke a window'), assign it to the participant explicitly linked by gendered pronouns or clear causal connection.",
+      "use_when": "sentence contains gendered pronouns 'he', 'she' linked to an action",
+      "do_not_use_when": "no clear gender or causal link",
+      "check": "Assign the action to the participant matching the pronoun gender and causal role.",
+      "activation_cues": [
+        "he broke",
+        "she broke",
+        "he did",
+        "she did"
+      ],
+      "negative_cues": [
+        "ambiguous agent",
+        "no gender cues"
+      ],
+      "micro_example": "The driver yelled at the tailor after she broke a window. -> The tailor broke a window",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini"
+    }
+  ]
+}

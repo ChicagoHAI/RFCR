@@ -1,0 +1,14 @@
+{
+  "task": "disambiguation_qa",
+  "marker": "sentence:",
+  "n_test_items": 100,
+  "n_llm_calls_audited": 695,
+  "n_docs_audited": 2079,
+  "n_candidates_audited": 6,
+  "test_item_matches (must be 0)": 0,
+  "detector_sanity_train_item_matches (must be > 0)": 1369,
+  "train_test_key_overlap (must be 0)": 0,
+  "examples": [],
+  "seed_prompt_sha256": "e4df920479afff820c0c49aebbe6ecb1e3c7b8461109d4a9ccaf3b1bdbfd4853",
+  "optimized_prompt_sha256": "e4df920479afff820c0c49aebbe6ecb1e3c7b8461109d4a9ccaf3b1bdbfd4853"
+}

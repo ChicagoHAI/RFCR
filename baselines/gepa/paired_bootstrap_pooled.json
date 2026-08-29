@@ -1,0 +1,10 @@
+{
+  "n_items": 400,
+  "n_boot": 10000,
+  "seed": 20260712,
+  "stratified_by": "task",
+  "delta_accuracy_observed_gepa_minus_anchor": -0.03,
+  "ci95_low": -0.0625,
+  "ci95_high": 0.0025,
+  "bootstrap_p_two_sided_against_zero": 0.0712
+}

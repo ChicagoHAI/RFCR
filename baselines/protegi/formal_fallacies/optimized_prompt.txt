@@ -1,0 +1,106 @@
+**Guidelines for Evaluating Deductive Validity in Complex Logical Reasoning**
+
+---
+
+### Core Principles and Cautions
+
+1. **Implications and Contrapositives**
+
+- The conditional statement "If A then B" (A → B) is logically equivalent to its contrapositive "If not B then not A" (¬B → ¬A).
+- **Use contraposition only when the terminology and context clearly align.** Avoid applying it indiscriminately in natural language scenarios where domain boundaries or implicit assumptions exist.
+- Do **NOT** infer the converse (B → A) or inverse (¬A → ¬B) unless they are explicitly supported by premises.
+
+2. **Necessary vs. Sufficient Conditions**
+
+- Identify whether a condition is necessary, sufficient, or both.
+- "A only if B" translates to A → B, indicating B is necessary for A.
+- "If A then B" means A is sufficient for B.
+- Take care not to mix up necessity and sufficiency; the direction of implication is crucial.
+
+3. **Disjunctions (OR Statements)**
+
+- Given "A or B" (A ∨ B), if A is false, then B must be true; if B is false, then A must be true.
+- Do not conclude either A or B individually without further premises.
+- Clarify whether the “or” is inclusive or exclusive according to context.
+
+4. **Quantifiers and Existential Claims**
+
+- "Some X is Y" asserts the existence of at least one instance but does not imply universality or quantity.
+- Avoid deriving universal or exclusionary conclusions without explicit premises.
+- Do not assume "some X is not Z" when premises are ambiguous or contradictory.
+
+5. **Negations and Their Scope**
+
+- Negations require careful handling, especially in compound statements.
+- Use De Morgan’s laws only when justified by logical and contextual factors.
+- Do not interpret ¬A as meaning A is always false; it may indicate lack of evidence or irrelevance.
+
+6. **Transitive Reasoning**
+
+- Transitivity holds when premises form a connected sequence: If A → B and B → C, then A → C.
+- Ensure no conflicting or limiting premises exist before applying transitivity.
+
+7. **Avoiding Invalid Inferences**
+
+- The converse (B → A) and inverse (¬A → ¬B) are invalid unless premises explicitly support them.
+- The contrapositive (¬B → ¬A) is valid only when equivalent to A → B and contextually appropriate.
+
+8. **"Only If" and Biconditional Statements**
+
+- "A only if B" means A → B.
+- "A if and only if B" (A ↔ B) means both directions hold.
+- Distinguish carefully which applies based on premise phrasing.
+
+9. **"Neither...Nor..." and "Not Both" Forms**
+
+- "No one is neither A nor B" implies everyone satisfies at least one of A or B.
+- "No one is both A and B" excludes any overlap between A and B groups.
+- Use these to clarify and limit possible cases.
+
+10. **Existential vs. Universal Quantifiers**
+
+- Existential conclusions require premises affirming existence.
+- Universal conclusions require premises with universal scope.
+- Do not infer universals from existentials or vice versa without proper justification.
+
+11. **Subset and Inclusion Relations**
+
+- Statements like "All A are B" and "No A are C" imply "All A are not C."
+- Avoid assuming inverse or cross-subset relations without explicit premises.
+
+12. **"At Least One" and "At Most One" Statements**
+
+- "Some X is Y" does not imply "All X are Y."
+- "No X is both Y and Z" prevents overlap.
+- Apply these carefully to confirm or deny intersections.
+
+13. **Context and Domain Considerations**
+
+- Check if premises impose domain restrictions, exceptions, or specific contexts.
+- Do not apply formal logic rules mechanically without considering nuances or implied conditions in natural language.
+
+---
+
+### Practical Recommendations
+
+- Carefully analyze the exact wording and scope before using contraposition or transitivity.
+- Account for all necessary conditions and domain constraints prior to deciding deductive validity.
+- When in doubt, proceed cautiously and avoid overextending logical rules.
+
+---
+
+### Summary
+
+Deductive validity requires that conclusions inevitably follow from premises under every interpretation consistent with those premises. Distinguish clearly between logical equivalences, implications, and context-dependent limitations to avoid faulty conclusions.
+
+---
+
+Using these standards, assess whether the conclusion follows deductively from the explicitly stated premises and logical connections.
+
+Is the argument deductively valid or invalid?
+
+Options:
+- valid
+- invalid
+
+Output:

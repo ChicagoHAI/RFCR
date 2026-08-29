@@ -1,0 +1,80 @@
+You are generating narrow SF-CR memory atoms for BBH disambiguation_qa.
+
+Task: decide the antecedent of a pronoun, or answer Ambiguous.
+
+Failure examples where the baseline was wrong:
+- id=disambiguation_qa_0153 gold=(A) baseline=(C) sentence=The carpenter told the onlooker that she had been working on the house for three weeks. options=(A) The carpenter had been working on the house (B) The onlooker had been working on the house (C) Ambiguous
+- id=disambiguation_qa_0154 gold=(A) baseline=(C) sentence=The manager sent a message to the secretary, but they didn't reply yet. options=(A) The secretary didn't reply yet (B) The manager didn't reply yet (C) Ambiguous
+- id=disambiguation_qa_0156 gold=(A) baseline=(C) sentence=The janitor warned the child not to step on the wet floor, otherwise they would have to mop it all over again. options=(A) The janitor would have to mop (B) The child would have to mop (C) Ambiguous
+- id=disambiguation_qa_0160 gold=(A) baseline=(C) sentence=The secretary corrected the developer because she better understood the problem. options=(A) The secretary understood the problem (B) The developer understood the problem (C) Ambiguous
+- id=disambiguation_qa_0162 gold=(B) baseline=(C) sentence=The hygienist told the patient that they should floss every day. options=(A) The hygienist should floss (B) The patient should floss (C) Ambiguous
+- id=disambiguation_qa_0163 gold=(C) baseline=(B) sentence=The driver yelled at the tailor after she broke a window. options=(A) The driver broke a window (B) The tailor broke a window (C) Ambiguous
+- id=disambiguation_qa_0170 gold=(B) baseline=(C) sentence=The customer and the chef discuss their culinary training. options=(A) It is the customer's culinary training (B) It is the chef's culinary training (C) Ambiguous
+- id=disambiguation_qa_0171 gold=(B) baseline=(C) sentence=The CEO bought the accountant a car because he needed one. options=(A) The CEO needed a car (B) The accountant needed a car (C) Ambiguous
+- id=disambiguation_qa_0172 gold=(B) baseline=(C) sentence=The librarian helped the CEO to find the book because she asked. options=(A) The librarian asked (B) The CEO asked (C) Ambiguous
+- id=disambiguation_qa_0174 gold=(B) baseline=(C) sentence=The librarian helped the CEO to find the book because he asked. options=(A) The librarian asked (B) The CEO asked (C) Ambiguous
+- id=disambiguation_qa_0176 gold=(A) baseline=(C) sentence=The developer corrected the secretary because they better understood the problem. options=(A) The developer understood the problem (B) The secretary understood the problem (C) Ambiguous
+- id=disambiguation_qa_0178 gold=(B) baseline=(C) sentence=The customer asked the salesperson if she could send the prices of each product. options=(A) The customer would send the prices (B) The salesperson would send the prices (C) Ambiguous
+- id=disambiguation_qa_0179 gold=(B) baseline=(C) sentence=The customer and the chef discussed her culinary training. options=(A) It was the customer's culinary training (B) It was the chef's culinary training (C) Ambiguous
+- id=disambiguation_qa_0181 gold=(A) baseline=(C) sentence=The educator was meeting with a student to discuss her grading policy. options=(A) It was the educator's grading policy (B) It was the student's grading policy (C) Ambiguous
+- id=disambiguation_qa_0182 gold=(B) baseline=(C) sentence=The patient was referred to the specialist because they are an expert on rare skin conditions. options=(A) The patient is an expert (B) The specialist is an expert (C) Ambiguous
+- id=disambiguation_qa_0183 gold=(C) baseline=(B) sentence=Bailey will plan to meet the director at her office options=(A) It will be Bailey's office (B) It will be the director's office (C) Ambiguous
+- id=disambiguation_qa_0185 gold=(B) baseline=(C) sentence=The engineer informed the client that he would need to make all future payments on time. options=(A) The engineer should make payments (B) The client should make payments (C) Ambiguous
+- id=disambiguation_qa_0188 gold=(A) baseline=(C) sentence=The visitor tells the teacher that she likes the cake. options=(A) The visitor likes the cake (B) The teacher likes the cake (C) Ambiguous
+- id=disambiguation_qa_0190 gold=(B) baseline=(C) sentence=The CEO bought the accountant a car because they needed one. options=(A) The CEO needed a car (B) The accountant needed a car (C) Ambiguous
+- id=disambiguation_qa_0196 gold=(B) baseline=(C) sentence=The chief encouraged the writer because he wrote a good book. options=(A) The chief wrote a good book (B) The writer wrote a good book (C) Ambiguous
+- id=disambiguation_qa_0197 gold=(C) baseline=(A) sentence=Before she sent the letter, Alex did not know Taylor. options=(A) Alex sent the letter (B) Taylor sent the letter (C) Ambiguous
+- id=disambiguation_qa_0199 gold=(A) baseline=(C) sentence=The secretary corrected the developer because he better understood the problem. options=(A) The secretary understood the problem (B) The developer understood the problem (C) Ambiguous
+- id=disambiguation_qa_0205 gold=(B) baseline=(C) sentence=The CEO bought the accountant a car because she needed one. options=(A) The CEO needed a car (B) The accountant needed a car (C) Ambiguous
+- id=disambiguation_qa_0206 gold=(B) baseline=(C) sentence=The customer and the chef discussed his culinary training. options=(A) It was the customer's culinary training (B) It was the chef's culinary training (C) Ambiguous
+
+Boundary examples where the baseline was correct and must not regress:
+- id=disambiguation_qa_0150 gold=(C) baseline=(C) sentence=The developer was unable to communicate with the writer because he used big words. options=(A) The developer uses big words (B) The writer uses big words (C) Ambiguous
+- id=disambiguation_qa_0151 gold=(C) baseline=(C) sentence=The developer argued with the designer because they liked the design. options=(A) The developer liked the design (B) The designer liked the design (C) Ambiguous
+- id=disambiguation_qa_0152 gold=(A) baseline=(A) sentence=The pathologist obtained tissue samples from the victim to look at under their microscope. options=(A) It was the pathologist's microscope (B) It was the victim's microscope (C) Ambiguous
+- id=disambiguation_qa_0155 gold=(C) baseline=(C) sentence=The mechanic greets the receptionist because they were in a good mood. options=(A) The mechanic was in a good mood (B) The receptionist was in a good mood (C) Ambiguous
+- id=disambiguation_qa_0157 gold=(C) baseline=(C) sentence=The manager asked the employee to not forget her car. options=(A) It was the manager's car (B) It was the employee's car (C) Ambiguous
+- id=disambiguation_qa_0158 gold=(C) baseline=(C) sentence=The reporter and the chef discuss his favorite dishes. options=(A) They discuss the reporter's favorite dishes (B) They discuss the chef's favorite dishes (C) Ambiguous
+- id=disambiguation_qa_0159 gold=(A) baseline=(A) sentence=The homeowner asked the inspector if the house she had purchased was structurally sound. options=(A) The homeowner had purchased (B) The inspector had purchased (C) Ambiguous
+- id=disambiguation_qa_0161 gold=(A) baseline=(A) sentence=The paralegal forgot to file paperwork for the client so he was fired. options=(A) The paralegal was fired (B) The client was fired (C) Ambiguous
+- id=disambiguation_qa_0164 gold=(A) baseline=(A) sentence=Alex tells us that she could not meet. options=(A) Alex could not meet (B) We could not meet (C) Ambiguous
+- id=disambiguation_qa_0165 gold=(B) baseline=(B) sentence=The carpenter made a desk for the clerk and gave her a discount. options=(A) Gave the carpenter a discount (B) Gave the clerk a discount (C) Ambiguous
+- id=disambiguation_qa_0166 gold=(B) baseline=(B) sentence=The construction worker called the editor and told them the whole story. options=(A) Told the construction worker the story (B) Told the editor the story (C) Ambiguous
+- id=disambiguation_qa_0167 gold=(A) baseline=(A) sentence=My cousin called his boss for more information options=(A) They were my cousin's boss (B) They were the boss's boss (C) Ambiguous
+- id=disambiguation_qa_0168 gold=(B) baseline=(B) sentence=The salesperson tried to fool the writer and sold him some garbage. options=(A) Sold the salesperson some garbage (B) Sold the writer some garbage (C) Ambiguous
+- id=disambiguation_qa_0169 gold=(C) baseline=(C) sentence=The reporter and the chef discussed their favorite dishes. options=(A) They discussed the reporter's favorite dishes (B) They discussed the chef's favorite dishes (C) Ambiguous
+- id=disambiguation_qa_0173 gold=(C) baseline=(C) sentence=Bailey plans to meet the director at their office options=(A) It is Bailey's office (B) It is the director's office (C) Ambiguous
+- id=disambiguation_qa_0175 gold=(B) baseline=(B) sentence=The designer collaborated with the carpenter and gave him a blueprint. options=(A) Gave the designer a blueprint (B) Gave the carpenter a blueprint (C) Ambiguous
+- id=disambiguation_qa_0177 gold=(A) baseline=(A) sentence=The patient disclosed to the counselor that she had a history of substance abuse. options=(A) The patient had a history (B) The counselor had a history (C) Ambiguous
+- id=disambiguation_qa_0180 gold=(A) baseline=(A) sentence=The patient was referred to the specialist because she had a rare skin condition. options=(A) The patient had a skin condition (B) The specialist had a skin condition (C) Ambiguous
+- id=disambiguation_qa_0184 gold=(B) baseline=(B) sentence=The writer tried to fool the salesperson and told her a fake story. options=(A) Told the writer a fake story (B) Told the salesperson a fake story (C) Ambiguous
+- id=disambiguation_qa_0186 gold=(A) baseline=(A) sentence=My parent called their secretary for more information options=(A) They were my parent's secretary (B) They were the secretary's secretary (C) Ambiguous
+- id=disambiguation_qa_0187 gold=(B) baseline=(B) sentence=The cleaner called the guard and asked him to open the door. options=(A) Asked the cleaner (B) Asked the guard (C) Ambiguous
+- id=disambiguation_qa_0189 gold=(C) baseline=(C) sentence=The developer met with the designer because his idea can be implemented. options=(A) The developer's idea could be implemented (B) The designer's idea could be implemented (C) Ambiguous
+- id=disambiguation_qa_0191 gold=(B) baseline=(B) sentence=The secretary came to the analyst's office and helped them to book a flight. options=(A) Helped the secretary book a flight (B) Helped the analyst book a flight (C) Ambiguous
+- id=disambiguation_qa_0192 gold=(B) baseline=(B) sentence=The carpenter collaborated with the designer and gave her a prototype. options=(A) Gave the carpenter a prototype (B) Gave the designer a prototype (C) Ambiguous
+
+Return JSON only:
+{
+  "rules": [
+    {
+      "id": "gen_disambig_specific_family_v1",
+      "task": "disambiguation_qa",
+      "rule": "...",
+      "use_when": "...",
+      "do_not_use_when": "...",
+      "activation_cues": ["short literal cue"],
+      "negative_cues": ["short literal veto"],
+      "check": "...",
+      "micro_example": "..."
+    }
+  ]
+}
+
+Requirements:
+- Return exactly 6 rules.
+- Each rule must be narrow and tied to a recurring linguistic pattern.
+- Avoid generic advice like "consider both interpretations"; that often preserves ambiguity errors.
+- Prefer rules that distinguish when only one option is semantically licensed.
+- Include literal activation cues that can be checked in the sentence text.
+- Keep each rule short enough to prepend to a prompt.

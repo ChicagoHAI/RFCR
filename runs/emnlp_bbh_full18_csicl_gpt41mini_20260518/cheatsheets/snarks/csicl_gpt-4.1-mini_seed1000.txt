@@ -1,0 +1,139 @@
+**Cheat Sheet for Identifying Sarcasm in Challenging Examples**
+
+---
+
+### Key Indicators of Sarcasm
+
+1. **Contradiction Between Description and Conclusion**
+   - When a statement praises or defends something negative or criticizes something positive.
+   - Example: Calling a lazy employee "the best" right after describing laziness.
+   - Example: Saying "great transformation" when someone’s behavior worsens.
+
+2. **Irony Through Opposite Meaning**
+   - Saying the opposite of what is true or expected to highlight absurdity.
+   - Example: Claiming "government control of the internet can't be bad" when it clearly can.
+   - Example: "Pay-to-win content is more fun and accessible" when it’s widely disliked.
+
+3. **Exaggeration or Absurdity**
+   - Overstating or understating to an unrealistic degree to mock or ridicule.
+   - Example: Complaining about a 2-minute wait as "too long."
+   - Example: Suggesting banning breathing to mock banning vaping.
+
+4. **Mocking or Ridiculing a Stereotype or Common Belief**
+   - Using sarcasm to highlight the absurdity of stereotypes or false beliefs.
+   - Example: "Women are totally incapable of pumping gas" to mock sexist stereotypes.
+   - Example: "Muslims love celebrating Christmas" to mock misunderstanding of cultural practices.
+
+5. **Using Positive Language to Describe Negative Situations (or Vice Versa)**
+   - Praising something clearly bad or condemning something clearly good.
+   - Example: Calling leaving space junk "brilliant."
+   - Example: Calling genocide "the most rational decision."
+
+6. **Rhetorical Questions or Statements That Pretend Ignorance**
+   - Asking or stating something that implies the opposite is obvious.
+   - Example: "Why would they have weapons drawn at a shooting?" (when it’s obvious).
+   - Example: "No one is on the internet" (when obviously many are).
+
+7. **Misapplication of Logic or Flawed Reasoning**
+   - Presenting an obviously flawed argument as if it were sound.
+   - Example: "If it hasn't happened before, it must not be illegal."
+   - Example: "Only rich people can afford healthy food" (exaggerated to mock).
+
+8. **Incongruous or Illogical Cause-Effect Claims**
+   - Linking unrelated or absurd causes and effects.
+   - Example: "Evolution causes vaccines."
+   - Example: "Bought stock at $1050 and sold at $100. Such profits being made."
+
+---
+
+### Specific Challenging Patterns & How to Spot Them
+
+| Pattern | How to Identify | Examples |
+|---------|-----------------|----------|
+| **Praise after Negative Description** | Look for positive adjectives or praise immediately following a negative or contradictory description. | "He's the best after showing laziness." "Brilliant person leaving space junk." |
+| **Rhetorical Question with Obvious Answer** | The question implies the answer is obvious, but the speaker pretends not to know. | "Why have weapons drawn at a shooting?" |
+| **Exaggerated Reaction to Minor Issue** | Complaints or reactions that are disproportionate to the situation. | "Two-minute wait is too long." "Dumpstering a $1000 phone." |
+| **Mocking Stereotypes or Misconceptions** | Statements that exaggerate or invert stereotypes to highlight their absurdity. | "Women can't pump gas." "Muslims love Christmas." |
+| **Flawed Logic Presented Seriously** | Statements that use faulty logic but are phrased as if they are reasonable. | "If it hasn't happened before, it must not be illegal." "Only rich people can afford healthy food." |
+| **Opposite of Common Knowledge** | Statements that contradict well-known facts or principles. | "Ignorance of the law excuses you." "Diamonds are worthless." |
+| **Sarcastic Use of "Perfectly Reasonable" or Similar Phrases** | Calling something obviously unreasonable "perfectly reasonable." | "$10 per mile fuel cost is perfectly reasonable." |
+| **Using "So" or "Such" to Emphasize Irony** | Phrases like "Such profits being made" when losses occurred. | "Bought high, sold low. Such profits." |
+| **Mocking Serious Issues with Flippant Tone** | Treating serious topics as trivial or praising negative outcomes. | "Genocide is the most rational decision." "Drinking every day, what a great transformation." |
+
+---
+
+### How to Apply This Cheat Sheet
+
+1. **Check for Contradictions:**  
+   Does the statement praise something negative or criticize something positive?  
+   → Likely sarcasm.
+
+2. **Look for Exaggeration or Absurdity:**  
+   Is the reaction or claim wildly disproportionate or unrealistic?  
+   → Likely sarcasm.
+
+3. **Identify Irony or Opposite Meaning:**  
+   Is the statement saying the opposite of what is commonly accepted or expected?  
+   → Likely sarcasm.
+
+4. **Evaluate Logic:**  
+   Does the statement use flawed or absurd logic as if it were sound?  
+   → Likely sarcasm.
+
+5. **Consider Contextual Knowledge:**  
+   Does the statement contradict well-known facts or social norms?  
+   → Likely sarcasm.
+
+6. **Watch for Rhetorical Questions or Mocking Tone:**  
+   Is the speaker pretending ignorance or mocking a belief?  
+   → Likely sarcasm.
+
+---
+
+### Examples of Difficult Cases and Why They Are Sarcastic
+
+- **"He's a terrible person promoting a charity that raised millions."**  
+  Contradiction between negative label and positive action.
+
+- **"Government control of the internet can't be bad."**  
+  Irony highlighting obvious negatives.
+
+- **"Only rich people can afford healthy food."**  
+  Exaggerated stereotype used to mock.
+
+- **"Bought stock at $1050 and sold at $100. Such profits."**  
+  Opposite of reality stated as fact.
+
+- **"No one is on the internet."**  
+  Contradicts obvious reality, mocking.
+
+- **"Genocide is the most rational decision."**  
+  Absurd praise of a horrific act.
+
+- **"Two-minute wait is too long."**  
+  Exaggerated complaint.
+
+- **"Evolution causes vaccines."**  
+  Illogical cause-effect claim.
+
+---
+
+Keep this cheat sheet handy to analyze the tone, logic, and context of statements to accurately identify sarcasm in complex or subtle cases.
+
+Follow the format of the examples below in your response.
+
+Question: Which statement is sarcastic?
+Options:
+(A) He's just kindhearted. Okay, well nothing wrong with him running the country in that case!
+(B) He's just demented. Okay, well nothing wrong with him running the country in that case!
+Reasoning: Let's think step by step.  
+We need to identify which statement is sarcastic. Option (A) says "He's just kindhearted. Okay, well nothing wrong with him running the country in that case!" — describing someone as "kindhearted" and then saying there's "nothing wrong" with them running the country is a sincere, logical statement. Option (B) says "He's just demented. Okay, well nothing wrong with him running the country in that case!" — calling someone "demented" (a serious negative trait) and then claiming there's "nothing wrong" with them running the country is a contradiction, since no one would sincerely believe that being "demented" is acceptable for a leader. This contradiction signals sarcasm. So the answer is (B).
+Answer: (B)
+###
+Question: Which statement is sarcastic?
+Options:
+(A) Why would they have weapons drawn when they've been called to the scene of a fire?
+(B) Why would they have weapons drawn when they've been called to the scene of a shooting?
+Reasoning: Let's think step by step.  
+We need to identify which statement is sarcastic. Option (A) asks why someone would have weapons drawn when responding to a fire — since there is no obvious threat at a fire, this is a sincere question expressing confusion. Option (B) asks the same question but about a shooting, where having weapons drawn would be expected and appropriate. Questioning why weapons would be drawn at a shooting is ironic, since the answer is obvious, making this statement sarcastic. So the answer is (B).
+Answer: (B)

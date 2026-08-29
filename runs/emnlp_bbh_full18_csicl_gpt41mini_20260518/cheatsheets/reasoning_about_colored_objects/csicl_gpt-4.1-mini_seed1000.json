@@ -1,0 +1,15 @@
+{
+  "task": "reasoning_about_colored_objects",
+  "condition": "csicl",
+  "generator_model": "openai/gpt-4.1-mini",
+  "seed": 1000,
+  "train_path": "datasets/bbh/reasoning_about_colored_objects_train.jsonl",
+  "n_train": 150,
+  "prompt_hash": "15fbbc58a207ffd0",
+  "cheatsheet_hash": "cefeceaea659ee11",
+  "created_at": "2026-05-18T13:15:51",
+  "generation_prompt_chars": 56286,
+  "generation_input_tokens": 14072,
+  "generation_output_tokens": 3906,
+  "generation_estimated_cost_usd": 0.011878
+}

@@ -1,0 +1,17 @@
+field,value
+run_id,disambig_needed_one_told_that_strict_csicl_rerun_20260522
+item_surface_main,main_eligible_atom_tasks
+main_n_items,400
+main_item_ids_hash,06e51b82716d83a9faa8887a91fe36c2d5a41081e970605e4af719bf693c9bb9
+main_csicl_cache_hash,84cbbf2d460d0f5e2925d12d0834d755efb3377089bfbb3b2c3b41d2f48f4c23
+atom_file_hash,f2a90971412c403bcdbc17ba428bb41d26fd3fc3b2e41082151ddabb0002ccd9
+route_file_hash,1d241f4526c2cbd460083f7646af446c3fd6a5f70a421a4da49ffb9fe97cf1c0
+parser_version,task_spec.parse_verdict via scripts.run_controlled_full_benchmark_pilot._parse_prediction
+prompt_builder_version,task_spec.build_eval_prompt
+retry_policy,utils.llm_client.call_llm_batch_default
+model_version,openai/gpt-4.1-mini
+decode_config,"{""max_tokens"": 64, ""reasoning_effort"": ""low"", ""seed"": 20260522, ""temperature"": 0.0, ""top_p"": ""not explicitly set; provider/model default""}"
+bootstrap_samples,10000
+frozen_before_eval,True
+selected_atoms_frozen_at_utc,2026-05-22T15:50:05.034257+00:00
+final_run_created_at,2026-05-22T15:52:01

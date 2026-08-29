@@ -1,0 +1,170 @@
+=== CHEATSHEET ===
+**Cheat Sheet for Deductive Validity in Complex Logical Arguments**
+
+---
+
+### 1. **Understanding Implications and Their Contrapositives**
+
+- **If A is sufficient for B (A → B), then the contrapositive is: not B → not A.**  
+  *You can always infer the contrapositive, but not the converse.*  
+  - **Do NOT assume:** B → A unless explicitly stated.  
+  - **Common mistake:** Reversing implications (e.g., from "A → not B" to "not B → A") is invalid.
+
+---
+
+### 2. **Handling "Necessary" vs. "Sufficient" Conditions**
+
+- **Necessary condition:** B is necessary for A means A → B.  
+- **Sufficient condition:** A is sufficient for B means A → B.  
+- **Do NOT confuse:**  
+  - Necessary with sufficient.  
+  - The direction of implication matters critically.
+
+---
+
+### 3. **Dealing with Disjunctions (OR statements)**
+
+- **"No one is neither A nor B" means everyone is A or B (A ∨ B).**  
+- **From A ∨ B, you can infer:**  
+  - If not A, then B (¬A → B).  
+  - If not B, then A (¬B → A).  
+- **But you cannot infer:**  
+  - If A, then B (A → B) or vice versa without further info.
+
+---
+
+### 4. **Quantifiers and Existential Statements**
+
+- **"Some X is Y" means there exists at least one X with property Y.**  
+- **To conclude "some X is not Z," you need explicit info about the overlap or exclusion.**  
+- **Do NOT assume:**  
+  - From "some X is Y" and "all Y are Z," that "some X is not Z."  
+  - From "some X is Y" and "no Y is Z," that "some X is not Z" without explicit exclusion.
+
+---
+
+### 5. **Handling Negations and Double Negations**
+
+- **"It is not the case that A" means ¬A.**  
+- **Be careful with negations in premises and conclusions.**  
+- **Do NOT infer:**  
+  - From ¬(A ∧ B), that (¬A ∨ ¬B) is always true (De Morgan's law applies, but check context).  
+  - From ¬A, that A is false in all contexts (could be unknown or irrelevant).
+
+---
+
+### 6. **Transitive Reasoning**
+
+- If A → B and B → C, then A → C (valid).  
+- Use this to chain premises logically.  
+- **Check carefully:**  
+  - Whether premises truly connect A to C via B.  
+  - Whether any premise contradicts or restricts the chain.
+
+---
+
+### 7. **Avoiding Invalid Converse and Inverse Inferences**
+
+- From A → B, you cannot infer B → A (converse).  
+- From A → B, you cannot infer ¬A → ¬B (inverse).  
+- Only contrapositive ¬B → ¬A is valid.
+
+---
+
+### 8. **Handling "Only If" and "If and Only If" Statements**
+
+- "A only if B" means A → B.  
+- "A if and only if B" means A ↔ B (both directions).  
+- **Check if premises specify both directions or just one.**
+
+---
+
+### 9. **Dealing with "Neither... Nor..." and "Not Both"**
+
+- "No one is neither A nor B" means everyone is A or B.  
+- "No one is both A and B" means A ∧ B is false for all.  
+- Use these to exclude possibilities and narrow down options.
+
+---
+
+### 10. **Existential vs. Universal Quantifiers in Conclusions**
+
+- To conclude "some X is Y," you need premises that guarantee existence.  
+- To conclude "all X are Y," you need universal premises.  
+- **Be cautious when premises only imply universal statements but conclusion is existential or vice versa.**
+
+---
+
+### 11. **When Premises Are About Subsets**
+
+- If "All A are B" and "No A are C," then "All A are not C."  
+- But from "B includes A" and "C excludes A," you cannot infer "B excludes C" or vice versa without more info.  
+- **Do NOT assume reverse subset relations.**
+
+---
+
+### 12. **Handling "At Least One" and "At Most One"**
+
+- "Some X is Y" does not imply "All X are Y."  
+- "No X is both Y and Z" means intersection is empty.  
+- Use these to exclude or confirm overlaps.
+
+---
+
+### 13. **Common Logical Patterns in Difficult Examples**
+
+- **Premise:** "If not A then not B" → Conclusion: "B implies A" (contrapositive).  
+- **Premise:** "All A are B or C" + "No A are B" → Conclusion: "All A are C."  
+- **Premise:** "No A is B" + "All C are A or B" → Conclusion: "All C are A."  
+- **Premise:** "If A then B or C" + "Not B and not C" → Contradiction → Use to infer necessary conditions.  
+- **Premise:** "No one is neither A nor B" → "If not A then B" and vice versa.
+
+---
+
+### 14. **Testing Validity: Key Questions**
+
+- Does the conclusion follow **necessarily** from the premises?  
+- Are there any **missing conditions** or **unknowns** that prevent a definite conclusion?  
+- Is the conclusion a **contrapositive** or a **converse** of a premise?  
+- Are the premises **universal** or **existential**, and does the conclusion match?  
+- Are **disjunctions** properly handled (no invalid assumptions about "or")?  
+- Are **negations** correctly interpreted and not reversed improperly?
+
+---
+
+### 15. **Summary of Invalid Moves to Avoid**
+
+- Reversing implications without justification.  
+- Assuming "some" implies "all" or vice versa.  
+- Inferring necessity from sufficiency or vice versa without explicit premise.  
+- Assuming exclusivity or exhaustiveness without premise support.  
+- Ignoring unknown or missing information that blocks conclusion.
+
+---
+
+**Use this cheat sheet to carefully analyze premises and conclusions, focusing on the logical form and the direction of implications, quantifiers, and negations. Always check if the conclusion is a valid logical consequence (deductive validity) of the premises.**
+
+Follow the format of the examples below in your response.
+
+Question: "Is Fred a cousin of Robert? Is Joe related to Bob? In large families, it is sometimes difficult to keep track of all one's relatives. The following argument seeks to clarify some such relations: To start with, Darwin is a grandson of Dewayne. Now, whoever is not both a half-brother of Alvin and a grandson of Dewayne is an ancestor of Leslie. It follows that it is false that Darwin is an ancestor of Leslie."
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid
+Reasoning: Let's think step by step.  
+The first premise tells us "Darwin is a grandson of Dewayne." The second premise says "whoever is not both a half-brother of Alvin and a grandson of Dewayne is an ancestor of Leslie." This means: if someone is not both a half-brother of Alvin and a grandson of Dewayne, then that person is an ancestor of Leslie. The conclusion is "it is false that Darwin is an ancestor of Leslie," i.e., Darwin is not an ancestor of Leslie.
+
+But from the premises, we do not know whether Darwin is a half-brother of Alvin or not. If Darwin is a half-brother of Alvin, then he is both a half-brother of Alvin and a grandson of Dewayne, so the second premise does not apply to him, and we cannot conclude anything about whether he is an ancestor of Leslie. If Darwin is not a half-brother of Alvin, then he is not both a half-brother of Alvin and a grandson of Dewayne, so by the second premise, he is an ancestor of Leslie, which contradicts the conclusion. In either case, the conclusion does not necessarily follow from the premises. So the answer is invalid.
+Answer: invalid
+###
+Question: "It is not always easy to see who is related to whom -- and in which ways. The following argument pertains to this question: First of all, everyone who is a son of Andres is a son of Bruce, too. Next, Jeffrey is not a son of Bruce. In consequence, it is false that Jeffrey is a son of Andres."
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid
+Reasoning: Let's think step by step. (1) Whoever is not a great-grandfather of Clyde is a stepbrother of Brian: If X = NOT (great-grandfather(Clyde)), then X = stepbrother(Brian). (2): Being an ancestor of Dana is sufficient for not being a great-grandfather of Clyde: If X = ancestor(Dana), X = NOT (great-grandfather(Clyde)). Hypothesis: Does it follow that everyone who is an ancestor of Dana is a stepbrother of Brian, too: If X = ancestor(Dana), then X = stepbrother(Brian)? Let’s see whether the Hypothesis can be deduced from the arguments (1) and (2) by logical reasoning? By (2), we have if X = ancestor(Dana), X = NOT (great-grandfather(Clyde)). Furthermore, by (1), we have if X = NOT (great-grandfather(Clyde)), then X = stepbrother(Brian). By the transitive relation rule in first-order logic, we then have: if X = ancestor(Dana), then X = stepbrother(Brian). So, it is true that everyone who is an ancestor of Dana is a stepbrother of Brian. So the answer is valid.
+Answer: valid
+=== END CHEATSHEET ===
+
+Reply with ONLY the verdict — no explanation, no reasoning.
+VERDICT: valid or invalid

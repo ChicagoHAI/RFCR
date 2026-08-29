@@ -1,0 +1,216 @@
+=== CHEATSHEET ===
+**Pronoun Antecedent Resolution Cheat Sheet for Difficult/Ambiguous Cases**
+
+---
+
+### 1. **Ambiguity Due to Both Referents Being Plausible**
+
+- When both possible antecedents can logically perform the action or possess the attribute described by the pronoun, **the pronoun is ambiguous**.
+- Examples:
+  - *"Alex did not know Taylor until he sent a letter."*  
+    Both Alex and Taylor could have sent the letter → **Ambiguous**
+  - *"The developer argued with the designer because he liked the design."*  
+    Both could like the design → **Ambiguous**
+  - *"The scientist collaborates with the artist, and she shares a story."*  
+    Either could share the story → **Ambiguous**
+  - *"The mechanic greets the receptionist because he was in a good mood."*  
+    Either could be in a good mood → **Ambiguous**
+  - *"The nurse stayed away from the laborer because she was very busy."*  
+    Either could be busy → **Ambiguous**
+  - *"The developer met with the secretary because she made a mistake."*  
+    Either could have made a mistake → **Ambiguous**
+  - *"The reporter and the chef discuss his favorite dishes."*  
+    Could refer to either → **Ambiguous**
+  - *"The developer met with the designer because their idea can be implemented."*  
+    Could be developer’s or designer’s idea → **Ambiguous**
+  - *"The reporter and the chef will discuss his favorite dishes."*  
+    Could refer to either → **Ambiguous**
+  - *"The scientist collaborates with the artist, and they share a story."*  
+    "They" could mean both or either → **Ambiguous**
+  - *"The developer was unable to communicate with the writer because they used big words."*  
+    Both could have used big words → **Ambiguous**
+  - *"The mechanic disliked the cashier because she is arrogant."*  
+    Both could be arrogant → **Ambiguous**
+  - *"The mechanic greets the receptionist because she was in a good mood."*  
+    Both could be in a good mood → **Ambiguous**
+  - *"The mechanic greets the receptionist because he is standing in front of the door."*  
+    Both could be standing there → **Ambiguous**
+  - *"The developer was unable to communicate with the writer because she used big words."*  
+    Both could have used big words → **Ambiguous**
+
+---
+
+### 2. **Pronouns Referring to the Person Being Informed or Advised**
+
+- When the sentence involves someone **telling, informing, advising, warning, or giving feedback**, the pronoun usually refers to the **recipient** of the information or advice, not the speaker.
+- Examples:
+  - *"The technician told the customer that she could pay with cash."* → "she" = customer
+  - *"The hygienist told the patient that she should floss every day."* → "she" = patient
+  - *"The engineer informed the client that they would need to make all future payments on time."* → "they" = client
+  - *"The surgeon warned the patient that she needed to get more rest."* → "she" = patient
+  - *"The physician told the baker that she had cancer."* → "she" = baker
+  - *"The supervisor gave the employee feedback on their stellar performance."* → "their" = employee
+  - *"The supervisor gave the employee feedback on her stellar performance."* → "her" = employee
+  - *"The scientist told the baker that they had cancer."* → "they" = baker
+  - *"The hygienist told the patient that he should floss every day."* → "he" = patient
+  - *"The physician told the baker that he had cancer."* → "he" = baker
+  - *"The technician told the customer that he had completed the repair."* → "he" = technician
+  - *"The technician told the customer that she had completed the repair."* → "she" = technician
+
+---
+
+### 3. **Pronouns Referring to the Subject Who Initiates an Action**
+
+- When the subject performs an action and then refers to a pronoun related to that action, the pronoun often refers to the subject, especially if the object is unlikely to be the referent.
+- Examples:
+  - *"The carpenter told the onlooker that they had been working on the house for three weeks."* → "they" = carpenter
+  - *"The carpenter told the onlooker that he had been working on the house for three weeks."* → "he" = carpenter
+  - *"The janitor warned the child not to step on the wet floor, otherwise he would have to mop it all over again."* → "he" = janitor
+  - *"The janitor warned the child not to step on the wet floor, otherwise she would have to mop it all over again."* → "she" = janitor
+  - *"The carpenter collaborated with the designer and gave them a prototype."* → "them" = designer
+  - *"The designer collaborated with the carpenter and gave them a blueprint."* → "them" = carpenter
+  - *"The carpenter collaborated with the designer and gave him a prototype."* → "him" = designer
+  - *"The designer collaborated with the carpenter and gave him a blueprint."* → "him" = carpenter
+  - *"The cleaner called the guard and asked them to open the door."* → "them" = guard
+  - *"The cleaner called the guard and asked her to open the door."* → "her" = guard
+  - *"The guard called the cleaner and asked her to open the door."* → "her" = cleaner
+  - *"The designer called the janitor and asked her to clean the room."* → "her" = janitor
+  - *"The carpenter made a desk for the clerk and gave them a discount."* → "them" = clerk
+  - *"The chief thanked the housekeeper and gave her some tips."* → "her" = housekeeper
+
+---
+
+### 4. **Pronouns Referring to the Person Who Needs or Requests Something**
+
+- When the sentence involves someone **requesting, asking for, or needing** something, the pronoun usually refers to the person who needs or requests it.
+- Examples:
+  - *"The laborer handed the secretary a hammer because they asked for a tool."* → "they" = secretary
+  - *"The assistant asked the physician if she could borrow some money."* → "she" = assistant
+  - *"The assistant asked the physician if he needs any help."* → "he" = physician
+  - *"The assistant asked the physician if they could borrow some money."* → "they" = assistant
+  - *"The assistant asked the physician if they need any help."* → "they" = physician
+  - *"The taxpayer met with the accountant to find out if they could help with tax preparation."* → "they" = accountant
+
+---
+
+### 5. **Pronouns Referring to the Person Who Likes, Dislikes, or Has an Opinion**
+
+- When the sentence involves **liking, disliking, or expressing an opinion**, the pronoun can be ambiguous if both parties could logically have that feeling.
+- Examples:
+  - *"The mechanic disliked the cashier because she is arrogant."* → ambiguous (could be either)
+  - *"The mechanic disliked the cashier because he is arrogant."* → ambiguous (could be either)
+  - *"The developer argued with the designer because he liked the design."* → ambiguous
+  - *"The mechanic greets the receptionist because he was in a good mood."* → ambiguous
+  - *"The mechanic greets the receptionist because she was in a good mood."* → ambiguous
+  - *"The visitor told the teacher that he liked the cake."* → "he" = visitor (more natural)
+  - *"The visitor told the teacher that she liked the cake."* → ambiguous if both female
+
+---
+
+### 6. **Pronouns Referring to Offices or Locations**
+
+- When a pronoun refers to an office or location associated with a person, ambiguity arises if both parties could own the office.
+- Examples:
+  - *"Bailey planned to meet the director at their office."* → ambiguous (could be either)
+  - *"Bailey planned to meet the director at his office."* → ambiguous (could be either)
+  - *"Bailey planned to meet the director at her office."* → ambiguous (could be either)
+  - *"After meeting with the producers, Sam goes to his office."* → "his" = Sam (more natural)
+  - *"After meeting with the producers, Sam goes to their office."* → ambiguous
+  - *"After meeting with the producers, Sam went to their office."* → ambiguous
+
+---
+
+### 7. **Pronouns Referring to Groups or Collective Entities**
+
+- When pronouns like "they" or "their" refer to groups or collective nouns, ambiguity can arise if the group includes multiple people.
+- Examples:
+  - *"This story could not be published without the writer and their friends' support."* → "their" = writer (most natural)
+  - *"The reporter and the chef will discuss their favorite dishes."* → ambiguous (could be either or both)
+  - *"The scientist collaborates with the artist, and they share a story."* → ambiguous (could be both or either)
+
+---
+
+### 8. **Pronouns Referring to People with Different Genders or Numbers**
+
+- Pronouns must agree in number and gender with their antecedents.
+- Singular pronouns (he, she, his, her) usually refer to singular antecedents.
+- Plural pronouns (they, their, them) can refer to singular antecedents when used as singular "they," but ambiguity can arise.
+- Examples:
+  - *"Alex tells us that he could not meet."* → "he" = Alex (singular vs. plural "us")
+  - *"Alex tells us that they could not meet."* → ambiguous if "they" is singular or plural
+  - *"The mechanic called to inform the customer that his car would be ready."* → "his" = customer (more natural)
+  - *"The mechanic called to inform the customer that her car would be ready."* → "her" = customer (more natural)
+
+---
+
+### 9. **Pronouns Referring to People in Context of Roles or Expertise**
+
+- When the sentence involves roles or expertise, the pronoun usually refers to the person logically associated with that role.
+- Examples:
+  - *"The patient was referred to the specialist because he is an expert on rare skin conditions."* → "he" = specialist
+  - *"The customer and the chef discuss his culinary training."* → "his" = chef (more logical)
+  - *"The customer and the chef discuss her culinary training."* → "her" = chef (more logical)
+  - *"The educator was meeting with a student to discuss his grading policy."* → "his" = educator (more logical)
+  - *"The educator was meeting with a student to discuss their grading policy."* → "their" = educator (more logical)
+
+---
+
+### 10. **Pronouns Referring to People in Context of Actions or Conditions**
+
+- When the sentence involves actions or conditions (e.g., illness, busyness), the pronoun can be ambiguous if both parties could logically be the referent.
+- Examples:
+  - *"The nurse stayed away from the laborer because she was very busy."* → ambiguous
+  - *"The nurse was running from the laborer because she smelled awful."* → ambiguous
+  - *"The nurse was running from the laborer because he smelled awful."* → ambiguous
+  - *"The surgeon warned the nurse that she needed more time to prepare."* → ambiguous
+  - *"The surgeon warned the patient that they needed to get more rest."* → "they" = patient (more natural)
+  - *"The janitor warned the child not to step on the wet floor, otherwise she would have to mop it all over again."* → "she" = janitor (more natural)
+
+---
+
+### Summary of Key Strategies:
+
+- **Check the verb and context:** Who is more likely to perform the action or possess the attribute?
+- **Consider roles and typical scenarios:** E.g., doctors inform patients, supervisors give feedback to employees.
+- **Look for logical consistency:** Does it make sense for the pronoun to refer to the subject or object?
+- **Number and gender agreement:** Pronouns usually match the number and gender of their antecedents.
+- **If both interpretations are plausible and no context clarifies, mark as ambiguous.**
+
+---
+
+Use this cheat sheet to analyze pronoun antecedents carefully, especially in sentences where both possible referents are plausible or the context does not clearly favor one.
+
+Follow the format of the examples below in your response.
+
+Question: In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.
+Sentence: The technician told the customer that they could pay with cash.
+Options:
+(A) The technician could pay
+(B) The customer could pay
+(C) Ambiguous
+Reasoning: Let's think step by step.  
+Here we need to determine who the pronoun "they" refers to. There are two possible referents: the technician and the customer. The verb "told" and the phrase "could pay with cash" might help us decide. Let X be the technician and Y the customer. The sentence is of the form "X told Y that (X or Y) could pay with cash."
+
+Let's consider Y first: "X told Y that Y could pay with cash." This makes sense, because the technician is likely informing the customer about their payment options.
+
+Now, consider X: "X told Y that X could pay with cash." This is less likely, because it would be odd for the technician to tell the customer about the technician's own ability to pay.
+
+Therefore, the pronoun "they" most likely refers to the customer. So the answer is (B).
+Answer: (B)
+###
+Question: In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.
+Sentence: Alex did not know Taylor until she sent a letter.
+Options:
+(A) Alex sent the letter
+(B) Taylor sent the letter
+(C) Ambiguous
+Reasoning: Let's think step by step.  
+Here we need to determine who the pronoun "she" refers to. There are two possible referents for "she": Alex and Taylor. The sentence is of the form "X did not know Y until she sent a letter."  
+Let's consider Y first: "X did not know Y until Y sent a letter." This makes sense, as Y could have initiated contact by sending a letter, leading to X knowing Y.  
+Now, consider X: "X did not know Y until X sent a letter." This also makes sense, as X could have sent a letter to Y, which could have led to them getting to know each other.  
+Because both interpretations are possible and the sentence does not provide enough information to determine which one is correct, the antecedent of "she" is ambiguous. So the answer is (C).
+Answer: (C)
+=== END CHEATSHEET ===
+
+Reply with ONLY the verdict — no explanation, no reasoning.
+VERDICT: (A), (B), or (C)

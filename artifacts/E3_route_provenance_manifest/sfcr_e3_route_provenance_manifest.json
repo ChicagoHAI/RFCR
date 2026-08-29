@@ -1,0 +1,340 @@
+{
+  "bootstrap_samples": 10000,
+  "claim_not_supported": "This manifest does not by itself establish cross-model zero-regression transfer or AGIEval improvement.",
+  "claim_supported": "The repaired-route result is a strict paired comparison using the same item universe, CS-ICL cache, parser/prompt builder path, retry policy, and inactive passthrough protocol.",
+  "created_by": "E3 route provenance manifest build on 2026-05-23",
+  "csicl_cheatsheet_root": {
+    "note": "CS-ICL prompt cache/root used by unified evaluator; per-item CS-ICL outputs are hashed in item_surfaces.*.csicl_cache_hash.",
+    "path": "runs/emnlp_bbh_full18_csicl_gpt41mini_20260518/cheatsheets"
+  },
+  "decode_config": {
+    "max_tokens": 64,
+    "reasoning_effort": "low",
+    "seed": 20260522,
+    "temperature": 0.0,
+    "top_p": "not explicitly set; provider/model default"
+  },
+  "frozen_before_eval": {
+    "final_run_created_at_manifest": "2026-05-22T15:52:01",
+    "note": "Filesystem mtimes show selected atoms and strict effects were written before the final rerun manifest/output files.",
+    "run_manifest_mtime_utc": "2026-05-22T15:52:01.871347+00:00",
+    "selected_atoms_frozen_at_utc": "2026-05-22T15:50:05.034257+00:00",
+    "strict_effects_frozen_at_utc": "2026-05-22T15:50:05.034257+00:00",
+    "value": true
+  },
+  "full18_summary": {
+    "activated_count": 39,
+    "ci95_high": 0.01048951048951049,
+    "ci95_low": 0.002913752913752914,
+    "csicl_accuracy": 0.7558275058275058,
+    "csicl_correct": 1297,
+    "delta_vs_csicl": 0.00641025641025641,
+    "failed_calls": 0,
+    "fixes_vs_csicl": 11,
+    "missing_sfcr_effect_rows": 0,
+    "n_boot": 10000,
+    "n_items": 1716,
+    "net_vs_csicl": 11,
+    "p_two_sided": 0.0,
+    "parse_errors": 0,
+    "raw_accuracy": 0.7074592074592074,
+    "raw_correct": 1214,
+    "regressions_vs_csicl": 0,
+    "sfcr_accuracy": 0.7622377622377622,
+    "sfcr_correct": 1308,
+    "surface": "BBH full18 supplementary unified evaluator",
+    "task": "BBH full18 supplementary unified evaluator"
+  },
+  "git": {
+    "dirty": true,
+    "dirty_status_first_lines": [
+      "M ICR_hybrid/pipeline.py",
+      " M ICR_hybrid/training/loop.py",
+      " M ICR_partition/pipeline.py",
+      " M ICR_partition/training/loop.py",
+      " M ICR_select/training/gates.py",
+      " M ICR_sfcr/activation.py",
+      " M ICR_sfcr/pipeline.py",
+      " M ICR_sfcr/rule_validator.py",
+      " M scripts/eval/score_eval.py",
+      " M tasks/agieval.py",
+      " M tasks/formal_fallacies.py",
+      " M tasks/utils/__init__.py",
+      " M utils/case_study.py",
+      " M utils/cheatsheet.py",
+      " M utils/scorer.py",
+      " M utils/task_spec.py",
+      "?? ICR_sfcr/features.py",
+      "?? ICR_sfcr/scoring_cache.py",
+      "?? _incoming_sfcr_patch/",
+      "?? datasets/agieval/",
+      "?? experiments/",
+      "?? reports/",
+      "?? scripts/analyze_formal_fallacies_baseline_failures.py",
+      "?? scripts/analyze_geometric_failures.py",
+      "?? scripts/analyze_sfcr_cross_model_atom_decomposition.py",
+      "?? scripts/analyze_sfcr_feature_coverage.py",
+      "?? scripts/analyze_sfcr_risk_adjusted_utility.py",
+      "?? scripts/analyze_sfcr_same_generator_csicl.py",
+      "?? scripts/audit_formal_fallacies_features.py",
+      "?? scripts/audit_sfcr_atom_provenance.py",
+      "?? scripts/bootstrap_cross_model_main_eligible.py",
+      "?? scripts/bootstrap_sfcr_locked_surfaces.py",
+      "?? scripts/build_cross_model_main_eligible_item_totals.py",
+      "?? scripts/build_final_sfcr_emnlp_tables.py",
+      "?? scripts/build_sfcr_cross_model_item_level_totals.py",
+      "?? scripts/build_sfcr_cross_model_tables.py",
+      "?? scripts/build_sfcr_experiments_1_2_3_report.py",
+      "?? scripts/build_sfcr_final_emnlp_evidence_report.py",
+      "?? scripts/build_sfcr_final_protocol_lock.py",
+      "?? scripts/build_sfcr_final_protocol_lock_report.py",
+      "?? scripts/build_sfcr_full_benchmark_expansion_lock.py",
+      "?? scripts/build_sfcr_full_test_expansion_report.py",
+      "?? scripts/build_sfcr_locked_controlled_full_benchmark_pilot.py",
+      "?? scripts/build_sfcr_next_round_tables.py",
+      "?? scripts/build_sfcr_paper_tables.py",
+      "?? scripts/build_sfcr_protocol_reconciliation.py",
+      "?? scripts/build_sfcr_unified_paper_table.py",
+      "?? scripts/build_sfcr_web_exclusion_tables.py",
+      "?? scripts/decompose_sfcr_main_surface.py",
+      "?? scripts/evaluate_sfcr_atom_union.py",
+      "?? scripts/experiments/compare_candidate_sources.py",
+      "?? scripts/generate_geometric_sfcr_rules_from_logs.py",
+      "?? scripts/merge_cached_atom_controlled_surface.py",
+      "?? scripts/merge_controlled_benchmark_reports.py",
+      "?? scripts/prepare_agieval_lighteval.py",
+      "?? scripts/repair_sfcr_atoms_for_anchor.py",
+      "?? scripts/replay_disambiguation_selected_routes.py",
+      "?? scripts/replay_sfcr_activation_variants.py",
+      "?? scripts/replay_sfcr_candidates.py",
+      "?? scripts/replay_web_of_lies_signature_routes.py",
+      "?? scripts/repro/",
+      "?? scripts/rerun_sfcr_atom_effects_strict.py",
+      "?? scripts/run_agieval_anchor_repair.py",
+      "?? scripts/run_agieval_csicl_baselines.py",
+      "?? scripts/run_agieval_raw_anchor_sfcr_stress.py",
+      "?? scripts/run_agieval_raw_scoring_smoke.py",
+      "?? scripts/run_bbh_one_more_atom_locked.py",
+      "?? scripts/run_controlled_full_benchmark_pilot.py",
+      "?? scripts/run_disambiguation_generated_rule_pilot.py",
+      "?? scripts/run_object_counting_generated_rule_pilot.py",
+      "?? scripts/run_sfcr_anchor_conditioned_selection.py",
+      "?? scripts/run_sfcr_cross_model_replay.py",
+      "?? scripts/run_sfcr_csicl_anchor_eval.py",
+      "?? scripts/run_sfcr_emnlp_baseline_surface.py",
+      "?? scripts/run_sfcr_routing_ablation.py",
+      "?? scripts/run_tracking_generated_rule_pilot.py",
+      "?? scripts/run_web_of_lies_generated_rule_pilot.py",
+      "?? scripts/sfcr_next_round_lib.py",
+      "?? scripts/sfcr_strengthening_utils.py",
+      "?? scripts/triage_agieval_for_sfcr.py"
+    ],
+    "head": "1f57c2d96ae5549fa68c7ef48e83e33b9669d279",
+    "status_short_hash": "d1053dc38973514462dcaea592536df5680b9c800d2a6811cf6c4ca8296f050d"
+  },
+  "item_surfaces": {
+    "full18": {
+      "csicl_cache_file": "reports/sfcr_e3_route_provenance_manifest_20260523/full18_csicl_cache_canonical.jsonl",
+      "csicl_cache_hash": "47d4ac8c6fa52cb44a7a1f250054840db71c7174ea16557892b6ff470f6207a0",
+      "item_ids_file": "reports/sfcr_e3_route_provenance_manifest_20260523/full18_item_ids.tsv",
+      "item_ids_hash": "86e76590590f448761699c7dbc315d25922bea248629e959e08a9e21369486ad",
+      "n_items": 1716,
+      "sfcr_outputs_file": "reports/sfcr_e3_route_provenance_manifest_20260523/full18_sfcr_outputs_canonical.jsonl",
+      "sfcr_outputs_hash": "92338851b5a334542d0507d9c7a78c05d21e6cccf86cf9807b74cc4734b4352b"
+    },
+    "main_eligible_atom_tasks": {
+      "csicl_cache_file": "reports/sfcr_e3_route_provenance_manifest_20260523/main_eligible_atom_tasks_csicl_cache_canonical.jsonl",
+      "csicl_cache_hash": "84cbbf2d460d0f5e2925d12d0834d755efb3377089bfbb3b2c3b41d2f48f4c23",
+      "item_ids_file": "reports/sfcr_e3_route_provenance_manifest_20260523/main_eligible_atom_tasks_item_ids.tsv",
+      "item_ids_hash": "06e51b82716d83a9faa8887a91fe36c2d5a41081e970605e4af719bf693c9bb9",
+      "n_items": 400,
+      "sfcr_outputs_file": "reports/sfcr_e3_route_provenance_manifest_20260523/main_eligible_atom_tasks_sfcr_outputs_canonical.jsonl",
+      "sfcr_outputs_hash": "7494a9558de9f22d45809d309e7ae8a043fa302fbd1ba4cd3b4a08cba5a62a38"
+    }
+  },
+  "main_result_summary": {
+    "activated_count": 39,
+    "ci95_high": 0.045,
+    "ci95_low": 0.0125,
+    "csicl_accuracy": 0.685,
+    "csicl_correct": 274,
+    "delta_vs_csicl": 0.0275,
+    "failed_calls": 0,
+    "fixes_vs_csicl": 11,
+    "missing_sfcr_effect_rows": 0,
+    "n_boot": 10000,
+    "n_items": 400,
+    "net_vs_csicl": 11,
+    "p_two_sided": 0.0,
+    "parse_errors": 0,
+    "raw_accuracy": 0.56,
+    "raw_correct": 224,
+    "regressions_vs_csicl": 0,
+    "sfcr_accuracy": 0.7125,
+    "sfcr_correct": 285,
+    "surface": "BBH main eligible atom tasks, repaired disambiguation route",
+    "task": "BBH main eligible atom tasks, repaired disambiguation route"
+  },
+  "model_version": "openai/gpt-4.1-mini",
+  "paper_main_surface": "main_eligible_atom_tasks",
+  "parser_version": {
+    "dependency_hashes": {
+      "scripts/run_controlled_full_benchmark_pilot.py": "5fc3b657f5dd930ad8ef876824f6cbe927457cba6f6da1c50f442b4957a18637",
+      "utils/scorer.py": "7ca573d67c92cccd7ed0d01529a3e8d350c30545c2c982b05f80023a1763fded",
+      "utils/task_spec.py": "0ed48d223497701192dd7646c06c0f197694daa53764ade4341da397638c95f9"
+    },
+    "name": "task_spec.parse_verdict via scripts.run_controlled_full_benchmark_pilot._parse_prediction",
+    "primary_script": "scripts/run_sfcr_csicl_anchor_eval.py",
+    "primary_script_sha256": "6b6e18f01f6c00b2fbdf6e6e4bc827e33df1b6f9adb3548600b4824e504abc78"
+  },
+  "prompt_builder_version": {
+    "name": "task_spec.build_eval_prompt",
+    "primary_script": "scripts/run_sfcr_csicl_anchor_eval.py",
+    "task_prompt_hashes": {
+      "tasks/disambiguation_qa.py": "99eef45afba41994cde65d756593b2954aeb6fe06a1e0d404b5a28d6fc6c0007",
+      "tasks/formal_fallacies.py": "bbab38d5786e42befb52232041eb5aab187b54c36b201cf00c693165c74e8cf2",
+      "tasks/geometric_shapes.py": "ef54d8f41938b2e6275c7dc817d0830ee9fe307eb76acd7b2bc424568117f772"
+    }
+  },
+  "protocol_audit_summary": [
+    {
+      "allow_mixed_protocol_comparison": false,
+      "csicl_anchor_baseline_correct_mismatch_count": 0,
+      "csicl_anchor_inactive_passthrough_count": 461,
+      "missing_sfcr_effect_rows": 0,
+      "n_atom_task_items": 500,
+      "sfcr_csicl_anchor_activated_count": 39,
+      "sfcr_raw_anchor_activated_count": 132,
+      "task": "__aggregate_atom_tasks__"
+    },
+    {
+      "allow_mixed_protocol_comparison": false,
+      "csicl_anchor_baseline_correct_mismatch_count": 0,
+      "csicl_anchor_inactive_passthrough_count": 85,
+      "missing_sfcr_effect_rows": 0,
+      "n_atom_task_items": 100,
+      "sfcr_csicl_anchor_activated_count": 15,
+      "sfcr_raw_anchor_activated_count": 62,
+      "task": "disambiguation_qa"
+    },
+    {
+      "allow_mixed_protocol_comparison": false,
+      "csicl_anchor_baseline_correct_mismatch_count": 0,
+      "csicl_anchor_inactive_passthrough_count": 96,
+      "missing_sfcr_effect_rows": 0,
+      "n_atom_task_items": 100,
+      "sfcr_csicl_anchor_activated_count": 4,
+      "sfcr_raw_anchor_activated_count": 7,
+      "task": "formal_fallacies"
+    },
+    {
+      "allow_mixed_protocol_comparison": false,
+      "csicl_anchor_baseline_correct_mismatch_count": 0,
+      "csicl_anchor_inactive_passthrough_count": 80,
+      "missing_sfcr_effect_rows": 0,
+      "n_atom_task_items": 100,
+      "sfcr_csicl_anchor_activated_count": 20,
+      "sfcr_raw_anchor_activated_count": 34,
+      "task": "geometric_shapes"
+    },
+    {
+      "allow_mixed_protocol_comparison": false,
+      "csicl_anchor_baseline_correct_mismatch_count": 0,
+      "csicl_anchor_inactive_passthrough_count": 100,
+      "missing_sfcr_effect_rows": 0,
+      "n_atom_task_items": 100,
+      "sfcr_csicl_anchor_activated_count": 0,
+      "sfcr_raw_anchor_activated_count": 23,
+      "task": "object_counting"
+    },
+    {
+      "allow_mixed_protocol_comparison": false,
+      "csicl_anchor_baseline_correct_mismatch_count": 0,
+      "csicl_anchor_inactive_passthrough_count": 100,
+      "missing_sfcr_effect_rows": 0,
+      "n_atom_task_items": 100,
+      "sfcr_csicl_anchor_activated_count": 0,
+      "sfcr_raw_anchor_activated_count": 6,
+      "task": "web_of_lies"
+    }
+  ],
+  "purpose": "Audit repaired-route SF-CR main result provenance and protocol consistency.",
+  "retry_policy": {
+    "batch_call": "utils.llm_client.call_llm_batch_default",
+    "concurrency": 2,
+    "failed_call_handling": "failed responses are marked parse_error/failed_call; inactive items passthrough CS-ICL without model call",
+    "rf_consistency_guard": "enabled by script default and ICR_USE_RF_SCORING environment during rerun"
+  },
+  "route_definition": {
+    "path": "reports/sfcr_e3_route_provenance_manifest_20260523/route_definition_bundle.json",
+    "route_file_hash": "1d241f4526c2cbd460083f7646af446c3fd6a5f70a421a4da49ffb9fe97cf1c0"
+  },
+  "run_id": "disambig_needed_one_told_that_strict_csicl_rerun_20260522",
+  "run_inputs": {
+    "csicl_cheatsheet_root": "runs/emnlp_bbh_full18_csicl_gpt41mini_20260518/cheatsheets",
+    "item_universe": "runs/emnlp_bbh_unified_raw_csicl_sfcr_strict_20260518/unified_per_item_wide.jsonl",
+    "item_universe_file_hash": "2ab5b5097d5463452c57887bae9749ab6b249a44840f592daaf1ad13ed138d40",
+    "run_manifest": "runs/disambig_needed_one_told_that_strict_csicl_rerun_20260522/run_manifest.json",
+    "run_manifest_hash": "ff6bad1347249a653ac9774c39a902857ad9e33ecd074b4927951996ac7ab900",
+    "selected_atoms_file": "runs/disambig_needed_one_told_that_strict_protocol_20260522/selected_atoms_disambig_needed_one_told_that.json",
+    "strict_sfcr_effects": "runs/disambig_needed_one_told_that_strict_protocol_20260522/combined_strict_effects_disambig_needed_one_told_that.jsonl"
+  },
+  "run_outputs": {
+    "main_table_summary": "runs/disambig_needed_one_told_that_strict_csicl_rerun_20260522/main_table_summary_repaired.json",
+    "main_table_summary_hash": "3580ea817da7eb62d15bd1c013d13a4bbe3aeaee0aaa105dae979625772cbe73",
+    "per_item_wide": "runs/disambig_needed_one_told_that_strict_csicl_rerun_20260522/per_item_wide.jsonl",
+    "per_item_wide_hash": "2fa6e7b00ef00bece732516ba8e8461703e639f628b2369dbad08f082ad99e75",
+    "protocol_audit": "runs/disambig_needed_one_told_that_strict_csicl_rerun_20260522/protocol_audit.json",
+    "protocol_audit_hash": "2c7feddfcb1b19adb6d82738dd92087ead9dfb99f822f196222dc8ec6a435df2"
+  },
+  "selected_atoms": {
+    "atom_file_hash": "f2a90971412c403bcdbc17ba428bb41d26fd3fc3b2e41082151ddabb0002ccd9",
+    "atoms": [
+      {
+        "anchor": "csicl",
+        "atom_id": "gen_disambig_specific_family_v1_2",
+        "route": "needed_one_or_told_that",
+        "source": "focused_repair_20260522",
+        "task": "disambiguation_qa"
+      },
+      {
+        "anchor": "csicl",
+        "atom_id": "ff_role_universal_negative_complement_strict_v1",
+        "source": "locked_20260519",
+        "task": "formal_fallacies"
+      },
+      {
+        "anchor": "csicl",
+        "atom_id": "gen_geo_1_true_gpt41mini_v1",
+        "source": "locked_20260519",
+        "task": "geometric_shapes"
+      },
+      {
+        "anchor": "csicl",
+        "atom_id": "gen_geo_6_false_gpt41mini_repair_v3",
+        "source": "locked_20260519",
+        "task": "geometric_shapes"
+      }
+    ],
+    "path": "runs/disambig_needed_one_told_that_strict_protocol_20260522/selected_atoms_disambig_needed_one_told_that.json"
+  },
+  "source_scripts": {
+    "hashes": {
+      "scripts/run_controlled_full_benchmark_pilot.py": "5fc3b657f5dd930ad8ef876824f6cbe927457cba6f6da1c50f442b4957a18637",
+      "scripts/run_disambiguation_generated_rule_pilot.py": "b2648a7dc5871fcc5e41c239bb8b853410d302f331fa6a05491d1ef1011c186f",
+      "scripts/run_sfcr_csicl_anchor_eval.py": "6b6e18f01f6c00b2fbdf6e6e4bc827e33df1b6f9adb3548600b4824e504abc78",
+      "tasks/disambiguation_qa.py": "99eef45afba41994cde65d756593b2954aeb6fe06a1e0d404b5a28d6fc6c0007",
+      "tasks/formal_fallacies.py": "bbab38d5786e42befb52232041eb5aab187b54c36b201cf00c693165c74e8cf2",
+      "tasks/geometric_shapes.py": "ef54d8f41938b2e6275c7dc817d0830ee9fe307eb76acd7b2bc424568117f772",
+      "utils/llm_client.py": "c6680a6608c12af0b66d6dad88a722e2afb1f7a4c2796c0b79ff1ef957d65daa",
+      "utils/scorer.py": "7ca573d67c92cccd7ed0d01529a3e8d350c30545c2c982b05f80023a1763fded",
+      "utils/task_spec.py": "0ed48d223497701192dd7646c06c0f197694daa53764ade4341da397638c95f9"
+    },
+    "path": "reports/sfcr_e3_route_provenance_manifest_20260523/source_script_hashes.json",
+    "sha256": "5af2d4ab9ef23cb422969353d771bdb418e3fad170e1fdbbb683075bfce10a96"
+  },
+  "strict_sfcr_effects": {
+    "path": "runs/disambig_needed_one_told_that_strict_protocol_20260522/combined_strict_effects_disambig_needed_one_told_that.jsonl",
+    "sha256": "1ef415864ab9f38f20e5645be60847a43ae434f7501ed156bdfccc9f413c59de"
+  }
+}

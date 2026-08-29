@@ -1,0 +1,92 @@
+**Comprehensive SVG Path Guide for Advanced Use Cases**
+
+---
+
+### 1. **Combining Subpaths and Calculating Polygon Edges**
+
+- **Each `M` command signals a new subpath.**
+- **To analyze the full shape, integrate all connected subpaths into one closed polygon.**
+- **Count every unique vertex linked via line commands (`L`) within the merged subpaths that form this closed polygon.**
+- **Ensure closure by confirming the last vertex reconnects to the polygon’s first vertex.**
+- **The total count of distinct vertices after merging equals the polygon’s edge count.**
+
+---
+
+### 2. **Determining Polygon Types from Vertices and Edges**
+
+- After merging subpaths as above, tally all unique points connected by `L` commands.
+- A polygon is closed if the path ends exactly where it started.
+- Polygon classification by edges:
+  - 3 edges → Triangle
+  - 4 edges → Quadrilateral (kite, rectangle, trapezoid)
+  - 5 edges → Pentagon
+  - 6 edges → Hexagon
+  - 7 edges → Heptagon
+  - 8 edges → Octagon
+
+---
+
+### 3. **Classifying Quadrilaterals**
+
+- **Kite:** Has two pairs of adjacent sides equal in length.
+- **Rectangle:** Opposite sides are parallel and equal, with all interior angles at 90°.
+- **Trapezoid:** Contains at least one pair of parallel sides but with unequal adjacent side lengths.
+
+*Use coordinate data to calculate side lengths and verify parallelism to distinguish these forms.*
+
+---
+
+### 4. **Understanding Arc Commands (`A`)**
+
+- Syntax: `A rx ry x-axis-rotation large-arc-flag sweep-flag x y`
+- Two arcs sharing identical radii and rotation that connect seamlessly create an ellipse.
+- A circle is a special ellipse where radii are equal (`rx = ry`) and rotation is zero.
+- A closed shape made from a single arc plus two straight lines represents a sector (pie slice).
+
+---
+
+### 5. **Line Segments**
+
+- A path with only two points connected by a single `L` command and no closure represents a line segment.
+
+---
+
+### 6. **Summary Table**
+
+| Shape        | SVG Path Characteristics                                                        | How to Identify                                                                                 |
+|--------------|---------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **Line**     | Two points, one `L` command, path open                                        | Exactly two points                                                                              |
+| **Triangle** | Three points, closed path                                                      | Three unique vertices after merging, path returns to start                                    |
+| **Kite**     | Four points, two pairs of adjacent equal-length sides                         | Adjacent sides have equal lengths                                                             |
+| **Rectangle**| Four points, opposite sides equal and parallel, all angles 90°                | Parallel opposite sides, equal length, all right angles                                       |
+| **Trapezoid**| Four points, at least one pair of parallel sides, unequal adjacent sides       | Detect one pair of parallel sides with differing side lengths                                 |
+| **Pentagon** | Five points, closed path                                                       | Five unique vertices after merging subpaths                                                   |
+| **Hexagon**  | Six points, closed path                                                        | Six unique vertices after merging subpaths                                                    |
+| **Heptagon** | Seven points, closed path                                                      | Seven unique vertices after merging subpaths                                                  |
+| **Octagon**  | Eight points, closed path                                                      | Eight unique vertices after merging subpaths                                                  |
+| **Sector**   | One arc plus two lines forming a closed shape                                 | Single `A` command combined with two `L` commands creating a pie slice                         |
+| **Ellipse**  | Two arcs with matching `rx`, `ry`, and rotation, forming a closed loop        | Two arcs share identical radii and rotation, path closes                                     |
+| **Circle**   | Ellipse with equal radii and zero rotation                                   | Same as ellipse but with no rotation                                                          |
+
+---
+
+### 7. **Calculating Side Lengths**
+
+For two points \((x_1, y_1)\) and \((x_2, y_2)\):
+
+\[
+\text{length} = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+\]
+
+Use this to measure side lengths to differentiate kites, rectangles, and trapezoids.
+
+---
+
+### 8. **Identifying Figures Defined by Arcs**
+
+- Two arcs with matching radii and rotation forming a continuous loop indicate an ellipse or circle.
+- A single arc plus two line segments forming a closed path indicate a sector.
+
+---
+
+**Reminder:** Always combine all subpaths that begin with `M` commands into a single continuous shape before counting vertices and edges. This ensures accurate side counts and correct shape classification.

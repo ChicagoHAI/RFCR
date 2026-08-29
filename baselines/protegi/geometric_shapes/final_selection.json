@@ -1,0 +1,32 @@
+{
+  "task": "geometric_shapes",
+  "aborted": null,
+  "final_beam": [
+    {
+      "train_acc": 0.64,
+      "sha256": "f80baefe7d7752a8248722bee1da1591d9eaad5b94e9808183f0251205276e97"
+    },
+    {
+      "train_acc": 0.6,
+      "sha256": "7d5a51c52ccb0cb40d0129b885300d0036e32a06d659ecd6d15a4b7eb9fa271f"
+    },
+    {
+      "train_acc": 0.58,
+      "sha256": "2dd3eab839b93b08a4bfd37d58a0dab07875cd819c888e4b74c5d230b39ac283"
+    },
+    {
+      "train_acc": 0.62,
+      "sha256": "927ad37d072f82eccf743a17ffc43b8d68d5c503aa5a09aa25c3628e50804858"
+    }
+  ],
+  "selected_index": 0,
+  "selected_train_acc": 0.64,
+  "best_candidate_sha256": "f80baefe7d7752a8248722bee1da1591d9eaad5b94e9808183f0251205276e97",
+  "optimized_cheatsheet_sha256": "db4285ae42a8a017d47d78c6f3e925eb2ab7c2d2c9683ef8fd4614a434ecc34c",
+  "seed_cheatsheet_sha256": "89732dd7e41d30f106eeda40c152dd445a2507a57646dad13fb3e5a31187ffb9",
+  "cheatsheet_changed": true,
+  "n_llm_calls": 6902,
+  "est_cost_usd": 3.8923,
+  "input_chars": 35542627,
+  "output_chars": 845001
+}

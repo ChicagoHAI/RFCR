@@ -1,0 +1,189 @@
+**Cheat Sheet for Difficult Causation Questions**
+
+---
+
+### 1. **Intentionality vs. Foreseen Side Effects**
+
+- **Intentional** means the person **acted with the purpose** of causing the outcome.
+- **Foreseen but indifferent**: If the person **knows** the outcome will happen but **does not care** and acts anyway, a typical person usually says the outcome was **intentionally caused**.
+- **Foreseen but unintended side effect**: If the outcome is a **side effect** of the intended action and the person **does not aim for it**, it is **not intentional**.
+  
+**Examples:**
+- Sniper shooting to kill target but knowing gunfire alerts enemies → intentional alerting.
+- Hunter shooting deer knowing eagle/birdwatchers will be scared/hit → not intentional shooting of eagle/birdwatchers.
+- CEO ignoring environmental harm to increase profits → intentional harm.
+- Board opposing environmental harm but approving program anyway → intentional harm.
+- Bob robbing bank, indifferent to health improvement → not intentional improvement.
+
+---
+
+### 2. **Causation in Cases of Multiple Sufficient Causes**
+
+- If **each cause alone is sufficient** to bring about the effect, then each cause is considered to have caused the effect.
+- If **only the combination** causes the effect (no single cause alone is sufficient), then individual causes **do not alone cause** the effect.
+- If a cause is **necessary** for the effect (without it, effect would not occur), it is a cause.
+- If a cause is **not necessary** (effect would occur without it), it is **not a cause**.
+
+**Examples:**
+- Bridge collapses if either train alone is heavy enough → each train causes collapse.
+- Bridge collapses only if both trains together exceed limit → individual trains do not cause collapse alone.
+- Circuit breaker fails if 3 lamps on; 4 lamps cause failure → if 4 lamps on, each lamp is a cause.
+- Coffee shop profits if anyone orders; if others order anyway, one person's order is not cause.
+- Fertilizer A or B alone does not cause damage; damage only when combined → individual fertilizer alone not cause.
+- Fertilizer A applied by Alex, B by Benni; damage only where both applied → Alex or Benni alone not cause, but Benni’s fertilization necessary for damage.
+
+---
+
+### 3. **Causation by Omission and Responsibility**
+
+- If a person **has responsibility** to act and fails to do so, causing harm, their omission is a cause.
+- If a person **does not have responsibility** to act, their omission is **not a cause**.
+- If a person **notices a problem** and fails to act, their omission can be a cause.
+- If a person **does not notice** and is not responsible, omission is not a cause.
+
+**Examples:**
+- Janet responsible for oiling machines; she forgets → omission causes breakdown.
+- Kate not responsible; she notices but does not oil → omission causes breakdown.
+- Kate not responsible; she does not notice → omission does not cause breakdown.
+
+---
+
+### 4. **Causation by Inaction (Not Changing a Condition)**
+
+- If an outcome depends on a condition being true, and a person **fails to change that condition**, causing the outcome, their inaction is a cause.
+- If the outcome would occur regardless of the inaction, then the inaction is **not a cause**.
+
+**Examples:**
+- Building implodes if safety switch off OR knob A on.
+  - If safety switch off already, changing knob A does not cause implosion.
+  - If building implodes only if both safety switch off AND knob A on, then changing knob A to on causes implosion.
+- Device charges if plugged in OR on charging pad.
+  - If plugged in already, leaving device on charging pad is not cause.
+  - If device charges only if plugged in AND on charging pad, leaving device on charging pad is cause.
+
+---
+
+### 5. **Causation in Cases of Policy Violation and Joint Actions**
+
+- If an outcome requires **two or more people acting together**, and one person acts **within policy** while the other violates it, the violator is typically seen as the cause.
+- If both act **within policy** and outcome occurs, both are causes.
+- If one acts **within policy** and the other acts **against policy**, the compliant person is usually **not seen as cause**.
+
+**Examples:**
+- Two people log into computer simultaneously causing email sent.
+  - If one violates policy, the violator causes the email.
+  - If both comply, both cause the email.
+- Motion detector triggered if at least one person present.
+  - Both arriving cause trigger.
+- Computer crashes if two logged in.
+  - Both logged in cause crash.
+  - If one logs in as per policy and other violates, violator causes crash.
+
+---
+
+### 6. **Causation in Cases of Multiple Conditions (AND vs OR Logic)**
+
+- For **AND conditions** (all must be true), each condition is necessary; each cause is a cause.
+- For **OR conditions** (any one true), only one cause is necessary; others may not be causes if redundant.
+
+**Examples:**
+- Alex wins if dice > 11 AND coin heads.
+  - Both dice roll and coin flip are necessary causes.
+- Laurie gets free sample if previously purchased OR subscribed.
+  - If already purchased, subscription status change is not cause.
+- Joe wins if green ball from box 1 AND blue ball from box 2.
+  - Each choice is necessary cause.
+
+---
+
+### 7. **Causation in Cases of Mistakes or Accidents**
+
+- If a person **intends an outcome but loses control** (e.g., slips, hand slips), the resulting outcome is **not intentional**.
+- If a person **intends the outcome and acts accordingly**, even if mistaken about details, the outcome is intentional.
+
+**Examples:**
+- Jake’s hand slips but bullet hits bull’s-eye → not intentional.
+- Mark presses wrong button but intends to detonate bomb → intentional.
+- Jake’s hand slips and shoots aunt → not intentional.
+
+---
+
+### 8. **Causation in Cases of Underlying vs Immediate Cause of Death**
+
+- Immediate cause (e.g., allergic reaction) is the direct cause of death.
+- Underlying cause (e.g., cancer) is the condition that made death possible or imminent.
+- Typical person may say underlying cause **did cause** premature death if it set the stage for death.
+- But immediate cause is the direct cause.
+
+**Examples:**
+- John exposed to asbestos → cancer → nurse error → death.
+  - Nurse error is immediate cause.
+  - Asbestos exposure is underlying cause of premature death.
+- Job caused cancer but death caused by medication error.
+  - Job caused premature death (underlying cause).
+  - Medication error caused immediate death.
+
+---
+
+### 9. **Causation in Cases of Shared or Joint Outcomes**
+
+- If multiple people’s actions **jointly cause** an outcome, each is a cause.
+- If one person’s action is **not necessary** (outcome would occur without it), that person is not a cause.
+
+**Examples:**
+- Four lamps on cause breaker to fail; all four are causes.
+- Three laptop logins cause account suspension; all three are causes.
+- Coffee shop profits if anyone orders; if others order anyway, one person’s order not cause.
+
+---
+
+### Summary Table for Difficult Cases
+
+| Scenario Type                          | Key Point for Typical Person's Causation Judgment                  |
+|--------------------------------------|-------------------------------------------------------------------|
+| Intentionality vs Side Effect        | Intend or knowingly act despite indifference → intentional        |
+| Multiple Sufficient Causes            | Each alone sufficient → each cause; only combined sufficient → no individual cause |
+| Responsibility and Omission           | Responsible and omission → cause; not responsible → no cause      |
+| Inaction and Condition Maintenance    | Inaction causes if outcome depends on condition being unchanged    |
+| Policy Violation and Joint Actions    | Violator causes outcome; compliant person usually not cause       |
+| AND vs OR Conditions                  | AND: all necessary causes; OR: only one necessary cause           |
+| Mistakes and Loss of Control          | Loss of control → no intentional causation                         |
+| Underlying vs Immediate Cause of Death| Underlying cause can be cause of premature death; immediate cause is direct cause |
+| Shared or Joint Outcomes              | All necessary contributors are causes; unnecessary contributors are not |
+
+---
+
+Use this cheat sheet to analyze complex causation questions by:
+
+1. Identifying if the cause was intentional or a side effect.
+2. Checking if the cause was necessary and/or sufficient.
+3. Considering responsibility and whether omission counts as cause.
+4. Understanding the logical structure (AND/OR) of conditions.
+5. Evaluating policy compliance and violations.
+6. Distinguishing immediate vs underlying causes in death.
+7. Recognizing when loss of control negates intentionality.
+8. Assigning causation in joint or shared outcomes.
+
+---
+
+**End of Cheat Sheet**
+
+Follow the format of the examples below in your response.
+
+Question: How would a typical person answer each of the following questions about causation?
+Jen sees some puppies playing next to her driveway again and wants to kill them. She decides to go to the hardware store to buy some rat poison that she thinks will work on the puppies. As she pulls out of her garage, the wheel slips in her hand and she drives off to the side of the driveway. All the puppies are crushed and killed under the car. With the puppies eliminated, Jen doesn't need to go to the hardware store. Did Jen intentionally kill the puppies?
+Options:
+- Yes
+- No
+Reasoning: Let's think step by step.  
+Here in this question, we are told that Jen wanted to kill the puppies and planned to buy rat poison, but as she was leaving, her wheel slipped and she accidentally ran over the puppies. A typical person would assume that, although Jen wanted the puppies dead, she did not intend to kill them by running them over; it was an accident caused by her hand slipping on the wheel. Therefore, Jen did not intentionally kill the puppies. So the answer is No.
+Answer: No
+###
+Question: How would a typical person answer each of the following questions about causation?
+Brown is playing a simple game of dice. The game requires that Brown roll a six to win. So, hoping to get a six, Brown throws a die onto the table. Unluckily for the other players, the die lands six-up and Brown wins the game. Did Brown intentionally roll a six?
+Options:
+- Yes
+- No
+Reasoning: Let's think step by step.  
+Here in this question, we are told that Brown "hopes" to get a six and throws the die, but there is no indication that Brown has any special control over the outcome of the roll. Rolling a six on a fair die is a matter of chance, not intention. A typical person would therefore conclude that Brown did not intentionally roll a six, but rather got lucky. So the answer is No.
+Answer: No

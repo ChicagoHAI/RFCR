@@ -1,0 +1,136 @@
+Cheat Sheet for Solving Complex Swap/Trade Problems Involving Alice, Bob, and Claire
+
+---
+
+### 1. **Identify the Initial Assignments Clearly**
+- Write down who starts with what (book, partner, ball, position, gift).
+- Use initials or shorthand for quick reference (e.g., A: Odyssey, B: Fellowship, C: Baskervilles).
+
+---
+
+### 2. **Track Each Swap Step-by-Step**
+- For each swap, update the holders immediately.
+- Example format for swaps:
+  - Swap 1: A ↔ B → update A and B’s items.
+  - Swap 2: C ↔ B → update C and B’s items.
+  - Swap 3: A ↔ C → update A and C’s items.
+
+---
+
+### 3. **Use a Table or List to Track Changes**
+| Person | Start | After Swap 1 | After Swap 2 | After Swap 3 |
+|--------|-------|--------------|--------------|--------------|
+| Alice  |       |              |              |              |
+| Bob    |       |              |              |              |
+| Claire |       |              |              |              |
+
+- Fill in the table as you process each swap.
+
+---
+
+### 4. **Common Swap Patterns to Recognize**
+
+- **Pattern A (3 swaps involving all pairs):**
+  - Swap 1: A ↔ B
+  - Swap 2: C ↔ B
+  - Swap 3: A ↔ C
+  - Result: Bob ends up with what Claire started with.
+
+- **Pattern B (3 swaps involving A and C twice):**
+  - Swap 1: A ↔ B
+  - Swap 2: A ↔ C
+  - Swap 3: B ↔ C
+  - Result: Claire ends up with what Alice started with.
+
+- **Pattern C (Swaps involving repeated pairs):**
+  - When the same pair swaps multiple times, the item may return to the original owner or move in a cycle.
+  - Track carefully to avoid mistakes.
+
+---
+
+### 5. **Handling Dancers and Partners**
+
+- Partners are swapped between people, not the people themselves.
+- When Alice and Bob switch partners, swap their partners, not Alice and Bob.
+- Track partners as:
+  - Alice → Partner X
+  - Bob → Partner Y
+  - Claire → Partner Z
+- After each swap, update partners accordingly.
+
+---
+
+### 6. **Handling Soccer Positions**
+
+- Positions are swapped between players.
+- Track positions similarly to items.
+- After each swap, update the player’s position.
+
+---
+
+### 7. **Tips for Avoiding Common Mistakes**
+
+- **Do not confuse the people with the items/partners/positions.**
+- **Always update both parties involved in a swap simultaneously.**
+- **If a swap repeats the same pair, check if the item returns to the original owner.**
+- **For multiple swaps, do not try to guess the final state; track each step.**
+
+---
+
+### 8. **Example Walkthrough (Difficult Case)**
+
+**Initial:**
+- Alice: Book A
+- Bob: Book B
+- Claire: Book C
+
+**Swaps:**
+1. Bob and Alice swap → Alice: B, Bob: A, Claire: C
+2. Claire and Bob swap → Alice: B, Bob: C, Claire: A
+3. Alice and Claire swap → Alice: A, Bob: C, Claire: B
+
+**Result:**
+- Bob has Book C (Claire’s original book).
+
+---
+
+### 9. **When Reasoning is Provided**
+
+- Follow the reasoning step-by-step.
+- Check if the reasoning matches the swaps.
+- If reasoning is inconsistent, redo the swaps yourself.
+
+---
+
+### 10. **Summary of Key Points**
+
+- Always write down initial states.
+- Update after each swap.
+- Use tables or lists for clarity.
+- Recognize common swap patterns.
+- For partners and positions, swap the associated item, not the person.
+- Double-check repeated swaps.
+- When in doubt, simulate each swap carefully.
+
+---
+
+This cheat sheet focuses on the most challenging aspects: tracking multiple swaps, especially when swaps involve repeated pairs or complex sequences, and distinguishing between swapping people vs. swapping their associated items/partners/positions. Use it to systematically solve problems without confusion.
+
+Follow the format of the examples below in your response.
+
+Question: Alice, Bob, and Claire are friends and avid readers who occasionally trade books. At the start of the semester, they each buy one new book: Alice gets The Odyssey, Bob gets The Fellowship of the Ring, and Claire gets Hound of the Baskervilles.
+As the semester proceeds, they start trading around the new books. First, Bob and Alice swap books. Then, Claire and Bob swap books. Finally, Alice and Claire swap books. At the end of the semester, Bob has
+Options:
+(A) The Odyssey
+(B) The Fellowship of the Ring
+(C) Hound of the Baskervilles
+Answer: (C)
+###
+Question: Alice, Bob, and Claire are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Jamie, Bob is dancing with Patrick, and Claire is dancing with Melissa.
+Throughout the song, the dancers often trade partners. First, Claire and Bob switch partners. Then, Bob and Alice switch partners. Finally, Alice and Claire switch partners. At the end of the dance, Bob is dancing with
+Options:
+(A) Jamie
+(B) Patrick
+(C) Melissa
+Reasoning: Let's think step by step. (0) At the start: Alice: Lola, Bob: Rodrigo, Claire: Patrick. (1) Alice and Bob switch partners: Alice: Rodrigo, Bob: Lola, Claire: Patrick. (2) Claire and Bob switch partners: Alice: Rodrigo, Bob: Patrick, Claire: Lola. (3) Bob and Alice switch partners: Alice: Patrick, Bob: Rodrigo, Claire: Lola. At the end of the dance, Alice is dancing with Patrick. So the answer is (C).
+Answer: (A)

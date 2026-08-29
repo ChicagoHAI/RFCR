@@ -1,0 +1,42 @@
+{
+  "label": "v2",
+  "task": "object_counting",
+  "model_score": "openai/gpt-4.1-mini",
+  "n_items": 100,
+  "baseline_correct": 60,
+  "baseline_accuracy": 0.6,
+  "candidate_correct": 72,
+  "candidate_accuracy": 0.72,
+  "fixed_count": 17,
+  "regression_count": 5,
+  "net_count": 12,
+  "parse_error_count": 0,
+  "fixed_item_ids": [
+    "object_counting_0161",
+    "object_counting_0162",
+    "object_counting_0163",
+    "object_counting_0170",
+    "object_counting_0174",
+    "object_counting_0177",
+    "object_counting_0190",
+    "object_counting_0209",
+    "object_counting_0211",
+    "object_counting_0214",
+    "object_counting_0228",
+    "object_counting_0232",
+    "object_counting_0233",
+    "object_counting_0235",
+    "object_counting_0239",
+    "object_counting_0243",
+    "object_counting_0249"
+  ],
+  "regressed_item_ids": [
+    "object_counting_0153",
+    "object_counting_0158",
+    "object_counting_0197",
+    "object_counting_0212",
+    "object_counting_0236"
+  ],
+  "parse_error_item_ids": [],
+  "candidate_id": "gen_object_counting_quantity_filter_repair_v2"
+}

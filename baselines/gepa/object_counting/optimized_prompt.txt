@@ -1,0 +1,121 @@
+You are given a short natural language statement that describes a collection of various items, followed by a question asking how many items there are of a specified category. Your task is to accurately identify, categorize, and count only the items in the specified category according to very detailed, domain-specific rules and counting conventions described below, then output the total count as a single integer in the exact format:
+
+```
+VERDICT: <integer>
+```
+
+---
+
+### Input format
+Statements follow this pattern:  
+`I have <item descriptions>. How many <category> do I have?`
+
+- The list of items is given as a natural language enumeration, often separated by commas and conjunctions such as "and."
+- Quantities can be specified in multiple ways:
+  - Number words: "one," "two," "three," "four," etc.
+  - Articles: "a" or "an" (count as 1)
+  - Plurals without quantity specified count as an implicit plural quantity of items (see details below).
+  - Compound units specifying multiple units (e.g., "two heads of broccoli") must be interpreted carefully.
+
+---
+
+### Categories and valid items
+
+You must count **only** the items listed in the specified category. Items not explicitly listed in the category must be ignored, even if they appear in the input.
+
+Categories and their items (case-insensitive):
+
+1. **Objects**  
+   - Items: couch, bed, table, lamp, car, chair, toaster, stove, fridge, oven, microwave  
+   - Count all occurrences regardless of singular or plural or phrasing.
+
+2. **Vegetables**  
+   - Items: cabbage, carrot, stalk of celery, onion, garlic, cauliflower, broccoli (count by heads), lettuce (count by heads), potato, yam  
+   - Important:  
+     - "stalk of celery" counts as 1 per stalk.  
+     - Broccoli and lettuce count by heads, e.g., "a head of broccoli" = 1, "two heads of broccoli" = 2.  
+     - Garlic is always counted individually as vegetable units.  
+     - Plurals must be counted appropriately (e.g., "two onions" = 2).  
+
+3. **Fruits**  
+   - Items: apple, banana, orange, peach, plum, nectarine, raspberry, blackberry, strawberry, grape, blueberry  
+   - Count plurals and quantities explicitly.  
+
+4. **Animals**  
+   - Items: mouse, snail, chicken, cat, pig, snake, fish, goat, bear, dog, cow, frog, donkey, rabbit, duck  
+   - Count plural forms and quantities explicitly.
+
+5. **Musical Instruments**  
+   - Items: flute, trombone, accordion, clarinet, drum, piano, violin, trumpet  
+   - Count plural forms and quantities explicitly.
+
+---
+
+### Counting rules and details
+
+- Quantity determination:  
+  - Number words ("one," "two," "three," etc.) correspond to integer quantities.  
+  - Articles "a" or "an" each count as quantity 1.  
+  - When plural form is present without an explicit number, infer quantity as the plural implies at least 2. If quantity is explicitly stated, use that number.  
+    For example, "two clarinets" = 2, "clarinets" without number is assumed plural and count as number of items specified if known, otherwise assume quantity 1 per noun unless ambiguous (usually the input will specify quantity).  
+  - Compound units:  
+    - Examples:  
+      - "a head of broccoli" = 1 item of broccoli counted as vegetable.  
+      - "two heads of broccoli" = 2 items.  
+      - "a stalk of celery" = 1 vegetable.  
+      - "two stalks of celery" = 2 vegetables.  
+  - Some vegetables may appear with units (head, stalk) which must be parsed correctly.
+
+- Only count items exactly belonging to the requested category: ignore items outside that category, even if present in the list.
+
+- Do NOT mix categories when counting.
+
+- Items not listed in any category must be ignored.
+
+---
+
+### Parsing and output details
+
+- The final output must be exactly:
+
+```
+VERDICT: <number>
+```
+
+- Output only a single line with the count integer.
+
+- No additional text, comments, or formatting.
+
+- The number is the sum of counted items in the requested category according to all the above rules.
+
+---
+
+### Additional notes to avoid errors
+
+- Confirm the requested category precisely from the question (which is always at the end of the input sentence and uses one of the exact category names: objects, vegetables, fruits, animals, musical instruments).
+
+- Carefully parse plural forms, quantity words, and compound units.
+
+- When items such as broccoli, lettuce, celery appear with descriptor words ("head," "stalk"), these define the quantification for counting.
+
+- Avoid counting items from other categories present in the sentence.
+
+- Consistency and rigor in counting quantities is essential to avoid off-by-one or incorrect totals.
+
+- Only output the final count line with no explanations.
+
+---
+
+### Example
+
+Input:  
+`I have a stalk of celery, two drums, two onions, a carrot, an accordion, a yam, a cabbage, a lettuce head, a potato, and a head of broccoli. How many vegetables do I have?`
+
+Process:  
+- Vegetables present:  
+  stalk of celery (1), two onions (2), carrot (1), yam (1), cabbage (1), lettuce head (1), potato (1), head of broccoli (1)  
+- Total vegetables = 1+2+1+1+1+1+1+1 = 9
+
+Output:  
+```
+VERDICT: 9

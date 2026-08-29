@@ -1,0 +1,25 @@
+```json
+{
+  "rules": [
+    {
+      "id": "gen_geo_6_false_gpt41mini_repair_v2",
+      "task": "geometric_shapes",
+      "routing_key": [
+        6,
+        false
+      ],
+      "rule": "If the SVG path has exactly 5 unique effective vertices from M and L commands (excluding the closing vertex if it duplicates the start), all commands are either M or L (no arcs), and the path is closed (the last L coordinate exactly equals the first M coordinate), then classify the shape as pentagon (G).",
+      "use_when": "partition_key is (6, False) and the SVG path has exactly 5 unique vertices from M and L commands excluding the closing duplicate vertex, all commands are M or L, and the path is closed by the last L coordinate equaling the first M coordinate.",
+      "do_not_use_when": "the number of unique vertices from M and L commands excluding the closing duplicate vertex is not 5, or the path contains any arc (A) commands, or the path is not closed (last point does not equal first point).",
+      "check": "Count the number of unique vertices from M and L commands excluding the closing vertex if it duplicates the start vertex. Confirm this count equals 5. Confirm no arc (A) commands are present in the path. Confirm the path is closed by verifying the last L coordinate exactly equals the first M coordinate. If all these conditions hold, output the VERDICT: pentagon (G).",
+      "micro_example": "Input: <path d='M 6.68,51.71 L 25.83,67.50 L 45.78,74.93 L 55.10,57.27 L 54.84,38.25 L 6.68,51.71'/> Output: pentagon (G)",
+      "source_of_candidate": "generated_from_failure_audit",
+      "generator_model": "openai/gpt-4.1-mini",
+      "target_partition": "(6, False)",
+      "observed_failure_gold_labels": [
+        "(G)"
+      ]
+    }
+  ]
+}
+```

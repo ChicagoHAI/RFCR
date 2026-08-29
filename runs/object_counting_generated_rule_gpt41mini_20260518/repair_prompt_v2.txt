@@ -1,0 +1,66 @@
+Repair this object_counting SF-CR atom. Keep the same rule family, but reduce regressions.
+
+Current rule:
+{
+  "id": "gen_object_counting_quantity_filter_v1",
+  "task": "object_counting",
+  "rule": "Identify the category asked in the question. Count only objects belonging to that category. Convert explicit quantity words (e.g., two, three, four, five) to their numeric counts; treat 'a', 'an', or 'one' as 1. Ignore any objects outside the requested category.",
+  "use_when": "The input contains multiple objects with explicit quantity words and a clear category is asked for counting.",
+  "do_not_use_when": "The question does not specify a category or when counting all objects regardless of type.",
+  "check": "Verify that the final count includes all objects in the requested category, correctly summing quantities, and excludes objects outside that category.",
+  "micro_example": "Input: 'I have two apples, a banana, and three oranges. How many fruits do I have?' Count = 6 (2 apples + 1 banana + 3 oranges).",
+  "source_of_candidate": "generated_from_failure_logs",
+  "generator_model": "openai/gpt-4.1-mini"
+}
+
+Fixed examples:
+- id=object_counting_0156 gold=10 baseline=9 input=I have a trumpet, a piano, a flute, a snake, three accordions, a violin, a drum, a clarinet, and a trombone. How many musical instruments do I have?
+- id=object_counting_0161 gold=5 baseline=4 input=I have a trombone, a flute, two nectarines, a violin, a strawberry, a peach, and a grape. How many fruits do I have?
+- id=object_counting_0162 gold=7 baseline=6 input=I have three heads of broccoli, two cauliflowers, a yam, and a lettuce head. How many vegetables do I have?
+- id=object_counting_0163 gold=13 baseline=11 input=I have a lettuce head, two yams, a cabbage, a stalk of celery, three heads of broccoli, a garlic, an onion, a carrot, a cauliflower, and a potato. How many vegetables do I have?
+- id=object_counting_0169 gold=6 baseline=5 input=I have two chairs, a toaster, an oven, a table, and a couch. How many objects do I have?
+- id=object_counting_0170 gold=11 baseline=10 input=I have a trombone, three clarinets, an accordion, two violins, a flute, a drum, a trumpet, and a piano. How many musical instruments do I have?
+- id=object_counting_0175 gold=12 baseline=8 input=I have a potato, a carrot, two onions, a cauliflower, a plum, a lettuce head, five stalks of celery, and a yam. How many vegetables do I have?
+- id=object_counting_0177 gold=10 baseline=9 input=I have two fish, four cats, two chickens, a mouse, and a goat. How many animals do I have?
+- id=object_counting_0190 gold=5 baseline=4 input=I have two stalks of celery, a carrot, a lettuce head, and an onion. How many vegetables do I have?
+- id=object_counting_0203 gold=10 baseline=9 input=I have two violins, a piano, a drum, two flutes, a trombone, an accordion, a trumpet, a goat, and a clarinet. How many musical instruments do I have?
+
+Regressed examples:
+- id=object_counting_0153 gold=9 baseline=9 input=I have a plum, a banana, a nectarine, a strawberry, a blackberry, two oranges, a raspberry, and a peach. How many fruits do I have?
+- id=object_counting_0197 gold=15 baseline=15 input=I have a stove, two tables, three toasters, a fridge, a lamp, a microwave, three chairs, a bed, a car, and a couch. How many objects do I have?
+- id=object_counting_0198 gold=14 baseline=14 input=I have four cauliflowers, a garlic, a cabbage, a potato, a head of broccoli, three yams, a lettuce head, an onion, and a carrot. How many vegetables do I have?
+- id=object_counting_0199 gold=9 baseline=9 input=I have a snail, a chair, a duck, a cat, a toaster, a fish, a chicken, two ovens, a cow, two mice, and a rabbit. How many animals do I have?
+- id=object_counting_0212 gold=8 baseline=8 input=I have three clarinets, a trombone, two pianos, an accordion, and a trumpet. How many musical instruments do I have?
+- id=object_counting_0236 gold=6 baseline=6 input=I have a trumpet, a drum, a piano, a flute, and two trombones. How many musical instruments do I have?
+
+Still wrong examples:
+- id=object_counting_0159 gold=8 baseline=6 input=I have three potatoes, a carrot, a snake, a yam, a cauliflower, a stalk of celery, and a garlic. How many vegetables do I have?
+- id=object_counting_0165 gold=16 baseline=13 input=I have a cabbage, four stalks of celery, two garlics, three carrots, a yam, a cauliflower, a lettuce head, two heads of broccoli, a microwave, and an onion. How many vegetables do I have?
+- id=object_counting_0173 gold=10 baseline=9 input=I have three snakes, a cat, a bear, two goats, a chicken, a donkey, a car, and a fish. How many animals do I have?
+- id=object_counting_0174 gold=15 baseline=12 input=I have a fish, a snake, a lettuce head, a mouse, four bears, a rabbit, a pig, three goats, a cow, and two snails. How many animals do I have?
+- id=object_counting_0179 gold=14 baseline=12 input=I have a mouse, a frog, two snails, a lettuce head, an onion, a goat, a cat, a fish, a cow, a pig, four ducks, and a rabbit. How many animals do I have?
+- id=object_counting_0186 gold=16 baseline=15 input=I have four couches, a microwave, a table, a chair, a fridge, four stoves, a lamp, a car, an oven, and a toaster. How many objects do I have?
+- id=object_counting_0194 gold=13 baseline=12 input=I have a cow, two dogs, a mouse, a donkey, a snail, a snake, a cat, a pig, a bear, and three rabbits. How many animals do I have?
+- id=object_counting_0195 gold=15 baseline=14 input=I have a drum, four pianos, two accordions, a carrot, a stalk of celery, three flutes, a cauliflower, a violin, a clarinet, a trombone, and two trumpets. How many musical instruments do I have?
+- id=object_counting_0208 gold=10 baseline=9 input=I have a stove, a microwave, a couch, a lamp, a chair, an oven, a fridge, and three beds. How many objects do I have?
+- id=object_counting_0209 gold=13 baseline=12 input=I have two heads of broccoli, a cabbage, a lettuce head, a yam, an onion, a stalk of celery, a potato, four garlics, and a cauliflower. How many vegetables do I have?
+
+Return JSON only with one rule:
+{
+  "rules": [
+    {
+      "id": "gen_object_counting_quantity_filter_repair_v2",
+      "task": "object_counting",
+      "rule": "...",
+      "use_when": "...",
+      "do_not_use_when": "...",
+      "check": "...",
+      "micro_example": "..."
+    }
+  ]
+}
+
+Requirements:
+- The CHECK must force a concrete sum.
+- Preserve correct baseline cases.
+- Do not introduce broad advice unrelated to object counting.

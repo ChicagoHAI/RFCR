@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {
+      "id": "gen_object_counting_quantity_filter_repair_v2",
+      "task": "object_counting",
+      "rule": "Identify the category explicitly asked in the question. Count only objects that belong to that category. Convert explicit quantity words (e.g., two, three, four, five) and phrases indicating quantity (e.g., 'three heads of broccoli', 'five stalks of celery') into their numeric counts; treat 'a', 'an', or 'one' as 1. Sum all quantities of objects matching the requested category, including those expressed with units or descriptors (e.g., 'head', 'stalk'). Exclude any objects outside the requested category or those not clearly belonging to it.",
+      "use_when": "The input contains multiple objects with explicit or implicit quantity words and a clear category is asked for counting.",
+      "do_not_use_when": "The question does not specify a category or when counting all objects regardless of type.",
+      "check": "Verify that the final count is the exact sum of all objects belonging to the requested category, correctly interpreting all quantity expressions and excluding objects outside that category.",
+      "micro_example": "Input: 'I have two apples, a banana, and three oranges. How many fruits do I have?' Count = 6 (2 apples + 1 banana + 3 oranges).",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini",
+      "parent_candidate_id": "gen_object_counting_quantity_filter_v1"
+    }
+  ]
+}

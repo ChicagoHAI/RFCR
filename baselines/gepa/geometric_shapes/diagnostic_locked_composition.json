@@ -1,0 +1,511 @@
+{
+  "purpose": "diagnostic only \u2014 anchor cheatsheet content in the EXACT locked composition (spec.build_eval_prompt), fresh calls, temp 0.0, max_tokens 64, concurrency 12",
+  "task": "geometric_shapes",
+  "accuracy": 0.51,
+  "anchor_accuracy": 0.56,
+  "fix_vs_anchor": 2,
+  "reg_vs_anchor": 7,
+  "cheatsheet_sha256": "89732dd7e41d30f106eeda40c152dd445a2507a57646dad13fb3e5a31187ffb9",
+  "per_item": [
+    {
+      "item_id": "geometric_shapes_0150",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0151",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0152",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0153",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0154",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0155",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0156",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0157",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0158",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0159",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0160",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0161",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0162",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0163",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0164",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0165",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0166",
+      "correct": false,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0167",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0168",
+      "correct": false,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0169",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0170",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0171",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0172",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0173",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0174",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0175",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0176",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0177",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0178",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0179",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0180",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0181",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0182",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0183",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0184",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0185",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0186",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0187",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0188",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0189",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0190",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0191",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0192",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0193",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0194",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0195",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0196",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0197",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0198",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0199",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0200",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0201",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0202",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0203",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0204",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0205",
+      "correct": false,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0206",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0207",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0208",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0209",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0210",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0211",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0212",
+      "correct": false,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0213",
+      "correct": false,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0214",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0215",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0216",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0217",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0218",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0219",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0220",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0221",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0222",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0223",
+      "correct": false,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0224",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0225",
+      "correct": true,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0226",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0227",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0228",
+      "correct": false,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0229",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0230",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0231",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0232",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0233",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0234",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0235",
+      "correct": true,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0236",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0237",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0238",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0239",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0240",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0241",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0242",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0243",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0244",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0245",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0246",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0247",
+      "correct": false,
+      "anchor_correct": false
+    },
+    {
+      "item_id": "geometric_shapes_0248",
+      "correct": true,
+      "anchor_correct": true
+    },
+    {
+      "item_id": "geometric_shapes_0249",
+      "correct": true,
+      "anchor_correct": true
+    }
+  ]
+}

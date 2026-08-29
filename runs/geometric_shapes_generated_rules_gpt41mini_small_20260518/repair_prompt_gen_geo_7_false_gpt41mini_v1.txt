@@ -1,0 +1,45 @@
+
+You are repairing one generated SF-CR rule for BBH geometric_shapes.
+
+Keep the same target partition and core rule family. The prior candidate had real fixes but regressed baseline-correct items. Repair only wording/boundary/check so the model follows the direct shape decision more reliably. Prefer explicit final VERDICT instructions.
+
+Original candidate JSON:
+{
+  "id": "gen_geo_7_false_gpt41mini_v1",
+  "task": "geometric_shapes",
+  "routing_key": [
+    7,
+    false
+  ],
+  "rule": "If the SVG path has exactly 6 effective vertices (counting M and L commands, excluding the closing L that repeats the start), and the path is closed (final L coordinate equals initial M coordinate), then classify as hexagon (C).",
+  "use_when": "partition_key is (7, False) and effective_vertices == 6 and path is closed",
+  "do_not_use_when": "effective_vertices != 6 or path is not closed or partition_key != (7, False)",
+  "check": "Count the number of vertices from M and L commands excluding the closing L if it repeats the start point; if count == 6 and path is closed, return hexagon (C). Otherwise, do not apply this rule.",
+  "micro_example": "Input: <path d='M 26,23 L 19,16 L 40,74 L 83,64 L 91,38 L 34,12 L 26,23'/> has 6 vertices and is closed, so output hexagon (C).",
+  "source_of_candidate": "generated_from_failure_audit",
+  "generator_model": "openai/gpt-4.1-mini",
+  "target_partition": "(7, False)",
+  "observed_failure_gold_labels": [
+    "(C)"
+  ]
+}
+
+Examples fixed by the rule:
+- geometric_shapes_0166: baseline=(G) candidate=(C) gold=(C) input=This SVG path element <path d="M 2.00,80.00 L 51.00,59.00 L 86.00,84.00 L 53.00,15.00 L 28.00,48.00 L 41.00,50.00 L 2.00,80.00"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon (H) rectangle 
+- geometric_shapes_0172: baseline=(B) candidate=(C) gold=(C) input=This SVG path element <path d="M 32.40,78.23 L 57.50,76.24 M 57.50,76.24 L 74.81,67.36 L 98.56,43.33 L 95.80,24.76 M 95.80,24.76 L 47.83,29.33 M 47.83,29.33 L 32.40,78.23"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) 
+- geometric_shapes_0179: baseline=(B) candidate=(C) gold=(C) input=This SVG path element <path d="M 3.00,60.00 L 55.00,74.00 L 82.00,50.00 L 91.00,16.00 L 34.00,44.00 L 1.00,56.00 L 3.00,60.00"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon (H) rectangle (
+- geometric_shapes_0186: baseline=(B) candidate=(C) gold=(C) input=This SVG path element <path d="M 45.00,97.00 L 87.00,78.00 L 80.00,31.00 L 37.00,9.00 L -3.00,46.00 L 9.00,82.00 L 45.00,97.00"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon (H) rectangle 
+
+Examples regressed by the rule, which must remain correct:
+- geometric_shapes_0189: baseline=(C) candidate=(J) gold=(C) input=This SVG path element <path d="M 24.95,59.83 L 44.01,58.16 L 57.11,51.31 M 57.11,51.31 L 75.01,32.90 L 72.80,18.81 M 72.80,18.81 L 36.38,22.58 L 24.95,59.83"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octag
+- geometric_shapes_0225: baseline=(C) candidate=(E) gold=(C) input=This SVG path element <path d="M 29.25,88.14 L 74.91,74.60 M 74.91,74.60 L 84.13,44.02 M 84.13,44.02 L 75.16,14.24 L 45.19,61.73 M 45.19,61.73 L 25.89,86.05 L 29.25,88.14"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) 
+- geometric_shapes_0233: baseline=(C) candidate=(D) gold=(C) input=This SVG path element <path d="M 73.43,27.01 L 6.90,79.25 L 49.09,84.71 L 69.21,97.37 L 69.96,76.08 M 69.96,76.08 L 90.27,46.02 M 90.27,46.02 L 73.43,27.01"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octago
+
+Return JSON only with one rule object inside {"rules": [...]}.
+Requirements:
+- id must be "gen_geo_7_false_gpt41mini_repair_v2".
+- task must be geometric_shapes.
+- routing_key must remain [7, False].
+- Do not broaden activation.
+- The CHECK must end with an explicit instruction to output the correct VERDICT option for this partition.
+- Do not introduce uncertainty words like usually, likely, may, or consider.

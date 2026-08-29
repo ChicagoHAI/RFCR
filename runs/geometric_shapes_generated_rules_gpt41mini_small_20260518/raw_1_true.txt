@@ -1,0 +1,14 @@
+{
+  "rules": [
+    {
+      "id": "gen_geo_1_true_gpt41mini_v1",
+      "task": "geometric_shapes",
+      "routing_key": [1, true],
+      "rule": "If the SVG path has exactly one 'M' command, zero 'L' commands, and exactly two 'A' (arc) commands, and the path is closed by the last arc returning to the start point, and the arc flags have the large-arc-flag set to 1, then classify as ellipse (K).",
+      "use_when": "partition_key is (1, True)",
+      "do_not_use_when": "number of 'M' commands is not 1, or number of 'L' commands is not 0, or number of 'A' commands is not 2, or path is not closed by arcs returning to start point, or large-arc-flag is not 1 in arcs",
+      "check": "count 'M' commands == 1 AND count 'L' commands == 0 AND count 'A' commands == 2 AND path ends at starting point AND both arcs have large-arc-flag == 1",
+      "micro_example": "Input: <path d=\"M 86.00,47.00 A 28.00,28.00 0 1,0 30.00,47.00 A 28.00,28.00 0 1,0 86.00,47.00\"/> Output: ellipse (K)"
+    }
+  ]
+}

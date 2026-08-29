@@ -1,0 +1,52 @@
+You are generating one conservative SF-CR memory atom for BBH geometric_shapes.
+
+Goal:
+- Infer the narrow SVG-shape rule from the failed examples.
+- Preserve baseline-correct examples. The rule must not fire outside the target partition.
+- Prefer exact procedural checks over broad natural-language advice.
+
+Target partition:
+- partition_key: (6, False)
+- routing_key to return: [6, False]
+
+Failure examples that the baseline got wrong and the candidate should try to fix:
+- item_id=geometric_shapes_0155 partition=(6, False) gold=(G) baseline_pred=(D) effective_vertices=5 n_m=2 n_l=5 n_a=0 close_duplicate=True input=This SVG path element <path d="M 6.68,51.71 L 25.83,67.50 L 45.78,74.93 M 45.78,74.93 L 55.10,57.27 L 54.84,38.25 L 6.68,51.71"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon (H) rectangle
+- item_id=geometric_shapes_0165 partition=(6, False) gold=(G) baseline_pred=(D) effective_vertices=5 n_m=1 n_l=5 n_a=0 close_duplicate=True input=This SVG path element <path d="M 31.82,80.60 L 69.44,51.63 L 71.48,42.91 L 63.73,40.47 L 54.89,46.36 L 31.82,80.60"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon (H) rectangle (I) sector (
+- item_id=geometric_shapes_0178 partition=(6, False) gold=(G) baseline_pred=(D) effective_vertices=5 n_m=5 n_l=5 n_a=0 close_duplicate=True input=This SVG path element <path d="M 68.57,20.35 L 60.86,9.44 M 60.86,9.44 L 69.54,45.49 M 69.54,45.49 L 71.82,26.36 M 71.82,26.36 L 83.64,19.16 M 83.64,19.16 L 68.57,20.35"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) li
+- item_id=geometric_shapes_0201 partition=(6, False) gold=(G) baseline_pred=(D) effective_vertices=5 n_m=2 n_l=5 n_a=0 close_duplicate=True input=This SVG path element <path d="M 72.27,81.13 L 74.58,97.35 L 85.30,53.15 L 72.10,72.75 L 55.16,73.99 M 55.16,73.99 L 72.27,81.13"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon (H) rectangl
+- item_id=geometric_shapes_0209 partition=(6, False) gold=(G) baseline_pred=(D) effective_vertices=5 n_m=3 n_l=5 n_a=0 close_duplicate=True input=This SVG path element <path d="M 35.02,5.69 L 27.03,22.01 M 27.03,22.01 L 25.13,37.49 L 39.29,41.12 M 39.29,41.12 L 52.79,37.71 L 35.02,5.69"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon
+- item_id=geometric_shapes_0217 partition=(6, False) gold=(G) baseline_pred=(D) effective_vertices=5 n_m=2 n_l=5 n_a=0 close_duplicate=True input=This SVG path element <path d="M 46.46,57.32 L 58.02,53.27 L 49.10,30.59 M 49.10,30.59 L 54.77,16.49 L 38.99,34.40 L 46.46,57.32"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon (H) rectangl
+
+Boundary examples that the candidate must NOT disturb:
+- item_id=geometric_shapes_0150 partition=(2, False) gold=(E) baseline_pred=(E) effective_vertices=2 n_m=1 n_l=1 n_a=0 close_duplicate=False input=This SVG path element <path d="M 90.41,82.38 L 45.53,97.84"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon (H) rectangle (I) sector (J) triangle
+- item_id=geometric_shapes_0151 partition=(3, True) gold=(I) baseline_pred=(I) effective_vertices= n_m=1 n_l=2 n_a=1 close_duplicate=True input=This SVG path element <path d="M 18.51,5.48 L 34.19,27.80 A 27.27,27.27 243.03 0,1 8.20,30.73 L 18.51,5.48"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon (H) rectangle (I) sector (J) trian
+- item_id=geometric_shapes_0154 partition=(4, False) gold=(J) baseline_pred=(J) effective_vertices=3 n_m=1 n_l=3 n_a=0 close_duplicate=True input=This SVG path element <path d="M 31.00,29.00 L 34.00,76.00 L 82.00,16.00 L 31.00,29.00"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon (H) rectangle (I) sector (J) triangle
+- item_id=geometric_shapes_0156 partition=(5, False) gold=(D) baseline_pred=(D) effective_vertices=4 n_m=1 n_l=4 n_a=0 close_duplicate=True input=This SVG path element <path d="M 32.60,38.55 L 36.60,29.84 L 39.90,32.12 L 41.75,35.68 L 32.60,38.55"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon (H) rectangle (I) sector (J) triangle
+- item_id=geometric_shapes_0160 partition=(4, False) gold=(J) baseline_pred=(J) effective_vertices=3 n_m=3 n_l=3 n_a=0 close_duplicate=True input=This SVG path element <path d="M 48.91,14.78 L 36.25,27.10 M 36.25,27.10 L 8.34,4.07 M 8.34,4.07 L 48.91,14.78"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon (H) rectangle (I) sector (J) t
+- item_id=geometric_shapes_0169 partition=(3, True) gold=(I) baseline_pred=(I) effective_vertices= n_m=1 n_l=2 n_a=1 close_duplicate=True input=This SVG path element <path d="M 72.13,55.74 L 66.37,76.94 A 21.97,21.97 105.19 0,1 74.83,33.93 L 72.13,55.74"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon (H) rectangle (I) sector (J) tr
+- item_id=geometric_shapes_0170 partition=(3, True) gold=(I) baseline_pred=(I) effective_vertices= n_m=2 n_l=2 n_a=1 close_duplicate=True input=This SVG path element <path d="M 32.43,11.23 L 25.24,31.00 M 25.24,31.00 A 21.04,21.04 298.07 0,1 11.90,15.87 L 32.43,11.23"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon (H) rectangle (I)
+- item_id=geometric_shapes_0174 partition=(5, False) gold=(D) baseline_pred=(D) effective_vertices=4 n_m=1 n_l=4 n_a=0 close_duplicate=True input=This SVG path element <path d="M 60.76,55.59 L 73.82,59.06 L 78.35,63.06 L 72.33,62.58 L 60.76,55.59"/> draws a Options: (A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon (H) rectangle (I) sector (J) triangle
+
+Important domain conventions:
+- SVG path commands M/L are vertices/line segments.
+- If the final L coordinate repeats the starting M coordinate, that final coordinate closes the path and is not a new vertex.
+- A path with A arc commands and no L line segments is an ellipse when it is formed by closed arcs; sectors include straight L segments.
+- Output labels in this task are: (A) circle, (B) heptagon, (C) hexagon, (D) kite, (E) line, (F) octagon, (G) pentagon, (H) rectangle, (I) sector, (J) triangle, (K) ellipse.
+
+Return JSON only, no markdown, with this exact shape:
+{
+  "rules": [
+    {
+      "id": "gen_geo_6_false_gpt41mini_v1",
+      "task": "geometric_shapes",
+      "routing_key": [6, False],
+      "rule": "...",
+      "use_when": "...",
+      "do_not_use_when": "...",
+      "check": "...",
+      "micro_example": "..."
+    }
+  ]
+}
+
+The rule/check may mention the final VERDICT option when the partition gives enough evidence.

@@ -1,0 +1,5 @@
+task,protegi_acc,anchor_acc,fix,regression,net,delta_pp,changed_from_seed,parse_rate,opt_calls,opt_cost_usd,leak_matches,docs_audited
+disambiguation_qa,0.82,0.83,1,2,-1,-1.0,False,1.0,7075,3.3288,0,14221
+geometric_shapes,0.51,0.56,5,10,-5,-5.0,True,1.0,6902,3.8923,0,13863
+formal_fallacies,0.69,0.67,10,8,2,2.0,True,1.0,7469,3.7389,0,15007
+object_counting,0.8,0.68,16,4,12,12.0,True,1.0,7370,2.8315,0,14805

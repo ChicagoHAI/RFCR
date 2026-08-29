@@ -1,0 +1,14 @@
+{
+ "observed_delta_pp": 2.0,
+ "ci95": [
+  -1.5,
+  5.5
+ ],
+ "n_boot": 10000,
+ "seed": 20260712,
+ "pooled_fix": 32,
+ "pooled_regression": 24,
+ "pooled_protegi_acc": 0.705,
+ "pooled_anchor_acc": 0.685,
+ "p_two_sided_sign": 0.3092
+}

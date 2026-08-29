@@ -1,0 +1,54 @@
+[
+  {
+    "target_partition": "(6, False)",
+    "candidate_id": "gen_geo_6_false_gpt41mini_v1",
+    "n_failure_examples": 6,
+    "n_boundary_examples": 8,
+    "gold_labels": [
+      "(G)"
+    ],
+    "rule": "If the SVG path has exactly 5 effective vertices (counting unique M/L points excluding the closing point if it repeats the start), and all path commands are M or L (no arcs), and the shape is closed (the last L coordinate equals the first M coordinate), then classify as pentagon (G).",
+    "use_when": "partition_key is (6, False) and the SVG path has 5 effective vertices, all commands are M or L, and the path is closed by repeating the start point at the end.",
+    "do_not_use_when": "the number of effective vertices is not 5, or the path contains arc (A) commands, or the path is not closed (last point != first point).",
+    "check": "Count the number of unique vertices from M and L commands excluding the closing vertex if it duplicates the start. Confirm it equals 5. Confirm no arc commands are present. Confirm the path is closed by checking if the last L coordinate equals the first M coordinate."
+  },
+  {
+    "target_partition": "(1, True)",
+    "candidate_id": "gen_geo_1_true_gpt41mini_v1",
+    "n_failure_examples": 6,
+    "n_boundary_examples": 8,
+    "gold_labels": [
+      "(K)"
+    ],
+    "rule": "If the SVG path has exactly one 'M' command, zero 'L' commands, and exactly two 'A' (arc) commands, and the path is closed by the last arc returning to the start point, and the arc flags have the large-arc-flag set to 1, then classify as ellipse (K).",
+    "use_when": "partition_key is (1, True)",
+    "do_not_use_when": "number of 'M' commands is not 1, or number of 'L' commands is not 0, or number of 'A' commands is not 2, or path is not closed by arcs returning to start point, or large-arc-flag is not 1 in arcs",
+    "check": "count 'M' commands == 1 AND count 'L' commands == 0 AND count 'A' commands == 2 AND path ends at starting point AND both arcs have large-arc-flag == 1"
+  },
+  {
+    "target_partition": "(9, False)",
+    "candidate_id": "gen_geo_9_false_gpt41mini_v1",
+    "n_failure_examples": 6,
+    "n_boundary_examples": 8,
+    "gold_labels": [
+      "(F)"
+    ],
+    "rule": "If the partition_key is (9, False), and the SVG path has exactly 8 line vertices (n_l=8), no arc commands (n_a=0), and the path is closed (the last L coordinate equals the first M coordinate), then predict (F) octagon.",
+    "use_when": "partition_key == (9, False) and n_l == 8 and n_a == 0 and path is closed",
+    "do_not_use_when": "n_l != 8 or n_a > 0 or path is not closed",
+    "check": "Count the number of L commands (excluding the closing L if it repeats the starting M coordinate). Confirm it is exactly 8. Confirm no arc commands (A) are present. Confirm the path is closed by checking if the last L coordinate equals the first M coordinate. If all true, return (F) octagon."
+  },
+  {
+    "target_partition": "(7, False)",
+    "candidate_id": "gen_geo_7_false_gpt41mini_v1",
+    "n_failure_examples": 6,
+    "n_boundary_examples": 8,
+    "gold_labels": [
+      "(C)"
+    ],
+    "rule": "If the SVG path has exactly 6 effective vertices (counting M and L commands, excluding the closing L that repeats the start), and the path is closed (final L coordinate equals initial M coordinate), then classify as hexagon (C).",
+    "use_when": "partition_key is (7, False) and effective_vertices == 6 and path is closed",
+    "do_not_use_when": "effective_vertices != 6 or path is not closed or partition_key != (7, False)",
+    "check": "Count the number of vertices from M and L commands excluding the closing L if it repeats the start point; if count == 6 and path is closed, return hexagon (C). Otherwise, do not apply this rule."
+  }
+]

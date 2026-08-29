@@ -1,0 +1,49 @@
+{
+  "task": "geometric_shapes",
+  "wall_seconds": 670.6,
+  "num_candidates": 7,
+  "best_idx": 0,
+  "val_aggregate_scores": [
+    0.6533333333333333,
+    0.49333333333333335,
+    0.5733333333333334,
+    0.4,
+    0.6,
+    0.5466666666666666,
+    0.52
+  ],
+  "seed_val_score": 0.6533333333333333,
+  "best_val_score": 0.6533333333333333,
+  "total_metric_calls": 735,
+  "num_full_val_evals": 7,
+  "parents": [
+    [
+      null
+    ],
+    [
+      0
+    ],
+    [
+      1
+    ],
+    [
+      2
+    ],
+    [
+      0
+    ],
+    [
+      0
+    ],
+    [
+      0
+    ]
+  ],
+  "n_llm_calls_logged": 767,
+  "prompt_tokens": 1012864,
+  "completion_tokens": 69685,
+  "est_cost_usd": 0.5166,
+  "seed_prompt_sha256": "59bf1f58e367c87b1a2d8548a85d8e61d068f2c42ef7ee93fa7fa404bfc87478",
+  "optimized_prompt_sha256": "59bf1f58e367c87b1a2d8548a85d8e61d068f2c42ef7ee93fa7fa404bfc87478",
+  "best_is_seed": true
+}

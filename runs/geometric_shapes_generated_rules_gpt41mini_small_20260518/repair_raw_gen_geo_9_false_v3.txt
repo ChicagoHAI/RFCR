@@ -1,0 +1,11 @@
+```json
+{
+  "id": "gen_geo_9_false_gpt41mini_repair_v3",
+  "task": "geometric_shapes",
+  "routing_key": [9, false],
+  "rule": "If partition_key is (9, False), the SVG path has exactly 8 line vertices excluding the closing vertex, no arc commands, and the path is closed (last L equals first M), then output VERDICT: (F). Multiple M commands inside do not affect vertex count.",
+  "use_when": "partition_key == (9, False) and n_l == 8 and n_a == 0 and path is closed",
+  "do_not_use_when": "n_l != 8 or n_a > 0 or path is not closed",
+  "check": "Count L commands excluding closing L if it repeats starting M coordinate; confirm count is 8. Confirm no arc commands (A). Confirm path is closed by last L coordinate equaling first M coordinate. Output VERDICT: (F)"
+}
+```

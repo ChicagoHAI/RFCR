@@ -1,0 +1,15 @@
+{
+  "task": "date_understanding",
+  "condition": "csicl",
+  "generator_model": "openai/gpt-4.1-mini",
+  "seed": 1000,
+  "train_path": "datasets/bbh/date_understanding_train.jsonl",
+  "n_train": 150,
+  "prompt_hash": "6a0865b8f347a0f6",
+  "cheatsheet_hash": "cd0a003d6c5ea153",
+  "created_at": "2026-05-18T13:00:11",
+  "generation_prompt_chars": 83417,
+  "generation_input_tokens": 20855,
+  "generation_output_tokens": 1259,
+  "generation_estimated_cost_usd": 0.010356
+}

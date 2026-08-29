@@ -1,0 +1,32 @@
+{
+  "task": "disambiguation_qa",
+  "aborted": null,
+  "final_beam": [
+    {
+      "train_acc": 0.9066666666666666,
+      "sha256": "b39c7e46858f9efce5a949709e149b137edca6fc61dbf1983315808173a5226b"
+    },
+    {
+      "train_acc": 0.8266666666666667,
+      "sha256": "e4682747c59a469ff6486d813a56a96b895a900e94528186cdee6af7cc1d6e08"
+    },
+    {
+      "train_acc": 0.84,
+      "sha256": "37fcbe5f46ce550ecaebacf4bc094b610237be5bf0126d6fa85e73b05ad384f3"
+    },
+    {
+      "train_acc": 0.84,
+      "sha256": "116cbd08608c38bd8a16525654fc15114baf643bc6a90cb5e27bc18d84004f9a"
+    }
+  ],
+  "selected_index": 0,
+  "selected_train_acc": 0.9066666666666666,
+  "best_candidate_sha256": "b39c7e46858f9efce5a949709e149b137edca6fc61dbf1983315808173a5226b",
+  "optimized_cheatsheet_sha256": "042a5e0d2601bdbf90e77be895f597278d871af9b6e78203680e61249162c18f",
+  "seed_cheatsheet_sha256": "042a5e0d2601bdbf90e77be895f597278d871af9b6e78203680e61249162c18f",
+  "cheatsheet_changed": false,
+  "n_llm_calls": 7075,
+  "est_cost_usd": 3.3288,
+  "input_chars": 30775602,
+  "output_chars": 628215
+}

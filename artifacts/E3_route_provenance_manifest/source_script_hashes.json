@@ -1,0 +1,11 @@
+{
+  "scripts/run_controlled_full_benchmark_pilot.py": "5fc3b657f5dd930ad8ef876824f6cbe927457cba6f6da1c50f442b4957a18637",
+  "scripts/run_disambiguation_generated_rule_pilot.py": "b2648a7dc5871fcc5e41c239bb8b853410d302f331fa6a05491d1ef1011c186f",
+  "scripts/run_sfcr_csicl_anchor_eval.py": "6b6e18f01f6c00b2fbdf6e6e4bc827e33df1b6f9adb3548600b4824e504abc78",
+  "tasks/disambiguation_qa.py": "99eef45afba41994cde65d756593b2954aeb6fe06a1e0d404b5a28d6fc6c0007",
+  "tasks/formal_fallacies.py": "bbab38d5786e42befb52232041eb5aab187b54c36b201cf00c693165c74e8cf2",
+  "tasks/geometric_shapes.py": "ef54d8f41938b2e6275c7dc817d0830ee9fe307eb76acd7b2bc424568117f772",
+  "utils/llm_client.py": "c6680a6608c12af0b66d6dad88a722e2afb1f7a4c2796c0b79ff1ef957d65daa",
+  "utils/scorer.py": "7ca573d67c92cccd7ed0d01529a3e8d350c30545c2c982b05f80023a1763fded",
+  "utils/task_spec.py": "0ed48d223497701192dd7646c06c0f197694daa53764ade4341da397638c95f9"
+}

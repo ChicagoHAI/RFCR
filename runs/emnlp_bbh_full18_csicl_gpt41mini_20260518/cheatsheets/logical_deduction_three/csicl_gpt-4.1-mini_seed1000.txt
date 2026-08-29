@@ -1,0 +1,195 @@
+**Cheat Sheet for Solving Ordering Logic Problems with Three Objects**
+
+---
+
+### 1. **Basic Setup**
+
+- You have three objects (e.g., birds, books, fruits, vehicles, golfers).
+- Statements describe relative orderings (left/right, older/newer, more/less expensive, finished above/below).
+- Goal: Determine the exact order or position of one object (e.g., leftmost, second from left, oldest, second-most expensive).
+
+---
+
+### 2. **Key Concepts**
+
+- **Relative Positioning**:  
+  - "A is to the left of B" means A is somewhere left of B (not necessarily immediately adjacent).  
+  - "A is older than B" means A ranks higher (older) than B.  
+  - "A finished above B" means A ranks better (higher) than B.  
+  - "A is the second from the left" means A is in the middle position.
+
+- **Absolute Positioning**:  
+  - "A is the leftmost" means A is in position 1 (far left).  
+  - "A is the rightmost" means A is in position 3 (far right).  
+  - "A is the second from the left" means A is in position 2 (middle).
+
+- **Combining Statements**:  
+  Use all given statements to deduce a consistent linear order of the three objects.
+
+---
+
+### 3. **Common Difficult Patterns & How to Handle Them**
+
+#### A. **When given two relative orderings that form a chain**
+
+Example:  
+- "Quail is to the left of Owl."  
+- "Owl is to the left of Hummingbird."
+
+**Approach:**  
+- Chain the order: Quail < Owl < Hummingbird.  
+- Positions: Quail (1), Owl (2), Hummingbird (3).
+
+---
+
+#### B. **When one object’s position is explicitly stated (e.g., second from left)**
+
+Example:  
+- "Raven is the second from the left."  
+- "Blue jay is to the right of Hummingbird."
+
+**Approach:**  
+- Place the explicitly positioned object in the middle (position 2).  
+- Use relative order to place the others around it.
+
+---
+
+#### C. **When statements involve "older/newer" or "more/less expensive"**
+
+- "Older" or "more expensive" means higher rank (leftmost or first).  
+- "Newer" or "less expensive" means lower rank (rightmost or last).
+
+Example:  
+- "Limousine is older than Bus."  
+- "Bus is older than Convertible."
+
+**Approach:**  
+- Limousine > Bus > Convertible (Limousine oldest, Convertible newest).
+
+---
+
+#### D. **When the "second-newest" or "second-most expensive" is given**
+
+Example:  
+- "Minivan is second-newest."  
+- "Station wagon is newer than Minivan."
+
+**Approach:**  
+- Second-newest = middle position (2).  
+- Station wagon is newer → position 1 (newest).  
+- Minivan = 2, so the remaining vehicle is oldest (3).
+
+---
+
+#### E. **When contradictory or overlapping statements appear**
+
+Example:  
+- "Sedan is older than Tractor."  
+- "Bus is older than Sedan."  
+- Question: Who is oldest?
+
+**Approach:**  
+- Chain: Bus > Sedan > Tractor.  
+- Oldest is Bus.
+
+---
+
+#### F. **When multiple relative positions are given but no explicit absolute position**
+
+Example:  
+- "Crow is to the left of Owl."  
+- "Owl is second from the left."
+
+**Approach:**  
+- Owl = position 2.  
+- Crow is left of Owl → Crow = position 1.  
+- Remaining object = position 3.
+
+---
+
+### 4. **Step-by-Step Method**
+
+1. **Identify all relative orderings** (e.g., A left of B, A older than B).  
+2. **Identify any absolute positions** (e.g., A is second from left).  
+3. **Place absolute positions first** (if any).  
+4. **Use relative orderings to place other objects around absolute positions.**  
+5. **Check for consistency and adjust if needed.**  
+6. **Answer the question based on the final order.**
+
+---
+
+### 5. **Special Notes**
+
+- "Finished below" means worse rank (to the right or lower).  
+- "Second from the left" = middle position (2).  
+- "Second-newest" or "second-most expensive" = middle position (2).  
+- When "X is to the right of Y" and "Z is the second from the left," use these to deduce the order:  
+  - Place the second from left object in position 2.  
+  - Use "to the right/left" to place others accordingly.
+
+---
+
+### 6. **Examples of Applying the Cheat Sheet**
+
+- **Example 1:**  
+  "Quail is to the left of Owl."  
+  "Owl is to the left of Hummingbird."  
+  → Order: Quail (1), Owl (2), Hummingbird (3).
+
+- **Example 2:**  
+  "Blue jay is to the right of Hummingbird."  
+  "Raven is second from the left."  
+  → Raven = 2, Hummingbird left of Blue jay, so Hummingbird = 1, Blue jay = 3.
+
+- **Example 3:**  
+  "Minivan is second-newest."  
+  "Station wagon is newer than Minivan."  
+  → Station wagon = 1 (newest), Minivan = 2, Truck = 3 (oldest).
+
+---
+
+### 7. **Avoid Common Mistakes**
+
+- Do not confuse "older" with "newer" or "more expensive" with "cheaper."  
+- "Second from the left" is always position 2, not 1 or 3.  
+- When given "X is the second from the left" and "Y is to the left of X," Y must be position 1.  
+- When given "X is the second from the left" and "Y is to the right of X," Y must be position 3.
+
+---
+
+### 8. **Summary Table**
+
+| Statement Type                 | Meaning                          | Positioning Hint                  |
+|-------------------------------|---------------------------------|---------------------------------|
+| A is to the left of B          | A < B                           | A is left of B                  |
+| A is to the right of B         | A > B                           | A is right of B                 |
+| A is older than B              | A ranks higher than B            | A is left/higher than B         |
+| A is newer than B              | A ranks lower than B             | A is right/lower than B         |
+| A is the leftmost              | A is position 1                 | Absolute position               |
+| A is the rightmost             | A is position 3                 | Absolute position               |
+| A is second from the left      | A is position 2                 | Absolute position               |
+| A is second-newest             | A is position 2 (middle)        | Absolute position               |
+| A finished above B             | A ranks higher than B            | A is left/higher than B         |
+| A finished below B             | A ranks lower than B             | A is right/lower than B         |
+
+---
+
+Use this cheat sheet to carefully analyze the statements, build the order step-by-step, and answer the question correctly.
+
+Follow the format of the examples below in your response.
+
+Question: The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a branch, there are three birds: a quail, an owl, and a hummingbird. The quail is to the left of the owl. The owl is to the left of the hummingbird.
+Options:
+(A) The quail is the leftmost
+(B) The owl is the leftmost
+(C) The hummingbird is the leftmost
+Reasoning: Let's think step by step. (1) The white book is to the left of the gray book: "(left) ? white ? gray ? (right)". (2) The red book is the second from the left: "(left) ? white red gray ? (right)". (3) Combining (1) and (2) we get the following ordering: "(left) white red gray (right)". According to this ordering, the leftmost book is the white book. The white book is the leftmost. So the answer is (C).
+Answer: (A)
+###
+Question: The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In an antique car show, there are three vehicles: a convertible, a limousine, and a bus. The limousine is older than the bus. The bus is older than the convertible.
+Options:
+(A) The convertible is the oldest
+(B) The limousine is the oldest
+(C) The bus is the oldest
+Reasoning: Let's think step by step. (1) The white book is to the left of the gray book: "(left) ? white ? gray ? (right)". (2) The red book is the second from the left: "(left) ? white red gray ? (right)". (3) Combining (1) and (2) we get the following ordering: "(left) white red gray (right)". According to this ordering, the leftmost book is the white book. The white book is the leftmost. So the answer is (C).
+Answer: (B)

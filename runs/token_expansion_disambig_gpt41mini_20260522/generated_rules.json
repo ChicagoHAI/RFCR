@@ -1,0 +1,127 @@
+{
+  "rules": [
+    {
+      "id": "gen_disambig_specific_family_v1_1",
+      "task": "disambiguation_qa",
+      "rule": "When the pronoun refers to who better understood or knew something, assign it to the subject if the verb is 'corrected' or 'warned' and the subject is agent of understanding.",
+      "use_when": "Sentence contains verbs like 'corrected', 'warned', or 'informed' followed by 'because' + pronoun + 'better understood' or similar.",
+      "do_not_use_when": "Sentence contains multiple agents with equal knowledge or no clear agent of understanding.",
+      "check": "Assign pronoun to subject (first noun) when sentence states subject corrected/warned because pronoun better understood something.",
+      "activation_cues": [
+        "corrected because she better understood",
+        "warned ... because they better understood",
+        "informed ... because he better understood"
+      ],
+      "negative_cues": [
+        "ambiguous",
+        "both understood"
+      ],
+      "micro_example": "The secretary corrected the developer because she better understood the problem. => (A) The secretary understood",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini"
+    },
+    {
+      "id": "gen_disambig_specific_family_v1_2",
+      "task": "disambiguation_qa",
+      "rule": "When the pronoun refers to who needed or should do an action (e.g., make payments, reply), assign it to the indirect object or recipient if the verb implies obligation or necessity.",
+      "use_when": "Sentence contains verbs like 'sent', 'informed', 'bought' with 'because' + pronoun + 'needed' or 'should' + verb.",
+      "do_not_use_when": "Sentence is ambiguous about who has the obligation or need.",
+      "check": "Assign pronoun to the indirect object or recipient of the action when obligation or need is expressed.",
+      "activation_cues": [
+        "because he needed",
+        "because she needed",
+        "because they needed",
+        "didn't reply",
+        "should floss"
+      ],
+      "negative_cues": [
+        "ambiguous",
+        "both needed"
+      ],
+      "micro_example": "The CEO bought the accountant a car because he needed one. => (B) The accountant needed a car",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini"
+    },
+    {
+      "id": "gen_disambig_specific_family_v1_3",
+      "task": "disambiguation_qa",
+      "rule": "When the pronoun refers to possession or ownership of a thing mentioned immediately before, assign it to the possessor noun closest to the possessed noun.",
+      "use_when": "Sentence contains possessive constructions or references to objects owned by one of the nouns.",
+      "do_not_use_when": "Sentence contains ambiguous or shared ownership without further cues.",
+      "check": "Assign pronoun to the noun closest to the possessed object when possession is explicit.",
+      "activation_cues": [
+        "her car",
+        "his office",
+        "their microscope",
+        "her grading policy"
+      ],
+      "negative_cues": [
+        "ambiguous",
+        "shared ownership"
+      ],
+      "micro_example": "The manager asked the employee to not forget her car. => (C) Ambiguous (if no clear cue), else assign to closest possessor",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini"
+    },
+    {
+      "id": "gen_disambig_specific_family_v1_4",
+      "task": "disambiguation_qa",
+      "rule": "When the pronoun refers to who performed an action described by a verb in a relative clause or subordinate clause, assign it to the subject of that clause if explicit.",
+      "use_when": "Sentence contains relative or subordinate clauses with pronouns referring to the subject of the clause.",
+      "do_not_use_when": "Sentence contains multiple subjects or ambiguous clause attachment.",
+      "check": "Assign pronoun to the subject of the subordinate clause when verb action is described explicitly.",
+      "activation_cues": [
+        "after she broke",
+        "because he wrote",
+        "before she sent"
+      ],
+      "negative_cues": [
+        "ambiguous",
+        "multiple subjects"
+      ],
+      "micro_example": "The driver yelled at the tailor after she broke a window. => (B) The tailor broke a window",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini"
+    },
+    {
+      "id": "gen_disambig_specific_family_v1_5",
+      "task": "disambiguation_qa",
+      "rule": "When the pronoun refers to a person who is the recipient of an action and the pronoun is the object of a verb or preposition, assign it to the indirect object or recipient noun.",
+      "use_when": "Sentence contains verbs with indirect objects and pronouns referring to the recipient.",
+      "do_not_use_when": "Sentence is ambiguous about recipient or agent roles.",
+      "check": "Assign pronoun to the indirect object or recipient noun when pronoun is object of verb/preposition.",
+      "activation_cues": [
+        "gave her",
+        "helped him",
+        "told them"
+      ],
+      "negative_cues": [
+        "ambiguous",
+        "both possible recipients"
+      ],
+      "micro_example": "The carpenter made a desk for the clerk and gave her a discount. => (B) Gave the clerk a discount",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini"
+    },
+    {
+      "id": "gen_disambig_specific_family_v1_6",
+      "task": "disambiguation_qa",
+      "rule": "When the pronoun refers to who possesses a quality or attribute mentioned, assign it to the noun whose role or context semantically licenses that attribute.",
+      "use_when": "Sentence contains attributes like 'culinary training', 'history of substance abuse', 'rare skin condition' linked to one noun by context.",
+      "do_not_use_when": "Sentence contains joint possession or ambiguous attribution.",
+      "check": "Assign pronoun to noun whose role fits the attribute mentioned.",
+      "activation_cues": [
+        "culinary training",
+        "history of substance abuse",
+        "rare skin condition"
+      ],
+      "negative_cues": [
+        "ambiguous",
+        "both have attribute"
+      ],
+      "micro_example": "The customer and the chef discussed her culinary training. => (B) It was the chef's culinary training",
+      "source_of_candidate": "generated_from_failure_logs",
+      "generator_model": "openai/gpt-4.1-mini"
+    }
+  ]
+}

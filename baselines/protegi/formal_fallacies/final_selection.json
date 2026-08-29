@@ -1,0 +1,32 @@
+{
+  "task": "formal_fallacies",
+  "aborted": null,
+  "final_beam": [
+    {
+      "train_acc": 0.7666666666666667,
+      "sha256": "adb46be8a5e7b960ae7a1d2cd3e96b6d4f4077bc851e0e567836f3b5dbc362b9"
+    },
+    {
+      "train_acc": 0.7266666666666667,
+      "sha256": "333ad0a92c0b4d21e0b05ca96c42def2e64285bdd5b195145cda98a8919a5031"
+    },
+    {
+      "train_acc": 0.72,
+      "sha256": "b6013b135aaf2430c792d407e0e90e31ec4da625b7ec4724a9fd80277129a52e"
+    },
+    {
+      "train_acc": 0.7333333333333333,
+      "sha256": "442eb758a96429ce98915d24f9a22f4a280f2b5cc64eea97d85ffa508d205416"
+    }
+  ],
+  "selected_index": 0,
+  "selected_train_acc": 0.7666666666666667,
+  "best_candidate_sha256": "adb46be8a5e7b960ae7a1d2cd3e96b6d4f4077bc851e0e567836f3b5dbc362b9",
+  "optimized_cheatsheet_sha256": "c19f8e639c7f4aea592f57880ee5faa52ab16b7c98de466b63f457e36aeeddef",
+  "seed_cheatsheet_sha256": "43a513be75a0d05b55164ea4ce9ced4bc10e92510a1a3b4033f81896a8b9f197",
+  "cheatsheet_changed": true,
+  "n_llm_calls": 7469,
+  "est_cost_usd": 3.7389,
+  "input_chars": 34250461,
+  "output_chars": 784672
+}
